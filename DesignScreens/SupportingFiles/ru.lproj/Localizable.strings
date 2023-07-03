@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  DesignScreens
+
+  Created by Aziz's MacBook Air on 03.07.2023.
+  
+*/
+
+"nice_to_meet_you" = "Приятно познакомиться, %@!";
+
+"what_is_your %@" = "Какой у вас %@?";
+"_gender_" = "гендер";
+
+"when_is_your" = "When is your %@?";
+"_birthday_" = "birthday";
+
+"What_is_your" = "What is your %@?";
+"_birthday_" = "birthday";
