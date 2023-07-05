@@ -25,16 +25,25 @@ struct SurveyBasicDetailsScreen: View {
                 
                 Spacer()
                 
+                SurveyMiddleView()
+                
+                Spacer()
+                
                 Button(action: {
-                    print("Next")
+                    hideKeyboard()
+                    basicSurveyVM.nextPressed()
                 }, label: {
                     Text("Next")
-                        .modifier(BtnText(enabled: $nextBtnEnabled))
+                        .modifier(BtnText(enabled: $basicSurveyVM.nextEnabled))
                 })
                 .padding(.horizontal, 45)
                 .padding(.bottom, 50)
                 
             }
+        }
+        
+        .onTapGesture {
+            hideKeyboard()
         }
     }
     

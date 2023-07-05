@@ -10,23 +10,34 @@ import SwiftUI
 struct BasicDetailsLaunchScreen: View {
     var body: some View {
         ZStack {
+            
+            Rectangle()
+                .fill(Color(hex: "06201b"))
+                .edgesIgnoringSafeArea(.bottom)
+            
             Rectangle()
                 .fill(Color.black)
-                .ignoresSafeArea()
-                .overlay(
-                    Triangle()
-                        .fill(Color(hex: "06201b"))
-                        .ignoresSafeArea()
-                )
+                .edgesIgnoringSafeArea(.top)
             
-            VStack(spacing: 40) {
-                Image("basic-details-doctor")
-                Text("Basic Details")
+              
+            Triangle()
+                .fill(Color(hex: "06201b"))
+
+            Triangle()
+                .fill(Color(hex: "00FF66").opacity(0.1))
+                .ignoresSafeArea()
+                .offset(y: 120)
+            
+            
+            VStack(spacing: 0) {
+                Image("basic-details-launch")
+                Text("Profile Details")
                     .underline()
                     .font(Font.system(size: 40).weight(.black))
                     .foregroundColor(Color(hex: "00FF1A"))
                     .multilineTextAlignment(.center)
-                  
+                    .padding(.top, -40)
+                
             }
         }
     }

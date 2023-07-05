@@ -12,7 +12,8 @@ struct SurveyHeader: View {
     var body: some View {
         HStack {
             Button {
-                print("back")
+                hideKeyboard()
+                basicSurveyVM.prevSurvey()
             } label: {
                 Image("arrow-right")
                     .padding(.leading, 20)

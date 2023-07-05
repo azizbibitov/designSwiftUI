@@ -7,28 +7,16 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct SurveyGreenProgressBar: View {
     
     @EnvironmentObject var basicSurveyVM: SurveyVM
     
     var body: some View {
-        HStack(spacing: 3) {
-            ForEach(0..<basicSurveyVM.maxElements, id: \.self) { i in
-                RoundedRectangle(cornerRadius: 3)
-                    .fill(setColor(i))
-                    .frame(width: 22, height: 2)
-                
+        HStack(spacing: 10) {
+            ForEach(0..<3, id: \.self) { i in
+                ProportionalColoredRectangleView(firstColor: Color(hex: "#42FF00"), secondColor: Color(hex: "#D9D9D9"), colorProportion: basicSurveyVM.getProgressPercentage(section: i), cornerRadius: 30)
+                    .frame(width: 50, height: 4)
             }
-        }
-    }
-    
-    func setColor(_ ind: Int) -> Color {
-        if basicSurveyVM.progress >= ind {
-            return Color(hex: "#42FF00")
-        }else{
-            return Color(hex: "#D9D9D9")
         }
     }
     

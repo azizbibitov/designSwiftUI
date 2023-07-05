@@ -15,18 +15,18 @@ struct SurveyTitle: View {
         ["nice_to_meet_you", "what_is_your", "_gender_"],
         ["", "when_is_your", "_birthday_"],
         ["", "What_is_your", "_height_"],
-        ["", "What_is_your", "_weight_"]
+        ["", "What_is_your", "_weight_"],
     ]
     
     var title1Show: Bool {
-        if basicSurveyVM.progress == 0 || basicSurveyVM.progress == 1{
+        if basicSurveyVM.progress == 1 || basicSurveyVM.progress == 2{
             return true
         }
         return false
     }
     
     var title2Show: Bool {
-        if basicSurveyVM.progress == 0{
+        if basicSurveyVM.progress == 1{
             return false
         }
         return true
@@ -35,16 +35,19 @@ struct SurveyTitle: View {
     var body: some View {
         VStack{
             if title1Show {
-                Text("\(surveyTitles[basicSurveyVM.progress][0])".localized(arguments: basicSurveyVM.userName))
+                Text("\(surveyTitles[basicSurveyVM.progress-1][0])".localizedWithArguments(arguments: basicSurveyVM.userName))
                     .padding(.top, 40)
                     .modifier(SurveyTitleModifier())
+            }else{
+                Spacer()
+                    .frame(height: 46)
             }
             
+            
             if title2Show {
-                (Text("\(surveyTitles[basicSurveyVM.progress][1])".localized).foregroundColor(.white) + Text("\(surveyTitles[basicSurveyVM.progress][2])".localized).foregroundColor(Color(hex: "#05FF00")) + Text("?").foregroundColor(.white))
+                (Text("\(surveyTitles[basicSurveyVM.progress-1][1])".localizedForArguments).foregroundColor(.white) + Text("\(surveyTitles[basicSurveyVM.progress-1][2])".localizedForArguments).foregroundColor(Color(hex: "#05FF00")) + Text("?").foregroundColor(.white))
                     .modifier(SurveyTitleModifier())
             }
-        
         }
     }
 }
