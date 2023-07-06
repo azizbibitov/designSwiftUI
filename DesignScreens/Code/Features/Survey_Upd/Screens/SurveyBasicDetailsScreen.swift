@@ -29,15 +29,7 @@ struct SurveyBasicDetailsScreen: View {
                 
                 Spacer()
                 
-                Button(action: {
-                    hideKeyboard()
-                    basicSurveyVM.nextPressed()
-                }, label: {
-                    Text("Next")
-                        .modifier(BtnText(enabled: $basicSurveyVM.nextEnabled))
-                })
-                .padding(.horizontal, 45)
-                .padding(.bottom, 50)
+                SurveyBottomView()
                 
             }
         }
@@ -45,6 +37,7 @@ struct SurveyBasicDetailsScreen: View {
         .onTapGesture {
             hideKeyboard()
         }
+        
     }
     
 }

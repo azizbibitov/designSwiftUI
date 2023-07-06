@@ -22,6 +22,10 @@
 		047086A62A559C6E0031367E /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047086A52A559C6E0031367E /* ViewExtensions.swift */; };
 		04A290C42A532E390029C8D5 /* SurveyTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A290C32A532E390029C8D5 /* SurveyTitleModifier.swift */; };
 		04A290C62A533B7D0029C8D5 /* SurveyTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A290C52A533B7D0029C8D5 /* SurveyTitle.swift */; };
+		04B5E7972A5718B000EEAFB9 /* GenderImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5E7962A5718B000EEAFB9 /* GenderImage.swift */; };
+		04B5E7992A571FB300EEAFB9 /* SurveyBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5E7982A571FB300EEAFB9 /* SurveyBottomView.swift */; };
+		04B5E79B2A57286B00EEAFB9 /* BirthdaySurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5E79A2A57286B00EEAFB9 /* BirthdaySurvey.swift */; };
+		04B5E79D2A572C9900EEAFB9 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5E79C2A572C9900EEAFB9 /* Enums.swift */; };
 		04C2D62F2A50A73F00E3B0C1 /* DesignScreensApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2D62E2A50A73F00E3B0C1 /* DesignScreensApp.swift */; };
 		04C2D6312A50A73F00E3B0C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2D6302A50A73F00E3B0C1 /* ContentView.swift */; };
 		04C2D6332A50A74000E3B0C1 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C2D6322A50A74000E3B0C1 /* AppIcon.xcassets */; };
@@ -32,8 +36,8 @@
 		04C2D64D2A50BE3C00E3B0C1 /* Survey_Upd.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C2D64C2A50BE3C00E3B0C1 /* Survey_Upd.xcassets */; };
 		04C2D64F2A50C61E00E3B0C1 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2D64E2A50C61E00E3B0C1 /* Sizes.swift */; };
 		04C2D6512A50C73100E3B0C1 /* UIScreenExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2D6502A50C73100E3B0C1 /* UIScreenExtensions.swift */; };
-		04C2D6542A50CAA000E3B0C1 /* DeviceName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2D6532A50CAA000E3B0C1 /* DeviceName.swift */; };
-		04C662DE2A55B34D00BF6E84 /* NameSurveyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C662DD2A55B34D00BF6E84 /* NameSurveyField.swift */; };
+		04C662DE2A55B34D00BF6E84 /* NameSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C662DD2A55B34D00BF6E84 /* NameSurvey.swift */; };
+		04C663052A55F15700BF6E84 /* GenderSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C663042A55F15700BF6E84 /* GenderSurvey.swift */; };
 		2227B5A7E8AF560D302335DC /* Pods_DesignScreens.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA35DCE1DE841E8501691E0 /* Pods_DesignScreens.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +58,10 @@
 		047086A52A559C6E0031367E /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		04A290C32A532E390029C8D5 /* SurveyTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTitleModifier.swift; sourceTree = "<group>"; };
 		04A290C52A533B7D0029C8D5 /* SurveyTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTitle.swift; sourceTree = "<group>"; };
+		04B5E7962A5718B000EEAFB9 /* GenderImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderImage.swift; sourceTree = "<group>"; };
+		04B5E7982A571FB300EEAFB9 /* SurveyBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyBottomView.swift; sourceTree = "<group>"; };
+		04B5E79A2A57286B00EEAFB9 /* BirthdaySurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaySurvey.swift; sourceTree = "<group>"; };
+		04B5E79C2A572C9900EEAFB9 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		04C2D62B2A50A73F00E3B0C1 /* DesignScreens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignScreens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C2D62E2A50A73F00E3B0C1 /* DesignScreensApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignScreensApp.swift; sourceTree = "<group>"; };
 		04C2D6302A50A73F00E3B0C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,8 +73,8 @@
 		04C2D64C2A50BE3C00E3B0C1 /* Survey_Upd.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Survey_Upd.xcassets; sourceTree = "<group>"; };
 		04C2D64E2A50C61E00E3B0C1 /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
 		04C2D6502A50C73100E3B0C1 /* UIScreenExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenExtensions.swift; sourceTree = "<group>"; };
-		04C2D6532A50CAA000E3B0C1 /* DeviceName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceName.swift; sourceTree = "<group>"; };
-		04C662DD2A55B34D00BF6E84 /* NameSurveyField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSurveyField.swift; sourceTree = "<group>"; };
+		04C662DD2A55B34D00BF6E84 /* NameSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSurvey.swift; sourceTree = "<group>"; };
+		04C663042A55F15700BF6E84 /* GenderSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSurvey.swift; sourceTree = "<group>"; };
 		4B75937BD7C49E2A1117CB8D /* Pods-DesignScreens.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignScreens.debug.xcconfig"; path = "Target Support Files/Pods-DesignScreens/Pods-DesignScreens.debug.xcconfig"; sourceTree = "<group>"; };
 		7BA35DCE1DE841E8501691E0 /* Pods_DesignScreens.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesignScreens.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0CC2F7F7E8F272584D9BB6B /* Pods-DesignScreens.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignScreens.release.xcconfig"; path = "Target Support Files/Pods-DesignScreens/Pods-DesignScreens.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +108,42 @@
 				043CF3642A520C1200ADD6C1 /* SurveyVM.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04B5E79E2A57388B00EEAFB9 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				04A290C52A533B7D0029C8D5 /* SurveyTitle.swift */,
+				04C2D6472A50B56A00E3B0C1 /* HaveAccountView.swift */,
+				0429C6592A510A4800846DFC /* Triangle.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		04B5E79F2A57393A00EEAFB9 /* SurveyHeader */ = {
+			isa = PBXGroup;
+			children = (
+				043CF35F2A5206AD00ADD6C1 /* SurveyHeader.swift */,
+				0470869F2A5579BE0031367E /* ProportionallyColoredRectangle.swift */,
+				043CF3612A52092E00ADD6C1 /* SurveyGreenProgressBar.swift */,
+			);
+			path = SurveyHeader;
+			sourceTree = "<group>";
+		};
+		04B5E7A02A57397900EEAFB9 /* GenderSurvey */ = {
+			isa = PBXGroup;
+			children = (
+				04C663042A55F15700BF6E84 /* GenderSurvey.swift */,
+				04B5E7962A5718B000EEAFB9 /* GenderImage.swift */,
+			);
+			path = GenderSurvey;
+			sourceTree = "<group>";
+		};
+		04B5E7CE2A576DA300EEAFB9 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 		04C2D6222A50A73F00E3B0C1 = {
@@ -178,6 +222,7 @@
 		04C2D6402A50B46600E3B0C1 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				04B5E7CE2A576DA300EEAFB9 /* Root */,
 				04C2D6422A50B4A600E3B0C1 /* Survey_Upd */,
 			);
 			path = Features;
@@ -186,9 +231,9 @@
 		04C2D6412A50B48900E3B0C1 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				04C2D6522A50CA9400E3B0C1 /* Enums */,
 				04C2D6492A50BB2D00E3B0C1 /* Extensions */,
 				04C2D64E2A50C61E00E3B0C1 /* Sizes.swift */,
+				04B5E79C2A572C9900EEAFB9 /* Enums.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -217,13 +262,10 @@
 		04C2D6442A50B4B600E3B0C1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				04C2D6472A50B56A00E3B0C1 /* HaveAccountView.swift */,
-				0429C6592A510A4800846DFC /* Triangle.swift */,
-				043CF35F2A5206AD00ADD6C1 /* SurveyHeader.swift */,
-				043CF3612A52092E00ADD6C1 /* SurveyGreenProgressBar.swift */,
-				04A290C52A533B7D0029C8D5 /* SurveyTitle.swift */,
-				0470869F2A5579BE0031367E /* ProportionallyColoredRectangle.swift */,
+				04B5E79E2A57388B00EEAFB9 /* Subviews */,
+				04B5E79F2A57393A00EEAFB9 /* SurveyHeader */,
 				047086A12A5595D20031367E /* SurveyMiddleView.swift */,
+				04B5E7982A571FB300EEAFB9 /* SurveyBottomView.swift */,
 				04C662DF2A55B46E00BF6E84 /* SurveyMiddleViews */,
 			);
 			path = Views;
@@ -240,18 +282,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		04C2D6522A50CA9400E3B0C1 /* Enums */ = {
-			isa = PBXGroup;
-			children = (
-				04C2D6532A50CAA000E3B0C1 /* DeviceName.swift */,
-			);
-			path = Enums;
-			sourceTree = "<group>";
-		};
 		04C662DF2A55B46E00BF6E84 /* SurveyMiddleViews */ = {
 			isa = PBXGroup;
 			children = (
-				04C662DD2A55B34D00BF6E84 /* NameSurveyField.swift */,
+				04C662DD2A55B34D00BF6E84 /* NameSurvey.swift */,
+				04B5E7A02A57397900EEAFB9 /* GenderSurvey */,
+				04B5E79A2A57286B00EEAFB9 /* BirthdaySurvey.swift */,
 			);
 			path = SurveyMiddleViews;
 			sourceTree = "<group>";
@@ -394,6 +430,8 @@
 				043CF3622A52092E00ADD6C1 /* SurveyGreenProgressBar.swift in Sources */,
 				047086A22A5595D20031367E /* SurveyMiddleView.swift in Sources */,
 				043CF3602A5206AD00ADD6C1 /* SurveyHeader.swift in Sources */,
+				04B5E79B2A57286B00EEAFB9 /* BirthdaySurvey.swift in Sources */,
+				04B5E7972A5718B000EEAFB9 /* GenderImage.swift in Sources */,
 				0429C6582A51091A00846DFC /* BasicDetailsLaunchScreen.swift in Sources */,
 				04C2D64F2A50C61E00E3B0C1 /* Sizes.swift in Sources */,
 				04A290C62A533B7D0029C8D5 /* SurveyTitle.swift in Sources */,
@@ -406,12 +444,14 @@
 				04C2D64B2A50BB8900E3B0C1 /* ColorExtensions.swift in Sources */,
 				043CF3702A522AD500ADD6C1 /* StringExtensions.swift in Sources */,
 				04C2D6312A50A73F00E3B0C1 /* ContentView.swift in Sources */,
+				04B5E79D2A572C9900EEAFB9 /* Enums.swift in Sources */,
 				0429C6452A50F02900846DFC /* BtnText.swift in Sources */,
-				04C662DE2A55B34D00BF6E84 /* NameSurveyField.swift in Sources */,
-				04C2D6542A50CAA000E3B0C1 /* DeviceName.swift in Sources */,
+				04C662DE2A55B34D00BF6E84 /* NameSurvey.swift in Sources */,
 				04C2D6512A50C73100E3B0C1 /* UIScreenExtensions.swift in Sources */,
 				04C2D62F2A50A73F00E3B0C1 /* DesignScreensApp.swift in Sources */,
 				04C2D6462A50B4D900E3B0C1 /* SurveySecondOnboardingScreen.swift in Sources */,
+				04B5E7992A571FB300EEAFB9 /* SurveyBottomView.swift in Sources */,
+				04C663052A55F15700BF6E84 /* GenderSurvey.swift in Sources */,
 				043CF35E2A51FE9A00ADD6C1 /* SurveyBasicDetailsScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,7 +6,6 @@
 //a
 
 import SwiftUI
-import Introspect
 
 struct SurveyMiddleView: View {
     @EnvironmentObject var basicSurveyVM: SurveyVM
@@ -14,7 +13,11 @@ struct SurveyMiddleView: View {
         VStack {
             switch basicSurveyVM.progress {
             case 1:
-                NameSurveyField()
+                NameSurvey()
+            case 2:
+                GenderSurvey()
+            case 3:
+                BirthdaySurvey()
             default: ZStack{}
             }
         }

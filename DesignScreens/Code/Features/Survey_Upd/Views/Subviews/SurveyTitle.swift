@@ -35,7 +35,7 @@ struct SurveyTitle: View {
     var body: some View {
         VStack{
             if title1Show {
-                Text("\(surveyTitles[basicSurveyVM.progress-1][0])".localizedWithArguments(arguments: basicSurveyVM.userName))
+                Text("\(surveyTitles[basicSurveyVM.progress-1][0])".localizable(arguments: basicSurveyVM.userName))
                     .padding(.top, 40)
                     .modifier(SurveyTitleModifier())
             }else{
@@ -45,7 +45,7 @@ struct SurveyTitle: View {
             
             
             if title2Show {
-                (Text("\(surveyTitles[basicSurveyVM.progress-1][1])".localizedForArguments).foregroundColor(.white) + Text("\(surveyTitles[basicSurveyVM.progress-1][2])".localizedForArguments).foregroundColor(Color(hex: "#05FF00")) + Text("?").foregroundColor(.white))
+                (Text("\(surveyTitles[basicSurveyVM.progress-1][1])".localizable).foregroundColor(.white) + Text("\(surveyTitles[basicSurveyVM.progress-1][2])".localizable).foregroundColor(Color(hex: "#05FF00")) + Text("?").foregroundColor(.white))
                     .modifier(SurveyTitleModifier())
             }
         }

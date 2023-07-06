@@ -8,10 +8,10 @@
 import Foundation
 
 extension String {
-    var localizedForArguments: String {
+    var localizable: String {
         return NSLocalizedString(self, comment: "")
     }
-    func localizedWithArguments(arguments: CVarArg...) -> String {
-        return String(format: self.localizedForArguments, arguments: arguments)
+    func localizable(arguments: CVarArg...) -> String {
+        return String(format: self.localizable, arguments: arguments)
     }
 }

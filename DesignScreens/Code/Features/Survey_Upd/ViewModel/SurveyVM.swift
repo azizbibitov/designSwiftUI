@@ -6,12 +6,85 @@
 //
 
 import Foundation
+import SwiftUI
 
 class SurveyVM: ObservableObject {
     
     @Published var progress: Int = 1
     @Published var nextEnabled: Bool = false
     @Published var userName: String = "Vmir"
+    @Published var gender: Gender = .other
+    @Published var birthday = Date()
+    
+    
+    var maleSelectedImage: String {
+        if gender == .male {
+            return "gender_selected"
+        }else{
+            return "gender_unselected"
+        }
+    }
+    
+    var femaleSelectedImage: String {
+        if gender == .female {
+            return "gender_selected"
+        }else{
+            return "gender_unselected"
+        }
+    }
+    
+    var maleImagescale: CGFloat {
+        if gender == .male {
+            return 1
+        }else{
+            return 0.8
+        }
+    }
+    
+    var femaleImagescale: CGFloat {
+        if gender == .female {
+            return 1
+        }else{
+            return 0.8
+        }
+    }
+    
+    func chooseMale(proxy: ScrollViewProxy) {
+        withAnimation {
+            if gender == .male {
+                gender = .other
+            }else{
+                gender = .male
+            }
+            if gender == .male {
+                proxy.scrollTo(1, anchor: .center)
+            }else{
+                proxy.scrollTo(3, anchor: .center)
+            }
+        }
+    }
+    
+    func chooseFemale(proxy: ScrollViewProxy) {
+        withAnimation {
+            if gender == .female {
+                gender = .other
+            }else{
+                gender = .female
+            }
+            if gender == .female {
+                proxy.scrollTo(2, anchor: .center)
+            }else{
+                proxy.scrollTo(3, anchor: .center)
+            }
+        }
+    }
+    
+    func chooseGenderOthers() {
+        withAnimation {
+            gender = .other
+        }
+        nextSurvey()
+    }
     
     var sectionSurveyCount: [Int] = [2, 6, 5] // in reversed order cause of ForEach iterating order
     
@@ -39,7 +112,9 @@ class SurveyVM: ObservableObject {
             }
         default: print("")
         }
-        return CGFloat(sectionSurveyCount[section])/CGFloat(progress)
+        return withAnimation {
+            CGFloat(sectionSurveyCount[section])/CGFloat(progress)
+        }
     }
     
     func nextPressed() {
@@ -50,13 +125,17 @@ class SurveyVM: ObservableObject {
     
     func nextSurvey(){
         if progress < sectionSurveyCount.reduce(0, +) { //Sum
-            progress += 1
+            withAnimation {
+                progress += 1
+            }
         }
     }
     
     func prevSurvey(){
         if progress != 1 {
-            progress -= 1
+            withAnimation {
+                progress -= 1
+            }
         }
     }
     
@@ -64,6 +143,10 @@ class SurveyVM: ObservableObject {
         switch progress {
         case 1:
             return nameChecker()
+        case 2:
+            nextEnabled = true
+        case 3:
+            birthdayChecker()
         default: print("")
         }
     }
@@ -74,6 +157,10 @@ class SurveyVM: ObservableObject {
         }else{
             nextEnabled = false
         }
+    }
+    
+    func birthdayChecker() {
+        nextEnabled = birthday != Date()
     }
     
 }
