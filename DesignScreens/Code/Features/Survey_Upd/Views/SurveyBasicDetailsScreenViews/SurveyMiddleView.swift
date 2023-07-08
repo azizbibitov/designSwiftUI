@@ -18,6 +18,8 @@ struct SurveyMiddleView: View {
                 GenderSurvey()
             case 3:
                 BirthdaySurvey()
+            case 4:
+                HeightSurvey()
             default: ZStack{}
             }
         }

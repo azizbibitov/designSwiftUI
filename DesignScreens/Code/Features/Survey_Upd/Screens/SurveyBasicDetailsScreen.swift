@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SurveyBasicDetailsScreen: View {
     
+    @Environment(\.safeAreaInsets) private var safeAreaInsets
     @EnvironmentObject var basicSurveyVM: SurveyVM
     @State private var nextBtnEnabled: Bool = true
     
@@ -19,20 +20,29 @@ struct SurveyBasicDetailsScreen: View {
             
             VStack {
                 SurveyHeader()
-                    .padding(.top, 30)
+                    .padding(.top, safeAreaInsets.top)
+                
+                
+                Spacer()
+            }
+            .frame(width: UIScreen.screenWidth)
+            
+            VStack {
+                Spacer().frame(height: Sizes.size(45 + safeAreaInsets.top))
                 
                 SurveyTitle()
                 
                 Spacer()
                 
                 SurveyMiddleView()
+                    .frame(height: Sizes.size(500))
                 
                 Spacer()
                 
                 SurveyBottomView()
                 
             }
-        }
+        }.frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
         
         .onTapGesture {
             hideKeyboard()

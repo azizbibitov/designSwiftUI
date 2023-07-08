@@ -16,7 +16,7 @@ struct SurveyHeader: View {
                 basicSurveyVM.prevSurvey()
             } label: {
                 Image("arrow-right")
-                    .padding(.leading, 20)
+                   
             }
 
             Spacer()
@@ -30,6 +30,7 @@ struct SurveyHeader: View {
             
             Spacer()
         }
+        .padding(.leading, 20)
     }
 }
 

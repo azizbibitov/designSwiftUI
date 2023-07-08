@@ -15,6 +15,13 @@ class SurveyVM: ObservableObject {
     @Published var userName: String = "Vmir"
     @Published var gender: Gender = .other
     @Published var birthday = Date()
+    @Published var isEnabledCM: Bool = false
+    
+    init() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
+        birthday = formatter.date(from: "1995/10/08") ?? Date()
+    }
     
     
     var maleSelectedImage: String {
@@ -86,27 +93,27 @@ class SurveyVM: ObservableObject {
         nextSurvey()
     }
     
-    var sectionSurveyCount: [Int] = [2, 6, 5] // in reversed order cause of ForEach iterating order
+    var sectionSurveyCount: [Int] = [5, 6, 2]
     
     func getProgressPercentage(section: Int) -> CGFloat {
         switch section {
         case 0:
-            if progress <= sectionSurveyCount[2] {
-                return CGFloat(progress)/CGFloat(sectionSurveyCount[2])
+            if progress <= sectionSurveyCount[0] {
+                return CGFloat(progress)/CGFloat(sectionSurveyCount[0])
             }else{
                 return 1
             }
         case 1:
-            if progress > sectionSurveyCount[1] + sectionSurveyCount[2] {
+            if progress > sectionSurveyCount[1] + sectionSurveyCount[0] {
                 return 1
-            }else if progress > sectionSurveyCount[2] {
-                return CGFloat(progress-sectionSurveyCount[2])/CGFloat(sectionSurveyCount[1])
+            }else if progress > sectionSurveyCount[0] {
+                return CGFloat(progress-sectionSurveyCount[0])/CGFloat(sectionSurveyCount[1])
             }else{
                 return 0
             }
         case 2:
-            if progress > sectionSurveyCount[1] + sectionSurveyCount[2] {
-                return CGFloat(progress-sectionSurveyCount[2]-sectionSurveyCount[1])/CGFloat(sectionSurveyCount[0])
+            if progress > sectionSurveyCount[1] + sectionSurveyCount[0] {
+                return CGFloat(progress-sectionSurveyCount[0]-sectionSurveyCount[1])/CGFloat(sectionSurveyCount[2])
             }else{
                 return 0
             }

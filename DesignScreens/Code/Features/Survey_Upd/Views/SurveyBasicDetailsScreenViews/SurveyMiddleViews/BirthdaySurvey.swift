@@ -38,9 +38,6 @@ struct BirthdaySurvey: View {
         .padding(.horizontal, 40)
         
         .onAppear(perform: {
-            let formatter = DateFormatter()
-            formatter.dateFormat = "yyyy/MM/dd"
-            basicSurveyVM.birthday = formatter.date(from: "1995/10/08") ?? Date()
             basicSurveyVM.checker()
         })
     }

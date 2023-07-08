@@ -20,3 +20,8 @@ enum Gender: String {
     case female
     case other
 }
+
+enum LengthUnit {
+    case cm
+    case ft
+}
