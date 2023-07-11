@@ -16,11 +16,13 @@
 		043CF3652A520C1200ADD6C1 /* SurveyVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043CF3642A520C1200ADD6C1 /* SurveyVM.swift */; };
 		043CF36B2A5229A500ADD6C1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 043CF36D2A5229A500ADD6C1 /* Localizable.strings */; };
 		043CF3702A522AD500ADD6C1 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043CF36F2A522AD500ADD6C1 /* StringExtensions.swift */; };
-		04663D9C2A58B4F8009BF916 /* HeightRuler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663D9B2A58B4F8009BF916 /* HeightRuler.swift */; };
+		044EF1252A5D0D1500343DBD /* HeightRulerInFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EF1242A5D0D1400343DBD /* HeightRulerInFT.swift */; };
+		044EF1272A5D19D700343DBD /* RulerPartViewForFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EF1262A5D19D700343DBD /* RulerPartViewForFT.swift */; };
+		04663D9C2A58B4F8009BF916 /* HeightRulerInCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663D9B2A58B4F8009BF916 /* HeightRulerInCM.swift */; };
 		04663D9F2A58E2F4009BF916 /* SafeAreaInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663D9E2A58E2F4009BF916 /* SafeAreaInsets.swift */; };
 		04663DA12A58E4DB009BF916 /* ViewOffsetKeyPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663DA02A58E4DB009BF916 /* ViewOffsetKeyPreferenceKey.swift */; };
 		04663DA32A58E507009BF916 /* HorizontalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663DA22A58E507009BF916 /* HorizontalLine.swift */; };
-		04663DA52A58E598009BF916 /* RulerPartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663DA42A58E598009BF916 /* RulerPartView.swift */; };
+		04663DA52A58E598009BF916 /* RulerPartViewForCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663DA42A58E598009BF916 /* RulerPartViewForCM.swift */; };
 		047086A02A5579BE0031367E /* ProportionallyColoredRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470869F2A5579BE0031367E /* ProportionallyColoredRectangle.swift */; };
 		047086A22A5595D20031367E /* SurveyMiddleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047086A12A5595D20031367E /* SurveyMiddleView.swift */; };
 		047086A42A5597400031367E /* DynamicFontSizeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047086A32A5597400031367E /* DynamicFontSizeModifier.swift */; };
@@ -59,11 +61,13 @@
 		043CF36C2A5229A500ADD6C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		043CF36E2A5229B400ADD6C1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		043CF36F2A522AD500ADD6C1 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
-		04663D9B2A58B4F8009BF916 /* HeightRuler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightRuler.swift; sourceTree = "<group>"; };
+		044EF1242A5D0D1400343DBD /* HeightRulerInFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightRulerInFT.swift; sourceTree = "<group>"; };
+		044EF1262A5D19D700343DBD /* RulerPartViewForFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerPartViewForFT.swift; sourceTree = "<group>"; };
+		04663D9B2A58B4F8009BF916 /* HeightRulerInCM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightRulerInCM.swift; sourceTree = "<group>"; };
 		04663D9E2A58E2F4009BF916 /* SafeAreaInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaInsets.swift; sourceTree = "<group>"; };
 		04663DA02A58E4DB009BF916 /* ViewOffsetKeyPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewOffsetKeyPreferenceKey.swift; sourceTree = "<group>"; };
 		04663DA22A58E507009BF916 /* HorizontalLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalLine.swift; sourceTree = "<group>"; };
-		04663DA42A58E598009BF916 /* RulerPartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerPartView.swift; sourceTree = "<group>"; };
+		04663DA42A58E598009BF916 /* RulerPartViewForCM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerPartViewForCM.swift; sourceTree = "<group>"; };
 		0470869F2A5579BE0031367E /* ProportionallyColoredRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProportionallyColoredRectangle.swift; sourceTree = "<group>"; };
 		047086A12A5595D20031367E /* SurveyMiddleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyMiddleView.swift; sourceTree = "<group>"; };
 		047086A32A5597400031367E /* DynamicFontSizeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFontSizeModifier.swift; sourceTree = "<group>"; };
@@ -124,6 +128,24 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		044EF1222A5D0BF700343DBD /* HeightRulerInCM */ = {
+			isa = PBXGroup;
+			children = (
+				04663D9B2A58B4F8009BF916 /* HeightRulerInCM.swift */,
+				04663DA42A58E598009BF916 /* RulerPartViewForCM.swift */,
+			);
+			path = HeightRulerInCM;
+			sourceTree = "<group>";
+		};
+		044EF1232A5D0C0C00343DBD /* HeightRulerInFT */ = {
+			isa = PBXGroup;
+			children = (
+				044EF1242A5D0D1400343DBD /* HeightRulerInFT.swift */,
+				044EF1262A5D19D700343DBD /* RulerPartViewForFT.swift */,
+			);
+			path = HeightRulerInFT;
+			sourceTree = "<group>";
+		};
 		04B5E79F2A57393A00EEAFB9 /* SurveyHeader */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,13 +163,6 @@
 				04B5E7962A5718B000EEAFB9 /* GenderImage.swift */,
 			);
 			path = GenderSurvey;
-			sourceTree = "<group>";
-		};
-		04B5E7CE2A576DA300EEAFB9 /* Root */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Root;
 			sourceTree = "<group>";
 		};
 		04B5E7D12A580C4B00EEAFB9 /* SurveyBasicDetailsScreenViews */ = {
@@ -183,10 +198,10 @@
 			children = (
 				04B5E7CF2A5785EB00EEAFB9 /* HeightSurvey.swift */,
 				04B5E7D82A58AB1700EEAFB9 /* SurveyToggleStyle.swift */,
-				04663D9B2A58B4F8009BF916 /* HeightRuler.swift */,
-				04663DA02A58E4DB009BF916 /* ViewOffsetKeyPreferenceKey.swift */,
+				044EF1232A5D0C0C00343DBD /* HeightRulerInFT */,
+				044EF1222A5D0BF700343DBD /* HeightRulerInCM */,
 				04663DA22A58E507009BF916 /* HorizontalLine.swift */,
-				04663DA42A58E598009BF916 /* RulerPartView.swift */,
+				04663DA02A58E4DB009BF916 /* ViewOffsetKeyPreferenceKey.swift */,
 			);
 			path = HeightSurvey;
 			sourceTree = "<group>";
@@ -267,7 +282,6 @@
 		04C2D6402A50B46600E3B0C1 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				04B5E7CE2A576DA300EEAFB9 /* Root */,
 				04C2D6422A50B4A600E3B0C1 /* Survey_Upd */,
 			);
 			path = Features;
@@ -365,7 +379,7 @@
 				04C2D6272A50A73F00E3B0C1 /* Sources */,
 				04C2D6282A50A73F00E3B0C1 /* Frameworks */,
 				04C2D6292A50A73F00E3B0C1 /* Resources */,
-				52FFEA361F5DC58FC95D9E6A /* [CP] Embed Pods Frameworks */,
+				C68E6F31762E39D98F8D70C9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -425,23 +439,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		52FFEA361F5DC58FC95D9E6A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DesignScreens/Pods-DesignScreens-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DesignScreens/Pods-DesignScreens-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DesignScreens/Pods-DesignScreens-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7B5AADBBFD2279866B07ED5C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -464,6 +461,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C68E6F31762E39D98F8D70C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DesignScreens/Pods-DesignScreens-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DesignScreens/Pods-DesignScreens-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DesignScreens/Pods-DesignScreens-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -474,20 +488,22 @@
 				04B5E7D02A5785EB00EEAFB9 /* HeightSurvey.swift in Sources */,
 				047086A62A559C6E0031367E /* ViewExtensions.swift in Sources */,
 				043CF3622A52092E00ADD6C1 /* SurveyGreenProgressBar.swift in Sources */,
+				044EF1252A5D0D1500343DBD /* HeightRulerInFT.swift in Sources */,
 				047086A22A5595D20031367E /* SurveyMiddleView.swift in Sources */,
 				043CF3602A5206AD00ADD6C1 /* SurveyHeader.swift in Sources */,
 				04B5E79B2A57286B00EEAFB9 /* BirthdaySurvey.swift in Sources */,
 				04B5E7972A5718B000EEAFB9 /* GenderImage.swift in Sources */,
 				0429C6582A51091A00846DFC /* BasicDetailsLaunchScreen.swift in Sources */,
-				04663D9C2A58B4F8009BF916 /* HeightRuler.swift in Sources */,
+				04663D9C2A58B4F8009BF916 /* HeightRulerInCM.swift in Sources */,
 				04C2D64F2A50C61E00E3B0C1 /* Sizes.swift in Sources */,
 				04A290C62A533B7D0029C8D5 /* SurveyTitle.swift in Sources */,
+				044EF1272A5D19D700343DBD /* RulerPartViewForFT.swift in Sources */,
 				043CF3652A520C1200ADD6C1 /* SurveyVM.swift in Sources */,
 				047086A42A5597400031367E /* DynamicFontSizeModifier.swift in Sources */,
 				04C2D6482A50B56A00E3B0C1 /* HaveAccountView.swift in Sources */,
 				0429C65A2A510A4800846DFC /* Triangle.swift in Sources */,
 				047086A02A5579BE0031367E /* ProportionallyColoredRectangle.swift in Sources */,
-				04663DA52A58E598009BF916 /* RulerPartView.swift in Sources */,
+				04663DA52A58E598009BF916 /* RulerPartViewForCM.swift in Sources */,
 				04A290C42A532E390029C8D5 /* SurveyTitleModifier.swift in Sources */,
 				04C2D64B2A50BB8900E3B0C1 /* ColorExtensions.swift in Sources */,
 				043CF3702A522AD500ADD6C1 /* StringExtensions.swift in Sources */,

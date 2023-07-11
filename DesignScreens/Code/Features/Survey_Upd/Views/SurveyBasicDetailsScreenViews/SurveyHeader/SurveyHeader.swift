@@ -10,16 +10,20 @@ import SwiftUI
 struct SurveyHeader: View {
     @EnvironmentObject var basicSurveyVM: SurveyVM
     var body: some View {
-        HStack {
-            Button {
-                hideKeyboard()
-                basicSurveyVM.prevSurvey()
-            } label: {
-                Image("arrow-right")
-                   
+        ZStack {
+            
+            HStack {
+                Button {
+                    hideKeyboard()
+                    basicSurveyVM.prevSurvey()
+                } label: {
+                    Image("arrow-right")
+                    
+                }
+                
+                Spacer()
             }
-
-            Spacer()
+            .padding(.leading, 20)
             
             VStack(spacing: 14){
                 Text("Basic Details")
@@ -28,9 +32,7 @@ struct SurveyHeader: View {
                 SurveyGreenProgressBar()
             }
             
-            Spacer()
         }
-        .padding(.leading, 20)
     }
 }
 

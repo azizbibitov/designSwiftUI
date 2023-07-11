@@ -1,5 +1,5 @@
 //
-//  RulerPartView.swift
+//  RulerPartViewForCM.swift
 //  DesignScreens
 //
 //  Created by Aziz's MacBook Air on 08.07.2023.
@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-struct RulerPartView: View {
+struct RulerPartViewForCM: View {
     
     var num: String = ""
+    var isHidden: Bool = false
     
     var body: some View {
         
@@ -35,6 +36,7 @@ struct RulerPartView: View {
             HorizontalLine(num: num)
             
         }
+        .opacity(isHidden ? 0.0 : 1.0)
     }
     
 }

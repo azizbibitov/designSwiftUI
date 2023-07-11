@@ -14,35 +14,43 @@ struct SurveyBasicDetailsScreen: View {
     @State private var nextBtnEnabled: Bool = true
     
     var body: some View {
-        ZStack {
-            Color(hex: "#050813")
-                .ignoresSafeArea()
-            
-            VStack {
-                SurveyHeader()
-                    .padding(.top, safeAreaInsets.top)
+        GeometryReader { geometry in
+            ZStack {
+                Color(hex: "#050813")
+                    .ignoresSafeArea()
                 
+                VStack {
+                    SurveyHeader()
+                        .padding(.top, safeAreaInsets.top)
+                    
+                    
+                    Spacer()
+                }
+                .frame(width: UIScreen.screenWidth)
                 
-                Spacer()
+                VStack {
+                    Spacer()
+                        .frame(height: Sizes.size(45 + safeAreaInsets.top))
+                    
+                    SurveyTitle()
+                    
+                    Spacer()
+                    
+                    SurveyMiddleView()
+                    
+                    Spacer()
+                    
+                    SurveyBottomView()
+                    
+                }
+                
             }
-            .frame(width: UIScreen.screenWidth)
+            .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
+            .edgesIgnoringSafeArea(.all)
             
-            VStack {
-                Spacer().frame(height: Sizes.size(45 + safeAreaInsets.top))
-                
-                SurveyTitle()
-                
-                Spacer()
-                
-                SurveyMiddleView()
-                    .frame(height: Sizes.size(500))
-                
-                Spacer()
-                
-                SurveyBottomView()
-                
-            }
-        }.frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
+        }
+        .ignoresSafeArea(.keyboard, edges: .all)
+      
         
         .onTapGesture {
             hideKeyboard()
