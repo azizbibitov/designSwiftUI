@@ -34,11 +34,11 @@ struct HeightRulerInFT: View { // Ruler - Линейка
                     }
                     
                     
-                    HorizontalLine(num: "8")
+                    HorizontalLine(num: 8)
                     
                     ForEach(0..<4) { id in
                         
-                        RulerPartViewForFT(num: "\(lengthNums[id])")
+                        RulerPartViewForFT(num: lengthNums[id])
                         
                     }
                     

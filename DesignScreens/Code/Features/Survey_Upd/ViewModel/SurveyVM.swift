@@ -18,6 +18,10 @@ class SurveyVM: ObservableObject {
     @Published var measureInFT: Bool = false
     @Published var heightInCM: Int = 250
     @Published var heightInFT: Double = 8.2
+    @Published var measureInLB: Bool = false
+    @Published var widthInKG: CGFloat = 30
+    @Published var widthInLB: CGFloat = 61.0
+    
     
     init() {
         let formatter = DateFormatter()
@@ -89,7 +93,7 @@ class SurveyVM: ObservableObject {
         case 4:
             nextEnabled = true
         case 5:
-            nextEnabled = false
+            nextEnabled = true
         default: print("")
         }
     }

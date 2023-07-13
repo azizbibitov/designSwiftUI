@@ -25,13 +25,14 @@ struct HeightRulerInCM: View { // Ruler - Линейка
                 
                 VStack(alignment: .trailing, spacing: Sizes.size(18)){
                     
-                    HorizontalLine(num: "250")
+                    HorizontalLine(num: 250)
+                        .id(250)
                     
                     ForEach(0..<16) { id in
                         if id == 15 {
-                            RulerPartViewForCM(num: "", isHidden: true)
+                            RulerPartViewForCM(num: 0, isHidden: true)
                         }else{
-                            RulerPartViewForCM(num: "\(lengthNums[id])")
+                            RulerPartViewForCM(num: lengthNums[id])
                         }
                         
                     }
@@ -50,7 +51,7 @@ struct HeightRulerInCM: View { // Ruler - Линейка
                                            value: -$0.frame(in: .named("scroll")).origin.y)
                 })
                 .onPreferenceChange(ViewOffsetKey.self) { offset in
-                  
+                    
                     onScroll(offset: offset)
                 }
             }
@@ -64,6 +65,7 @@ struct HeightRulerInCM: View { // Ruler - Линейка
             
             VStack {
                 HStack {
+                    
                     Spacer()
                     
                     HStack {
@@ -129,9 +131,11 @@ struct HeightRulerInCM: View { // Ruler - Линейка
 }
 
 struct Ruler_Previews: PreviewProvider {
+    static let basicSurveyVM = SurveyVM()
     static var previews: some View {
         HeightRulerInCM()
-            .previewDevice(PreviewDevice(rawValue: DeviceName.iPad_Pro_11_inch_4th_generation.rawValue))
+            .previewDevice(PreviewDevice(rawValue: DeviceName.iPhone_14.rawValue))
+            .environmentObject(basicSurveyVM)
     }
 }
 

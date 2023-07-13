@@ -9,8 +9,9 @@ import SwiftUI
 
 struct RulerPartViewForCM: View {
     
-    var num: String = ""
+    var num: Int = 0
     var isHidden: Bool = false
+    
     
     var body: some View {
         
@@ -25,7 +26,6 @@ struct RulerPartViewForCM: View {
                         .frame(width: Sizes.size(45), height: Sizes.size(2))
                         .background(Color(hex: "#BEBEBE"))
                         .cornerRadius(5)
-                    
                 }
                 
             }

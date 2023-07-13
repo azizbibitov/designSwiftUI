@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RulerPartViewForFT: View {
     
-    var num: String = ""
+    var num: Int = 0
     var isHidden: Bool = false
     
     var body: some View {

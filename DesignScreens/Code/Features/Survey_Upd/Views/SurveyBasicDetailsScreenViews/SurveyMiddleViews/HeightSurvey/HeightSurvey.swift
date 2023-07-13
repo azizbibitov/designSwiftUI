@@ -29,6 +29,11 @@ struct HeightSurvey: View {
                     .frame(height: basicSurveyVM.measureInFT ? 0 : nil)
             }
         }
+        
+        .onAppear {
+            basicSurveyVM.checker()
+        }
+        
     }
 }
 

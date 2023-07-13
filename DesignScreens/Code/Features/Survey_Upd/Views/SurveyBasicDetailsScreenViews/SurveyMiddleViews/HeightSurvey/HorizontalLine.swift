@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HorizontalLine: View {
     
-    var num: String = ""
+    var num: Int = 0
     
     var body: some View {
         HStack {
@@ -22,7 +22,7 @@ struct HorizontalLine: View {
         }
         .overlay(
             HStack {
-                Text(num)
+                Text("\(num)")
                     .foregroundColor(.white)
                     .font(.title2.weight(.bold))
                 

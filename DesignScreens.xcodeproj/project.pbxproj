@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0413646F2A5DADB00096AAC1 /* WidthSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413646E2A5DADB00096AAC1 /* WidthSurvey.swift */; };
+		041364712A5F09010096AAC1 /* BMIDefinerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041364702A5F09010096AAC1 /* BMIDefinerView.swift */; };
+		041364732A5F0BAD0096AAC1 /* WidthRulerKG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041364722A5F0BAD0096AAC1 /* WidthRulerKG.swift */; };
+		041364752A5F1A520096AAC1 /* VerticalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041364742A5F1A520096AAC1 /* VerticalLine.swift */; };
+		041364772A5F1EE60096AAC1 /* WidthRulerPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041364762A5F1EE60096AAC1 /* WidthRulerPart.swift */; };
 		0429C6452A50F02900846DFC /* BtnText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429C6442A50F02900846DFC /* BtnText.swift */; };
 		0429C6582A51091A00846DFC /* BasicDetailsLaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429C6572A51091A00846DFC /* BasicDetailsLaunchScreen.swift */; };
 		0429C65A2A510A4800846DFC /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429C6592A510A4800846DFC /* Triangle.swift */; };
@@ -16,6 +21,8 @@
 		043CF3652A520C1200ADD6C1 /* SurveyVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043CF3642A520C1200ADD6C1 /* SurveyVM.swift */; };
 		043CF36B2A5229A500ADD6C1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 043CF36D2A5229A500ADD6C1 /* Localizable.strings */; };
 		043CF3702A522AD500ADD6C1 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043CF36F2A522AD500ADD6C1 /* StringExtensions.swift */; };
+		043FC1D52A60264A00CE9E50 /* ObservableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FC1D42A60264A00CE9E50 /* ObservableScrollView.swift */; };
+		043FC1D82A6098FF00CE9E50 /* WidthRulerLB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FC1D72A6098FF00CE9E50 /* WidthRulerLB.swift */; };
 		044EF1252A5D0D1500343DBD /* HeightRulerInFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EF1242A5D0D1400343DBD /* HeightRulerInFT.swift */; };
 		044EF1272A5D19D700343DBD /* RulerPartViewForFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EF1262A5D19D700343DBD /* RulerPartViewForFT.swift */; };
 		04663D9C2A58B4F8009BF916 /* HeightRulerInCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663D9B2A58B4F8009BF916 /* HeightRulerInCM.swift */; };
@@ -51,6 +58,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0413646E2A5DADB00096AAC1 /* WidthSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthSurvey.swift; sourceTree = "<group>"; };
+		041364702A5F09010096AAC1 /* BMIDefinerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIDefinerView.swift; sourceTree = "<group>"; };
+		041364722A5F0BAD0096AAC1 /* WidthRulerKG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthRulerKG.swift; sourceTree = "<group>"; };
+		041364742A5F1A520096AAC1 /* VerticalLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalLine.swift; sourceTree = "<group>"; };
+		041364762A5F1EE60096AAC1 /* WidthRulerPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthRulerPart.swift; sourceTree = "<group>"; };
 		0429C6442A50F02900846DFC /* BtnText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnText.swift; sourceTree = "<group>"; };
 		0429C6572A51091A00846DFC /* BasicDetailsLaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDetailsLaunchScreen.swift; sourceTree = "<group>"; };
 		0429C6592A510A4800846DFC /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
@@ -61,6 +73,8 @@
 		043CF36C2A5229A500ADD6C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		043CF36E2A5229B400ADD6C1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		043CF36F2A522AD500ADD6C1 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		043FC1D42A60264A00CE9E50 /* ObservableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableScrollView.swift; sourceTree = "<group>"; };
+		043FC1D72A6098FF00CE9E50 /* WidthRulerLB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthRulerLB.swift; sourceTree = "<group>"; };
 		044EF1242A5D0D1400343DBD /* HeightRulerInFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightRulerInFT.swift; sourceTree = "<group>"; };
 		044EF1262A5D19D700343DBD /* RulerPartViewForFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerPartViewForFT.swift; sourceTree = "<group>"; };
 		04663D9B2A58B4F8009BF916 /* HeightRulerInCM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightRulerInCM.swift; sourceTree = "<group>"; };
@@ -110,6 +124,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0413646D2A5DAD6B0096AAC1 /* WidthSurvey */ = {
+			isa = PBXGroup;
+			children = (
+				0413646E2A5DADB00096AAC1 /* WidthSurvey.swift */,
+				041364722A5F0BAD0096AAC1 /* WidthRulerKG.swift */,
+				043FC1D72A6098FF00CE9E50 /* WidthRulerLB.swift */,
+				041364762A5F1EE60096AAC1 /* WidthRulerPart.swift */,
+				041364742A5F1A520096AAC1 /* VerticalLine.swift */,
+				041364702A5F09010096AAC1 /* BMIDefinerView.swift */,
+				043FC1D42A60264A00CE9E50 /* ObservableScrollView.swift */,
+			);
+			path = WidthSurvey;
+			sourceTree = "<group>";
+		};
 		0429C6432A50EFF000846DFC /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,11 +196,11 @@
 		04B5E7D12A580C4B00EEAFB9 /* SurveyBasicDetailsScreenViews */ = {
 			isa = PBXGroup;
 			children = (
-				047086A12A5595D20031367E /* SurveyMiddleView.swift */,
+				04A290C52A533B7D0029C8D5 /* SurveyTitle.swift */,
 				04B5E7982A571FB300EEAFB9 /* SurveyBottomView.swift */,
+				047086A12A5595D20031367E /* SurveyMiddleView.swift */,
 				04B5E79F2A57393A00EEAFB9 /* SurveyHeader */,
 				04C662DF2A55B46E00BF6E84 /* SurveyMiddleViews */,
-				04A290C52A533B7D0029C8D5 /* SurveyTitle.swift */,
 			);
 			path = SurveyBasicDetailsScreenViews;
 			sourceTree = "<group>";
@@ -347,6 +375,7 @@
 				04B5E7A02A57397900EEAFB9 /* GenderSurvey */,
 				04B5E79A2A57286B00EEAFB9 /* BirthdaySurvey.swift */,
 				04B5E7D72A58AA2800EEAFB9 /* HeightSurvey */,
+				0413646D2A5DAD6B0096AAC1 /* WidthSurvey */,
 			);
 			path = SurveyMiddleViews;
 			sourceTree = "<group>";
@@ -493,20 +522,27 @@
 				043CF3602A5206AD00ADD6C1 /* SurveyHeader.swift in Sources */,
 				04B5E79B2A57286B00EEAFB9 /* BirthdaySurvey.swift in Sources */,
 				04B5E7972A5718B000EEAFB9 /* GenderImage.swift in Sources */,
+				0413646F2A5DADB00096AAC1 /* WidthSurvey.swift in Sources */,
 				0429C6582A51091A00846DFC /* BasicDetailsLaunchScreen.swift in Sources */,
 				04663D9C2A58B4F8009BF916 /* HeightRulerInCM.swift in Sources */,
 				04C2D64F2A50C61E00E3B0C1 /* Sizes.swift in Sources */,
 				04A290C62A533B7D0029C8D5 /* SurveyTitle.swift in Sources */,
 				044EF1272A5D19D700343DBD /* RulerPartViewForFT.swift in Sources */,
 				043CF3652A520C1200ADD6C1 /* SurveyVM.swift in Sources */,
+				041364752A5F1A520096AAC1 /* VerticalLine.swift in Sources */,
 				047086A42A5597400031367E /* DynamicFontSizeModifier.swift in Sources */,
 				04C2D6482A50B56A00E3B0C1 /* HaveAccountView.swift in Sources */,
 				0429C65A2A510A4800846DFC /* Triangle.swift in Sources */,
+				041364772A5F1EE60096AAC1 /* WidthRulerPart.swift in Sources */,
+				043FC1D52A60264A00CE9E50 /* ObservableScrollView.swift in Sources */,
 				047086A02A5579BE0031367E /* ProportionallyColoredRectangle.swift in Sources */,
 				04663DA52A58E598009BF916 /* RulerPartViewForCM.swift in Sources */,
 				04A290C42A532E390029C8D5 /* SurveyTitleModifier.swift in Sources */,
+				043FC1D82A6098FF00CE9E50 /* WidthRulerLB.swift in Sources */,
+				041364732A5F0BAD0096AAC1 /* WidthRulerKG.swift in Sources */,
 				04C2D64B2A50BB8900E3B0C1 /* ColorExtensions.swift in Sources */,
 				043CF3702A522AD500ADD6C1 /* StringExtensions.swift in Sources */,
+				041364712A5F09010096AAC1 /* BMIDefinerView.swift in Sources */,
 				04C2D6312A50A73F00E3B0C1 /* ContentView.swift in Sources */,
 				04B5E79D2A572C9900EEAFB9 /* Enums.swift in Sources */,
 				0429C6452A50F02900846DFC /* BtnText.swift in Sources */,
