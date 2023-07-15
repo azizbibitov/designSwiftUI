@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SurveySecondOnboardingScreen: View {
     @State private var nextBtnEnabled: Bool = true
+    @EnvironmentObject var basicSurveyVM: SurveyVM
     var body: some View {
         ZStack {
             Color(hex: "#050813")
@@ -44,6 +45,7 @@ struct SurveySecondOnboardingScreen: View {
                 
                 Button(action: {
                     print("I’M READY")
+                    basicSurveyVM.iamReadyBtnClick()
                 }, label: {
                     Text("I’M READY")
                         .modifier(BtnText(enabled: $nextBtnEnabled))

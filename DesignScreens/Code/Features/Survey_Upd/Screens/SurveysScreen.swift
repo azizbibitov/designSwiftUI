@@ -1,5 +1,5 @@
 //
-//  SurveyBasicDetailsScreen.swift
+//  SurveysScreen.swift
 //  DesignScreens
 //
 //  Created by Aziz's MacBook Air on 02.07.2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SurveyBasicDetailsScreen: View {
+struct SurveysScreen: View {
     
     @Environment(\.safeAreaInsets) private var safeAreaInsets
     @EnvironmentObject var basicSurveyVM: SurveyVM
@@ -63,7 +63,7 @@ struct SurveyBasicDetailsScreen: View {
 struct SurveyBasicDetailsScreen_Previews: PreviewProvider {
     static let basicSurveyVM = SurveyVM()
     static var previews: some View {
-        SurveyBasicDetailsScreen()
+        SurveysScreen()
             .environmentObject(basicSurveyVM)
     }
 }

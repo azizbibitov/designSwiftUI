@@ -10,7 +10,23 @@ import SwiftUI
 
 class SurveyVM: ObservableObject {
     
-    @Published var progress: Int = 1
+    /// Screen Progresses
+    ///  3 - SurveySecondOnboardingScreen
+    ///  4 - BasicDetailsLaunchScreen
+    ///  5 - SurveysScreen
+    ///  6 - LifestyleAndGoalsLaunchScreen
+   
+    /// Survey Progresses
+    /// 1 - Name
+    /// 2 - Gender
+    /// 3 - Birthday
+    /// 4 - Height
+    /// 5 - Width
+    /// 6 - Goals
+    
+    @Published var screensProgress: Int = 3
+    @Published var isBack: Bool = false
+    @Published var surveyProgress: Int = 1
     @Published var nextEnabled: Bool = false
     @Published var userName: String = "Vmir"
     @Published var gender: Gender = .other
@@ -21,6 +37,7 @@ class SurveyVM: ObservableObject {
     @Published var measureInLB: Bool = false
     @Published var widthInKG: CGFloat = 30
     @Published var widthInLB: CGFloat = 61.0
+    @Published var selectedGoalIndex: Int = 0
     
     
     init() {
@@ -34,56 +51,80 @@ class SurveyVM: ObservableObject {
     func getProgressPercentage(section: Int) -> CGFloat {
         switch section {
         case 0:
-            if progress <= sectionSurveyCount[0] {
-                return CGFloat(progress)/CGFloat(sectionSurveyCount[0])
+            if surveyProgress <= sectionSurveyCount[0] {
+                return CGFloat(surveyProgress)/CGFloat(sectionSurveyCount[0])
             }else{
                 return 1
             }
         case 1:
-            if progress > sectionSurveyCount[1] + sectionSurveyCount[0] {
+            if surveyProgress > sectionSurveyCount[1] + sectionSurveyCount[0] {
                 return 1
-            }else if progress > sectionSurveyCount[0] {
-                return CGFloat(progress-sectionSurveyCount[0])/CGFloat(sectionSurveyCount[1])
+            }else if surveyProgress > sectionSurveyCount[0] {
+                return CGFloat(surveyProgress-sectionSurveyCount[0])/CGFloat(sectionSurveyCount[1])
             }else{
                 return 0
             }
         case 2:
-            if progress > sectionSurveyCount[1] + sectionSurveyCount[0] {
-                return CGFloat(progress-sectionSurveyCount[0]-sectionSurveyCount[1])/CGFloat(sectionSurveyCount[2])
+            if surveyProgress > sectionSurveyCount[1] + sectionSurveyCount[0] {
+                return CGFloat(surveyProgress-sectionSurveyCount[0]-sectionSurveyCount[1])/CGFloat(sectionSurveyCount[2])
             }else{
                 return 0
             }
         default: print("")
         }
         return withAnimation {
-            CGFloat(sectionSurveyCount[section])/CGFloat(progress)
+            CGFloat(sectionSurveyCount[section])/CGFloat(surveyProgress)
+        }
+    }
+    
+    func iamReadyBtnClick() {
+        isBack = false
+        screensProgress = 4
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+            self.screensProgress = 5
         }
     }
     
     func nextPressed() {
         if nextEnabled {
-            nextSurvey()
+            
+            switch surveyProgress {
+            case 5:
+                screensProgress = 6
+                self.nextSurvey()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+                    self.screensProgress = 5
+                }
+            default:
+                nextSurvey()
+            }
+            
+            
+          
         }
     }
     
     func nextSurvey(){
-        if progress < sectionSurveyCount.reduce(0, +) { //Sum
+        if surveyProgress < sectionSurveyCount.reduce(0, +) { //Sum
             withAnimation {
-                progress += 1
+                surveyProgress += 1
             }
         }
     }
     
     func prevSurvey(){
-        if progress != 1 {
+        if surveyProgress != 1 {
             withAnimation {
-                progress -= 1
+                surveyProgress -= 1
             }
+        }else{
+            screensProgress = 3
+            isBack = true
         }
     }
     
     func checker() {
-        switch progress {
+        switch surveyProgress {
         case 1:
             return nameChecker()
         case 2:
@@ -185,7 +226,3 @@ extension SurveyVM {
 }
 
 
-// MARK: - Height Survey
-extension SurveyVM {
-    
-}

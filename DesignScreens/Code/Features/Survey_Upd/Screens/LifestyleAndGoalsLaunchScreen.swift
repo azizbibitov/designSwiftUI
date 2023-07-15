@@ -1,13 +1,13 @@
 //
-//  BasicDetailsLaunchScreen.swift
+//  LifestyleAndGoalsLaunchScreen.swift
 //  DesignScreens
 //
-//  Created by Aziz's MacBook Air on 02.07.2023.
+//  Created by Aziz's MacBook Air on 14.07.2023.
 //
 
 import SwiftUI
 
-struct BasicDetailsLaunchScreen: View {
+struct LifestyleAndGoalsLaunchScreen: View {
     var body: some View {
         ZStack {
             
@@ -21,17 +21,23 @@ struct BasicDetailsLaunchScreen: View {
             
               
             Triangle()
-                .fill(Color(hex: "06201b"))
+                .fill(Color(hex: "#05211b"))
 
             Triangle()
-                .fill(Color(hex: "00FF66").opacity(0.1))
+                .fill(Color(hex: "#053723"))
                 .ignoresSafeArea()
                 .offset(y: 150)
             
+            Triangle()
+                .fill(Color(hex: "#054b2a"))
+                .ignoresSafeArea()
+                .offset(y: 300)
             
-            VStack(spacing: 0) {
-                Image("basic-details-launch")
-                Text("Profile Details")
+          
+            
+            VStack(spacing: 40) {
+                Image("lifestyle_goals_image")
+                Text("Lifestyle & Goals")
                     .underline()
                     .font(Font.system(size: 40).weight(.black))
                     .foregroundColor(Color(hex: "00FF1A"))
@@ -43,9 +49,8 @@ struct BasicDetailsLaunchScreen: View {
     }
 }
 
-struct BasicDetailsLaunchScreen_Previews: PreviewProvider {
+struct LifestyleAndGoalsLaunchScreen_Previews: PreviewProvider {
     static var previews: some View {
-        BasicDetailsLaunchScreen()
-            .previewDevice(PreviewDevice(rawValue: DeviceName.iPhone_14.rawValue))
+        LifestyleAndGoalsLaunchScreen()
     }
 }

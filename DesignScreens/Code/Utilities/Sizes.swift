@@ -20,9 +20,17 @@ class Sizes {
             let deviceScreenAdaptedHeight = (UIScreen.screenWidth / averageFigmaScreenWidth) * size * 0.75
             return deviceScreenAdaptedHeight
         } else {
-            //iPhone
-            let deviceScreenAdaptedHeight = (UIScreen.screenHeight / averageFigmaScreenHeight) * size * 0.9
-            return deviceScreenAdaptedHeight
+         
+            if UIScreen.screenWidth <= 375 {
+                //iPhone 6s
+                let deviceScreenAdaptedHeight = (UIScreen.screenHeight / averageFigmaScreenHeight) * size * 1.0
+                return deviceScreenAdaptedHeight
+            }else{
+                //larger iPhone
+                let deviceScreenAdaptedHeight = (UIScreen.screenHeight / averageFigmaScreenHeight) * size * 0.85
+                return deviceScreenAdaptedHeight
+            }
+           
         }
     }
     

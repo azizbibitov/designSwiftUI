@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var basicSurveyVM = SurveyVM()
     var body: some View {
-        SurveyBasicDetailsScreen()
+        SurveyUpdateMain()
             .environmentObject(basicSurveyVM)
     }
 }

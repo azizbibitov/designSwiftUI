@@ -32,7 +32,7 @@ struct SurveyBottomView: View {
     }
     
     @ViewBuilder var otherOptionText: some View {
-        if basicSurveyVM.progress == 2 {
+        if basicSurveyVM.surveyProgress == 2 {
             Button {
                 basicSurveyVM.chooseGenderOthers()
             } label: {

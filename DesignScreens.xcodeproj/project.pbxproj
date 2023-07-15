@@ -15,7 +15,7 @@
 		0429C6452A50F02900846DFC /* BtnText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429C6442A50F02900846DFC /* BtnText.swift */; };
 		0429C6582A51091A00846DFC /* BasicDetailsLaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429C6572A51091A00846DFC /* BasicDetailsLaunchScreen.swift */; };
 		0429C65A2A510A4800846DFC /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429C6592A510A4800846DFC /* Triangle.swift */; };
-		043CF35E2A51FE9A00ADD6C1 /* SurveyBasicDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043CF35D2A51FE9A00ADD6C1 /* SurveyBasicDetailsScreen.swift */; };
+		043CF35E2A51FE9A00ADD6C1 /* SurveysScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043CF35D2A51FE9A00ADD6C1 /* SurveysScreen.swift */; };
 		043CF3602A5206AD00ADD6C1 /* SurveyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043CF35F2A5206AD00ADD6C1 /* SurveyHeader.swift */; };
 		043CF3622A52092E00ADD6C1 /* SurveyGreenProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043CF3612A52092E00ADD6C1 /* SurveyGreenProgressBar.swift */; };
 		043CF3652A520C1200ADD6C1 /* SurveyVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043CF3642A520C1200ADD6C1 /* SurveyVM.swift */; };
@@ -26,10 +26,16 @@
 		044EF1252A5D0D1500343DBD /* HeightRulerInFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EF1242A5D0D1400343DBD /* HeightRulerInFT.swift */; };
 		044EF1272A5D19D700343DBD /* RulerPartViewForFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EF1262A5D19D700343DBD /* RulerPartViewForFT.swift */; };
 		04663D9C2A58B4F8009BF916 /* HeightRulerInCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663D9B2A58B4F8009BF916 /* HeightRulerInCM.swift */; };
+		04663D9C2A60C2B100169000 /* SurveyUpdateMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663D9B2A60C2B100169000 /* SurveyUpdateMain.swift */; };
+		04663D9E2A61C8CF00169000 /* LifestyleAndGoalsLaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663D9D2A61C8CF00169000 /* LifestyleAndGoalsLaunchScreen.swift */; };
 		04663D9F2A58E2F4009BF916 /* SafeAreaInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663D9E2A58E2F4009BF916 /* SafeAreaInsets.swift */; };
 		04663DA12A58E4DB009BF916 /* ViewOffsetKeyPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663DA02A58E4DB009BF916 /* ViewOffsetKeyPreferenceKey.swift */; };
 		04663DA32A58E507009BF916 /* HorizontalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663DA22A58E507009BF916 /* HorizontalLine.swift */; };
+		04663DA42A61E3AD00169000 /* ExpandableGoalBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663DA32A61E3AD00169000 /* ExpandableGoalBtn.swift */; };
 		04663DA52A58E598009BF916 /* RulerPartViewForCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663DA42A58E598009BF916 /* RulerPartViewForCM.swift */; };
+		046A18842A620B89005DA357 /* ScaleEffectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A18832A620B89005DA357 /* ScaleEffectButton.swift */; };
+		046A18862A621322005DA357 /* GoalsSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A18852A621322005DA357 /* GoalsSurvey.swift */; };
+		046A18892A62140F005DA357 /* GoalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A18882A62140F005DA357 /* GoalModel.swift */; };
 		047086A02A5579BE0031367E /* ProportionallyColoredRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470869F2A5579BE0031367E /* ProportionallyColoredRectangle.swift */; };
 		047086A22A5595D20031367E /* SurveyMiddleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047086A12A5595D20031367E /* SurveyMiddleView.swift */; };
 		047086A42A5597400031367E /* DynamicFontSizeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047086A32A5597400031367E /* DynamicFontSizeModifier.swift */; };
@@ -66,7 +72,7 @@
 		0429C6442A50F02900846DFC /* BtnText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnText.swift; sourceTree = "<group>"; };
 		0429C6572A51091A00846DFC /* BasicDetailsLaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDetailsLaunchScreen.swift; sourceTree = "<group>"; };
 		0429C6592A510A4800846DFC /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
-		043CF35D2A51FE9A00ADD6C1 /* SurveyBasicDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyBasicDetailsScreen.swift; sourceTree = "<group>"; };
+		043CF35D2A51FE9A00ADD6C1 /* SurveysScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveysScreen.swift; sourceTree = "<group>"; };
 		043CF35F2A5206AD00ADD6C1 /* SurveyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyHeader.swift; sourceTree = "<group>"; };
 		043CF3612A52092E00ADD6C1 /* SurveyGreenProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyGreenProgressBar.swift; sourceTree = "<group>"; };
 		043CF3642A520C1200ADD6C1 /* SurveyVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyVM.swift; sourceTree = "<group>"; };
@@ -78,10 +84,16 @@
 		044EF1242A5D0D1400343DBD /* HeightRulerInFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightRulerInFT.swift; sourceTree = "<group>"; };
 		044EF1262A5D19D700343DBD /* RulerPartViewForFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerPartViewForFT.swift; sourceTree = "<group>"; };
 		04663D9B2A58B4F8009BF916 /* HeightRulerInCM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightRulerInCM.swift; sourceTree = "<group>"; };
+		04663D9B2A60C2B100169000 /* SurveyUpdateMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyUpdateMain.swift; sourceTree = "<group>"; };
+		04663D9D2A61C8CF00169000 /* LifestyleAndGoalsLaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifestyleAndGoalsLaunchScreen.swift; sourceTree = "<group>"; };
 		04663D9E2A58E2F4009BF916 /* SafeAreaInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaInsets.swift; sourceTree = "<group>"; };
 		04663DA02A58E4DB009BF916 /* ViewOffsetKeyPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewOffsetKeyPreferenceKey.swift; sourceTree = "<group>"; };
 		04663DA22A58E507009BF916 /* HorizontalLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalLine.swift; sourceTree = "<group>"; };
+		04663DA32A61E3AD00169000 /* ExpandableGoalBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableGoalBtn.swift; sourceTree = "<group>"; };
 		04663DA42A58E598009BF916 /* RulerPartViewForCM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerPartViewForCM.swift; sourceTree = "<group>"; };
+		046A18832A620B89005DA357 /* ScaleEffectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleEffectButton.swift; sourceTree = "<group>"; };
+		046A18852A621322005DA357 /* GoalsSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsSurvey.swift; sourceTree = "<group>"; };
+		046A18882A62140F005DA357 /* GoalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalModel.swift; sourceTree = "<group>"; };
 		0470869F2A5579BE0031367E /* ProportionallyColoredRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProportionallyColoredRectangle.swift; sourceTree = "<group>"; };
 		047086A12A5595D20031367E /* SurveyMiddleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyMiddleView.swift; sourceTree = "<group>"; };
 		047086A32A5597400031367E /* DynamicFontSizeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFontSizeModifier.swift; sourceTree = "<group>"; };
@@ -172,6 +184,32 @@
 				044EF1262A5D19D700343DBD /* RulerPartViewForFT.swift */,
 			);
 			path = HeightRulerInFT;
+			sourceTree = "<group>";
+		};
+		04663D9A2A60C26A00169000 /* ScreensNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				04663D9B2A60C2B100169000 /* SurveyUpdateMain.swift */,
+			);
+			path = ScreensNavigation;
+			sourceTree = "<group>";
+		};
+		04663DA22A61E2C500169000 /* GoalsSurvey */ = {
+			isa = PBXGroup;
+			children = (
+				046A18852A621322005DA357 /* GoalsSurvey.swift */,
+				04663DA32A61E3AD00169000 /* ExpandableGoalBtn.swift */,
+				046A18832A620B89005DA357 /* ScaleEffectButton.swift */,
+			);
+			path = GoalsSurvey;
+			sourceTree = "<group>";
+		};
+		046A18872A6213F4005DA357 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				046A18882A62140F005DA357 /* GoalModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		04B5E79F2A57393A00EEAFB9 /* SurveyHeader */ = {
@@ -330,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				0429C6432A50EFF000846DFC /* ViewModifiers */,
+				046A18872A6213F4005DA357 /* Models */,
 				04C2D6432A50B4B000E3B0C1 /* Screens */,
 				04C2D6442A50B4B600E3B0C1 /* Views */,
 				043CF3632A520BCC00ADD6C1 /* ViewModel */,
@@ -340,9 +379,11 @@
 		04C2D6432A50B4B000E3B0C1 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				04663D9A2A60C26A00169000 /* ScreensNavigation */,
 				04C2D6452A50B4D900E3B0C1 /* SurveySecondOnboardingScreen.swift */,
 				0429C6572A51091A00846DFC /* BasicDetailsLaunchScreen.swift */,
-				043CF35D2A51FE9A00ADD6C1 /* SurveyBasicDetailsScreen.swift */,
+				043CF35D2A51FE9A00ADD6C1 /* SurveysScreen.swift */,
+				04663D9D2A61C8CF00169000 /* LifestyleAndGoalsLaunchScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -376,6 +417,7 @@
 				04B5E79A2A57286B00EEAFB9 /* BirthdaySurvey.swift */,
 				04B5E7D72A58AA2800EEAFB9 /* HeightSurvey */,
 				0413646D2A5DAD6B0096AAC1 /* WidthSurvey */,
+				04663DA22A61E2C500169000 /* GoalsSurvey */,
 			);
 			path = SurveyMiddleViews;
 			sourceTree = "<group>";
@@ -514,6 +556,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046A18892A62140F005DA357 /* GoalModel.swift in Sources */,
 				04B5E7D02A5785EB00EEAFB9 /* HeightSurvey.swift in Sources */,
 				047086A62A559C6E0031367E /* ViewExtensions.swift in Sources */,
 				043CF3622A52092E00ADD6C1 /* SurveyGreenProgressBar.swift in Sources */,
@@ -533,6 +576,7 @@
 				047086A42A5597400031367E /* DynamicFontSizeModifier.swift in Sources */,
 				04C2D6482A50B56A00E3B0C1 /* HaveAccountView.swift in Sources */,
 				0429C65A2A510A4800846DFC /* Triangle.swift in Sources */,
+				04663D9C2A60C2B100169000 /* SurveyUpdateMain.swift in Sources */,
 				041364772A5F1EE60096AAC1 /* WidthRulerPart.swift in Sources */,
 				043FC1D52A60264A00CE9E50 /* ObservableScrollView.swift in Sources */,
 				047086A02A5579BE0031367E /* ProportionallyColoredRectangle.swift in Sources */,
@@ -544,6 +588,9 @@
 				043CF3702A522AD500ADD6C1 /* StringExtensions.swift in Sources */,
 				041364712A5F09010096AAC1 /* BMIDefinerView.swift in Sources */,
 				04C2D6312A50A73F00E3B0C1 /* ContentView.swift in Sources */,
+				046A18842A620B89005DA357 /* ScaleEffectButton.swift in Sources */,
+				046A18862A621322005DA357 /* GoalsSurvey.swift in Sources */,
+				04663DA42A61E3AD00169000 /* ExpandableGoalBtn.swift in Sources */,
 				04B5E79D2A572C9900EEAFB9 /* Enums.swift in Sources */,
 				0429C6452A50F02900846DFC /* BtnText.swift in Sources */,
 				04C662DE2A55B34D00BF6E84 /* NameSurvey.swift in Sources */,
@@ -556,7 +603,8 @@
 				04663DA12A58E4DB009BF916 /* ViewOffsetKeyPreferenceKey.swift in Sources */,
 				04B5E7992A571FB300EEAFB9 /* SurveyBottomView.swift in Sources */,
 				04C663052A55F15700BF6E84 /* GenderSurvey.swift in Sources */,
-				043CF35E2A51FE9A00ADD6C1 /* SurveyBasicDetailsScreen.swift in Sources */,
+				04663D9E2A61C8CF00169000 /* LifestyleAndGoalsLaunchScreen.swift in Sources */,
+				043CF35E2A51FE9A00ADD6C1 /* SurveysScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

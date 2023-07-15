@@ -11,7 +11,7 @@ import Introspect
 struct NameSurvey: View {
     
     @EnvironmentObject var basicSurveyVM: SurveyVM
-    @State var field: UITextField?
+    
     var body: some View {
         VStack {
             if #available(iOS 15.0, *) {
@@ -22,13 +22,10 @@ struct NameSurvey: View {
                     .padding(.top,30).padding(.bottom, 10)
                     .submitLabel(.done)
                     .introspectTextField { textField in
-                        DispatchQueue.main.async {
-                            field = textField
-                        }
-                    }
-                    .onAppear {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
-                            field?.becomeFirstResponder()
+                        if basicSurveyVM.surveyProgress == 1 && basicSurveyVM.screensProgress == 5 {/// this condition for removing introspectTextfield glitching effect
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+                                textField.becomeFirstResponder()
+                            }
                         }
                     }
                     .onChange(of: basicSurveyVM.userName, perform: {
@@ -42,13 +39,10 @@ struct NameSurvey: View {
                     .dynamicFontSize(text: $basicSurveyVM.userName)
                     .padding(.top,30).padding(.bottom, 10)
                     .introspectTextField { textField in
-                        DispatchQueue.main.async {
-                            field = textField
-                        }
-                    }
-                    .onAppear {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
-                            field?.becomeFirstResponder()
+                        if basicSurveyVM.surveyProgress == 1 && basicSurveyVM.screensProgress == 5 {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+                                textField.becomeFirstResponder()
+                            }
                         }
                     }
                     .onChange(of: basicSurveyVM.userName, perform: {
@@ -57,14 +51,12 @@ struct NameSurvey: View {
                     })
             }
             
-            
             Divider().padding(.horizontal).overlay(Color(hex: "#515151").padding(.horizontal))
             
         }
         .onAppear {
             basicSurveyVM.checker()
         }
-        
     }
 }
 
