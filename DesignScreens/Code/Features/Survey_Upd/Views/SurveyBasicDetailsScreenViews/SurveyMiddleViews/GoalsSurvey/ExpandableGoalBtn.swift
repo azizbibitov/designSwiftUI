@@ -101,7 +101,7 @@ struct ExpandableGoalBtn: View {
                 
                 
             }
-            .frame(height: basicSurveyVM.selectedGoalIndex == goal.goalIndex ? Sizes.size(200) : 0)
+            .frame(height: basicSurveyVM.selectedGoalIndex == goal.goalIndex ? Sizes.size(170) : 0)
             .cornerRadius(30)
             .padding(.horizontal, 40)
          

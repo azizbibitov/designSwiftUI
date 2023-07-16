@@ -20,9 +20,8 @@ struct Goal {
 
 
 var goals = [
-    Goal(goalTitle: "Lose Weight", goalDescription: "This goal focuses on regular exercise to stimulate weight loss. Our progress trackers help monitor your journey towards a lighter, fitter you.", maleImage: "loseweight_male_image", femaleImage: "loseweight_female_image", goalIcon: "loseweight_icon", goalIndex: 1),
-    Goal(goalTitle: "Build muscle", goalDescription: "This goal is designed for those aiming to gain lean muscle mass. It incorporates structured, high-intensity workout routines to fuel muscle growth.", maleImage: "buildmuscle_male_image", femaleImage: "buildmuscle_female_image", goalIcon: "buildmuscle_icon", goalIndex: 2),
-    Goal(goalTitle: "Mental wellness", goalDescription: "A holistic approach towards mental health! This goal includes mindfulness activities, stress management techniques, and light exercise routines", maleImage: "mentalwellness_male_image", femaleImage: "mentalwellness_female_image", goalIcon: "mentalwellness_icon", goalIndex: 3),
-    Goal(goalTitle: "Injury recovery", goalDescription: "I will guide you safely back to your regular activities, optimizing the recovery process and minimizing the risk of re-injury.", maleImage: "injuryrecovery_male_image", femaleImage: "injuryrecovery_female_image", goalIcon: "injuryrecovery_icon", goalIndex: 4),
+    Goal(goalTitle: "lose_weight".localizable, goalDescription: "lose_weight_desc".localizable(), maleImage: "loseweight_male_image", femaleImage: "loseweight_female_image", goalIcon: "loseweight_icon", goalIndex: 1),
+    Goal(goalTitle: "build_muscle".localizable, goalDescription: "build_muscle_desc".localizable(), maleImage: "buildmuscle_male_image", femaleImage: "buildmuscle_female_image", goalIcon: "buildmuscle_icon", goalIndex: 2),
+    Goal(goalTitle: "mental_wellness".localizable, goalDescription: "mental_wellness_desc".localizable, maleImage: "mentalwellness_male_image", femaleImage: "mentalwellness_female_image", goalIcon: "mentalwellness_icon", goalIndex: 3),
+    Goal(goalTitle: "injury_recovery".localizable, goalDescription: "injury_recovery_desc".localizable, maleImage: "injuryrecovery_male_image", femaleImage: "injuryrecovery_female_image", goalIcon: "injuryrecovery_icon", goalIndex: 4),
 ]
-

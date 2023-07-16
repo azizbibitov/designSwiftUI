@@ -20,4 +20,35 @@
 "_height_" = "height";
 "_weight_" = "weight";
 
-"goals_asks" = "What is your main goal?";
+
+//Survey
+"nice_to_meet_you" = "Nice to meet you, %@!";
+"what_is_your" = "What is your ";
+"_gender_" = "gender";
+"when_is_your" = "When is your ";
+"_birthday_" = "birthday";
+"What_is_your_height" = "What is your ";
+"What_is_your_weight" = "What is your ";
+"_height_" = "height";
+"_weight_" = "weight";
+
+//new
+"main_goals_asks" = "What is your main goal?";
+"lose_weight_desc" = "This goal focuses on regular exercise to stimulate weight loss. Our progress trackers help monitor your journey towards a lighter, fitter you.";
+"build_muscle" = "Build muscle";
+"build_muscle_desc" = "This goal is designed for those aiming to gain lean muscle mass. It incorporates structured, high-intensity workout routines to fuel muscle growth.";
+"mental_wellness" = "Mental wellness";
+"mental_wellness_desc" = "A holistic approach towards mental health! This goal includes mindfulness activities, stress management techniques, and light exercise routines";
+"injury_recovery_desc" = "I will guide you safely back to your regular activities, optimizing the recovery process and minimizing the risk of re-injury.";
+"_hi_" = "Hi!";
+"personal_coach" = "I am your personal coach. Please answer some question to get personalized plans.";
+"iam_ready" = "I’M READY";
+"profile_details" = "Profile Details";
+"lifestyle_and_goals" = "Lifestyle & Goals";
+"sign_in_to_your_existing_account" = "Sign in to your existing account";
+"basic_details" = "Basic Details";
+"_next_" = "Next";
+"_others_" = "Others / I’d rather not say";
+"adjust_workouts" = "We will adjust our workouts to best suit your age, give rewards for your progress, and more!";
+"your_current_body_mass_index" = "Your Current Body Mass Index";
+"amazing_bmi" = "Amazing! A little bit more sweat and you will have a perfect BMI!";

@@ -80,7 +80,7 @@ class SurveyVM: ObservableObject {
     func iamReadyBtnClick() {
         isBack = false
         screensProgress = 4
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
             self.screensProgress = 5
         }
     }
@@ -92,7 +92,7 @@ class SurveyVM: ObservableObject {
             case 5:
                 screensProgress = 6
                 self.nextSurvey()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
                     self.screensProgress = 5
                 }
             default:
@@ -121,6 +121,7 @@ class SurveyVM: ObservableObject {
             screensProgress = 3
             isBack = true
         }
+        checker()
     }
     
     func checker() {

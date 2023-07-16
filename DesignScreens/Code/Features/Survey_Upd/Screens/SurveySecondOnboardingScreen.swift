@@ -30,7 +30,7 @@ struct SurveySecondOnboardingScreen: View {
                 
                 VStack(alignment: .leading, spacing: 0) {
              
-                    Text("Hi!")
+                    Text("_hi_".localizable)
                         .font(.largeTitle.weight(.bold))
                         .foregroundColor(.white)
                     

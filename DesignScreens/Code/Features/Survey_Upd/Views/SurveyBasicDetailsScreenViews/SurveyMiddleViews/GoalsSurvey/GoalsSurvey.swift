@@ -22,7 +22,7 @@ struct GoalsSurvey: View {
             .padding(.vertical)
         }
         .onAppear {
-            print(UIScreen.screenWidth)
+            basicSurveyVM.checker()
         }
     }
 }

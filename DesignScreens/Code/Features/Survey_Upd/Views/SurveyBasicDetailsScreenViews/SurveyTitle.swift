@@ -14,9 +14,9 @@ struct SurveyTitle: View {
         ["full_name_asks", "", ""],
         ["nice_to_meet_you", "what_is_your", "_gender_"],
         ["", "when_is_your", "_birthday_"],
-        ["", "What_is_your", "_height_"],
-        ["", "What_is_your", "_weight_"],
-        ["goals_asks", "", ""],
+        ["", "What_is_your_height", "_height_"],
+        ["", "What_is_your_weight", "_weight_"],
+        ["main_goals_asks", "", ""],
     ]
     
     var title1Show: Bool {
