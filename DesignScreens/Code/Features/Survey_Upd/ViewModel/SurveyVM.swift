@@ -24,19 +24,19 @@ class SurveyVM: ObservableObject {
     /// 5 - Width
     /// 6 - Goals
     
-    @Published var screensProgress: Int = 3
+    @Published var screensProgress: Int = 5
     @Published var isBack: Bool = false
-    @Published var surveyProgress: Int = 1
+    @Published var surveyProgress: Int = 5
     @Published var nextEnabled: Bool = false
     @Published var userName: String = "Vmir"
     @Published var gender: Gender = .other
     @Published var birthday = Date()
     @Published var measureInFT: Bool = false
-    @Published var heightInCM: Int = 250
-    @Published var heightInFT: Double = 8.2
+    @Published var heightInCM: Int = 170
+    @Published var heightInFT: Double = 5.7
     @Published var measureInLB: Bool = false
-    @Published var widthInKG: CGFloat = 30
-    @Published var widthInLB: CGFloat = 61.0
+    @Published var weightInKG: CGFloat = 50
+    @Published var weightInLB: CGFloat = 100.0
     @Published var selectedGoalIndex: Int = 0
     
     
@@ -150,6 +150,27 @@ class SurveyVM: ObservableObject {
     
     func birthdayChecker() {
         nextEnabled = birthday != Date()
+    }
+    
+    func heightRulerCMInOnAppear(_ scrollView: UIScrollView, rulerHeight: inout CGFloat) {
+        rulerHeight = scrollView.contentSize.height - scrollView.frame.height
+        let unit = rulerHeight/150.1
+        let defaultScrollTo: CGFloat = CGFloat(250 - heightInCM) * unit
+        scrollView.contentOffset.y = defaultScrollTo
+    }
+    
+    func heightRulerFTInOnAppear(_ scrollView: UIScrollView, rulerHeight: inout CGFloat) {
+        rulerHeight = scrollView.contentSize.height - scrollView.frame.height
+        let unit = rulerHeight/8.2
+        let defaultScrollTo: CGFloat = abs(CGFloat(8.2 - heightInFT)) * unit
+        scrollView.contentOffset.y = defaultScrollTo
+    }
+    
+    func weightRulerKGInOnAppear(_ scrollView: UIScrollView, scrollContentWidth: CGFloat) {
+        print("scrollContentWidth: ",  scrollContentWidth)
+        let unit = scrollContentWidth/220
+        let defaultScrollTo: CGFloat = CGFloat(weightInKG - 30) * unit
+        scrollView.contentOffset.x = defaultScrollTo + 300
     }
     
 }

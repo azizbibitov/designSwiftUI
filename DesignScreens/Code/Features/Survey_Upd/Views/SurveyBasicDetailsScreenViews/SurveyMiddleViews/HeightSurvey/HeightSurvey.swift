@@ -12,22 +12,19 @@ struct HeightSurvey: View {
     @EnvironmentObject var basicSurveyVM: SurveyVM
     
     var body: some View {
-        VStack(spacing: 30){
+        VStack(spacing: 10){
             Toggle("", isOn: $basicSurveyVM.measureInFT)
                 .toggleStyle(SurveyToggleStyle(unit1: "cm", unit2: "ft"))
                 .padding()
             
-            VStack(spacing: 0){
+            if basicSurveyVM.measureInFT {
                 HeightRulerInFT()
                     .clipped()
-                    .opacity(basicSurveyVM.measureInFT ? 1 : 0)
-                    .frame(height: basicSurveyVM.measureInFT ? nil : 0)
-                
+            }else{
                 HeightRulerInCM()
                     .clipped()
-                    .opacity(basicSurveyVM.measureInFT ? 0 : 1)
-                    .frame(height: basicSurveyVM.measureInFT ? 0 : nil)
             }
+            
         }
         
         .onAppear {

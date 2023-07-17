@@ -14,6 +14,7 @@ struct HeightRulerInCM: View { // Ruler - Линейка
     @State private var greenLineOffset: CGFloat = 0
     @State private var scrollingOffset: CGFloat = 0
     @State private var rulerHeight: CGFloat = 0
+    @State private var oneTimeBool: Bool = true
     
     @EnvironmentObject var basicSurveyVM: SurveyVM
     
@@ -21,7 +22,7 @@ struct HeightRulerInCM: View { // Ruler - Линейка
         
         ZStack {
             
-            ScrollView(showsIndicators: false){
+            ScrollView(showsIndicators: false){ // Scrollable Ruler
                 
                 VStack(alignment: .trailing, spacing: Sizes.size(18)){
                     
@@ -38,14 +39,12 @@ struct HeightRulerInCM: View { // Ruler - Линейка
                     }
                 }
                 .padding(Sizes.size(20))
-                .overlay(
-                    GeometryReader { geometry in
-                        Text("")
-                            .onAppear(perform: {
-                                rulerHeight = geometry.frame(in: .named("scroll")).size.height - Sizes.size(440) // minus height of ZStack
-                            })
+                .introspectScrollView { scrollView in
+                    if oneTimeBool { // shouldn't update state during view update warning
+                        basicSurveyVM.heightRulerCMInOnAppear(scrollView, rulerHeight: &rulerHeight)
+                        oneTimeBool = false
                     }
-                )
+                }
                 .background(GeometryReader {
                     Color.clear.preference(key: ViewOffsetKey.self,
                                            value: -$0.frame(in: .named("scroll")).origin.y)
@@ -63,7 +62,7 @@ struct HeightRulerInCM: View { // Ruler - Линейка
                 UIScrollView.appearance().bounces = true
             }
             
-            VStack {
+            VStack { // Green Line
                 HStack {
                     
                     Spacer()
@@ -95,7 +94,7 @@ struct HeightRulerInCM: View { // Ruler - Линейка
                 Spacer()
             }
             
-            HStack{
+            HStack{ // Human Image
                 if basicSurveyVM.gender == .female {
                     Image("female_img")
                         .resizable()
@@ -116,6 +115,8 @@ struct HeightRulerInCM: View { // Ruler - Линейка
             
         }
         .frame(height: Sizes.size(440))
+        
+       
         
     }
     

@@ -14,6 +14,8 @@ struct SurveyBottomView: View {
         VStack(spacing: 22){
             
             Button(action: {
+                let generator = UIImpactFeedbackGenerator(style: .light)
+                generator.impactOccurred()
                 hideKeyboard()
                 basicSurveyVM.nextPressed()
             }, label: {

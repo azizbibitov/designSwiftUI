@@ -12,8 +12,8 @@ struct WidthRulerKG: View {
     @EnvironmentObject var basicSurveyVM: SurveyVM
     
     @State var scrollOffset = CGFloat.zero
-    let scrollContentWidth: CGFloat = 24640 - Sizes.size(1) // Calculated Value
-    
+    @State var scrollContentWidth: CGFloat = 0//24640 - Sizes.size(1) // Calculated Value
+    @State private var oneTimeBool: Bool = true
     let rows = [
         GridItem(.fixed(50))
     ]
@@ -40,7 +40,7 @@ struct WidthRulerKG: View {
                                         .inset(by: 0.5)
                                         .stroke(.black, lineWidth: 1)
                                     
-                                    Text("\(basicSurveyVM.widthInKG, specifier: "%.1f") kg")
+                                    Text("\(basicSurveyVM.weightInKG, specifier: "%.1f") kg")
                                         .font(Font.system(size: Sizes.size(40), weight: .bold))
                                         .foregroundColor(Color(hex: "#04C600"))
                                 }
@@ -49,14 +49,11 @@ struct WidthRulerKG: View {
                         
                         ZStack(alignment: .bottom) {
                             
-                            ObservableScrollView(scrollOffset: $scrollOffset) { proxy in
+//                            ObservableScrollView(scrollOffset: $scrollOffset) { proxy in
+                            ScrollView(.horizontal, showsIndicators: false){
                                 
                                 LazyHGrid(rows: rows, alignment: .bottom, spacing: 0) {
                                     
-                                    
-                                    Spacer()
-                                        .frame(width: (Sizes.size(352))/2 - 2)
-                                    // Width = 24644
                                     ForEach(0..<220) { id in
                                         
                                         WidthRulerPart(num: id + 30)
@@ -68,11 +65,28 @@ struct WidthRulerKG: View {
                                     
                                     VerticalLine(num: 250)
                                     
-                                    Color.clear
-                                        .frame(width: (Sizes.size(352))/2 - 2)
-                                    
+                                }
+                                .padding(.horizontal, Sizes.size(352)/2 - 2)
+                                .introspectScrollView { scrollView in
+                                    if oneTimeBool {
+                                        let space = Sizes.size(352)/2 - 2
+                                        scrollContentWidth = scrollView.contentSize.width - scrollView.frame.width
+                                        let rulerContentWidth = scrollContentWidth - 2*space
+                                        let unit = rulerContentWidth/220.0
+                                        scrollView.contentOffset.x = unit*20
+                                        oneTimeBool = false
+                                    }
+                                }
+                                .background(GeometryReader {
+                                    Color.clear.preference(key: ViewOffsetKey.self,
+                                                           value: -$0.frame(in: .named("scroll")).origin.x)
+                                })
+                                .onPreferenceChange(ViewOffsetKey.self) { offset in
+                                    scrollOffset = offset
+//                                    onScroll(offset: offset)
                                 }
                             }
+                            .coordinateSpace(name: "scroll")
                             .onAppear {
                                 UIScrollView.appearance().bounces = false
                             }
@@ -82,7 +96,7 @@ struct WidthRulerKG: View {
                             .padding(.bottom, 20)
                             .clipped()
                             
-                            HStack(alignment: .bottom) {
+                            HStack(alignment: .bottom, spacing: 0) {
                                 
                                 Spacer()
                                 
@@ -96,7 +110,7 @@ struct WidthRulerKG: View {
                                 Spacer()
                                 
                             }
-                            .frame(maxWidth: .infinity)
+                            .frame(width: Sizes.size(352))
                             .padding(.bottom, 18)
                             
                             
@@ -112,8 +126,10 @@ struct WidthRulerKG: View {
         .frame(width: Sizes.size(352))
         
         .onChange(of: scrollOffset) { newValue in
-            let unit = scrollContentWidth/220
-            basicSurveyVM.widthInKG = scrollOffset/unit + 30
+            let space = Sizes.size(352)/2 - 2
+            let rulerContentWidth = scrollContentWidth - 2*space
+            let unit = rulerContentWidth/220.0
+            basicSurveyVM.weightInKG = scrollOffset/unit + 30
         }
         
     }
@@ -125,7 +141,7 @@ struct WidthRulerKG_Previews: PreviewProvider {
     static let basicSurveyVM = SurveyVM()
     static var previews: some View {
         WidthRulerKG()
-            .previewDevice(PreviewDevice(rawValue: DeviceName.iPad_Pro_11_inch_4th_generation.rawValue))
+            .previewDevice(PreviewDevice(rawValue: DeviceName.iPhone_14.rawValue))
             .environmentObject(basicSurveyVM)
     }
 }

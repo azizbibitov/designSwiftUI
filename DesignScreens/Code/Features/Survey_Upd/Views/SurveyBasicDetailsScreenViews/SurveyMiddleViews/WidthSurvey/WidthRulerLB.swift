@@ -40,7 +40,7 @@ struct WidthRulerLB: View {
                                         .inset(by: 0.5)
                                         .stroke(.black, lineWidth: 1)
                                     
-                                    Text("\(basicSurveyVM.widthInLB, specifier: "%.1f") lb")
+                                    Text("\(basicSurveyVM.weightInLB, specifier: "%.1f") lb")
                                         .font(Font.system(size: Sizes.size(40), weight: .bold))
                                         .foregroundColor(Color(hex: "#04C600"))
                                 }
@@ -114,7 +114,7 @@ struct WidthRulerLB: View {
         .onChange(of: scrollOffset) { newValue in
             let scrollContentWidth: CGFloat = 54768
             let unit = scrollContentWidth/489
-            basicSurveyVM.widthInLB = scrollOffset/unit + 61
+            basicSurveyVM.weightInLB = scrollOffset/unit + 61
         }
         
     }

@@ -14,7 +14,7 @@ struct HeightRulerInFT: View { // Ruler - Линейка
     @State private var greenLineOffset: CGFloat = 0
     @State private var scrollingOffset: CGFloat = 0
     @State private var rulerHeight: CGFloat = 0
-    
+    @State private var oneTimeBool: Bool = true
     @EnvironmentObject var basicSurveyVM: SurveyVM
     
     var body: some View {
@@ -62,14 +62,12 @@ struct HeightRulerInFT: View { // Ruler - Линейка
                     
                 }
                 .padding(Sizes.size(20))
-                .overlay(
-                    GeometryReader { geometry in
-                        Text("")
-                            .onAppear(perform: {
-                                rulerHeight = geometry.frame(in: .named("scroll")).size.height - Sizes.size(440) // minus height of ZStack
-                            })
+                .introspectScrollView { scrollView in
+                    if oneTimeBool { // shouldn't update state during view update warning
+                        basicSurveyVM.heightRulerFTInOnAppear(scrollView, rulerHeight: &rulerHeight)
+                        oneTimeBool = false
                     }
-                )
+                }
                 .background(GeometryReader {
                     Color.clear.preference(key: ViewOffsetKey.self,
                                            value: -$0.frame(in: .named("scroll")).origin.y)
@@ -143,9 +141,6 @@ struct HeightRulerInFT: View { // Ruler - Линейка
     }
     
     func onScroll(offset: CGFloat) {
-        print("rulerHeight: ", rulerHeight)
-        print("heightInFT: ", basicSurveyVM.heightInFT)
-        print("scrollingOffset: ", scrollingOffset)
         self.greenLineOffset = offset/5.2
         self.scrollingOffset = offset
         if rulerHeight != 0 {

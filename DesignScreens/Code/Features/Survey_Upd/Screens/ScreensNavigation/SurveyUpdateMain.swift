@@ -31,8 +31,9 @@ struct SurveyUpdateMain: View {
                         BasicDetailsLaunchScreen()
                     }
                     
-                    SurveysScreen()
-                        .opacity(basicSurveyVM.screensProgress == 5 ? 1 : 0)
+                    if basicSurveyVM.screensProgress == 5 {
+                        SurveysScreen()
+                    }
                     
                     if basicSurveyVM.screensProgress == 6 {
                         LifestyleAndGoalsLaunchScreen()
