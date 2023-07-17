@@ -12,6 +12,8 @@ struct WidthRulerLB: View {
     @EnvironmentObject var basicSurveyVM: SurveyVM
     
     @State var scrollOffset = CGFloat.zero
+    @State var scrollContentWidth: CGFloat = 0
+    @State private var oneTimeBool: Bool = true
      // Calculated Value
     
     let rows = [
@@ -49,13 +51,10 @@ struct WidthRulerLB: View {
                         
                         ZStack(alignment: .bottom) {
                             
-                            ObservableScrollView(scrollOffset: $scrollOffset) { proxy in
+                            ScrollView(.horizontal, showsIndicators: false){
                                 
                                 LazyHGrid(rows: rows, alignment: .bottom, spacing: 0) {
                                     
-                                    
-                                    Spacer()
-                                        .frame(width: Sizes.size(352)/2 - 2)
                                     // Width = 24644
                                     ForEach(0..<489) { id in
                                         
@@ -67,12 +66,25 @@ struct WidthRulerLB: View {
                                     
                                     
                                     VerticalLine(num: 550)
-                                    
-                                    Color.clear
-                                        .frame(width: Sizes.size(352)/2 - 2)
-                                    
+                                
+                                }
+                                .padding(.horizontal, Sizes.size(352)/2 - 2)
+                                .introspectScrollView { scrollView in
+                                    if oneTimeBool {
+                                        basicSurveyVM.weightRulerLBInOnAppear(scrollView, scrollContentWidth: &scrollContentWidth)
+                                        oneTimeBool = false
+                                    }
+                                }
+                                .background(GeometryReader {
+                                    Color.clear.preference(key: ViewOffsetKey.self,
+                                                           value: -$0.frame(in: .named("scroll")).origin.x)
+                                })
+                                .onPreferenceChange(ViewOffsetKey.self) { offset in
+                                    scrollOffset = offset
+//                                    onScroll(offset: offset)
                                 }
                             }
+                            .coordinateSpace(name: "scroll")
                             .onAppear {
                                 UIScrollView.appearance().bounces = false
                             }
@@ -112,8 +124,7 @@ struct WidthRulerLB: View {
         .frame(width: Sizes.size(352))
         
         .onChange(of: scrollOffset) { newValue in
-            let scrollContentWidth: CGFloat = 54768
-            let unit = scrollContentWidth/489
+            let unit = scrollContentWidth/490.0
             basicSurveyVM.weightInLB = scrollOffset/unit + 61
         }
         
@@ -126,7 +137,7 @@ struct WidthRulerLB_Previews: PreviewProvider {
     static let basicSurveyVM = SurveyVM()
     static var previews: some View {
         WidthRulerLB()
-            .previewDevice(PreviewDevice(rawValue: DeviceName.iPhone_14.rawValue))
+            .previewDevice(PreviewDevice(rawValue: DeviceName.iPhone_8_Plus.rawValue))
             .environmentObject(basicSurveyVM)
     }
 }

@@ -182,10 +182,16 @@ class SurveyVM: ObservableObject {
     }
     
     func weightRulerKGInOnAppear(_ scrollView: UIScrollView, scrollContentWidth: CGFloat) {
-        print("scrollContentWidth: ",  scrollContentWidth)
         let unit = scrollContentWidth/220
         let defaultScrollTo: CGFloat = CGFloat(weightInKG - 30) * unit
-        scrollView.contentOffset.x = defaultScrollTo + 300
+        scrollView.contentOffset.x = defaultScrollTo
+    }
+    
+    func weightRulerLBInOnAppear(_ scrollView: UIScrollView, scrollContentWidth: inout CGFloat) {
+        scrollContentWidth = scrollView.contentSize.width - scrollView.frame.width
+        let unit = scrollContentWidth/489.5
+        let defaultScrollTo: CGFloat = CGFloat(weightInLB - 61) * unit
+        scrollView.contentOffset.x = defaultScrollTo
     }
     
 }

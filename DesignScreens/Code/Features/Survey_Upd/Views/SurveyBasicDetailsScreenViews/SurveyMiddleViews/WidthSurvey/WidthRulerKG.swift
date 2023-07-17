@@ -12,7 +12,7 @@ struct WidthRulerKG: View {
     @EnvironmentObject var basicSurveyVM: SurveyVM
     
     @State var scrollOffset = CGFloat.zero
-    @State var scrollContentWidth: CGFloat = 0//24640 - Sizes.size(1) // Calculated Value
+    @State var scrollContentWidth: CGFloat = 24640 - Sizes.size(1) // Calculated Value
     @State private var oneTimeBool: Bool = true
     let rows = [
         GridItem(.fixed(50))
@@ -69,11 +69,7 @@ struct WidthRulerKG: View {
                                 .padding(.horizontal, Sizes.size(352)/2 - 2)
                                 .introspectScrollView { scrollView in
                                     if oneTimeBool {
-                                        let space = Sizes.size(352)/2 - 2
-                                        scrollContentWidth = scrollView.contentSize.width - scrollView.frame.width
-                                        let rulerContentWidth = scrollContentWidth - 2*space
-                                        let unit = rulerContentWidth/220.0
-                                        scrollView.contentOffset.x = unit*20
+                                        basicSurveyVM.weightRulerKGInOnAppear(scrollView, scrollContentWidth: scrollContentWidth)
                                         oneTimeBool = false
                                     }
                                 }
@@ -126,9 +122,7 @@ struct WidthRulerKG: View {
         .frame(width: Sizes.size(352))
         
         .onChange(of: scrollOffset) { newValue in
-            let space = Sizes.size(352)/2 - 2
-            let rulerContentWidth = scrollContentWidth - 2*space
-            let unit = rulerContentWidth/220.0
+            let unit = scrollContentWidth/220
             basicSurveyVM.weightInKG = scrollOffset/unit + 30
         }
         
@@ -141,7 +135,7 @@ struct WidthRulerKG_Previews: PreviewProvider {
     static let basicSurveyVM = SurveyVM()
     static var previews: some View {
         WidthRulerKG()
-            .previewDevice(PreviewDevice(rawValue: DeviceName.iPhone_14.rawValue))
+            .previewDevice(PreviewDevice(rawValue: DeviceName.iPhone_11.rawValue))
             .environmentObject(basicSurveyVM)
     }
 }
