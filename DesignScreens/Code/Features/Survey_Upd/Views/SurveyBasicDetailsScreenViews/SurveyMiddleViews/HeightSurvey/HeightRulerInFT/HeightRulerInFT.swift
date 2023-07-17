@@ -99,7 +99,7 @@ struct HeightRulerInFT: View { // Ruler - Линейка
                     }
                     .overlay(
                         HStack {
-                            Text("\(basicSurveyVM.heightInFT, specifier: "%.1f") ft")
+                            Text("\(basicSurveyVM.heightInFT).\(basicSurveyVM.heightInFTInch) ft")
                                 .foregroundColor(Color(hex: "#05FF00"))
                                 .font(.title.weight(.bold))
                         }
@@ -144,8 +144,32 @@ struct HeightRulerInFT: View { // Ruler - Линейка
         self.greenLineOffset = offset/5.2
         self.scrollingOffset = offset
         if rulerHeight != 0 {
-            let unit = rulerHeight/8.2
-            basicSurveyVM.heightInFT = abs(8.2 - Double(scrollingOffset/unit))
+            let unit = rulerHeight/60
+            let progress = scrollingOffset/unit
+            if progress == 0 {
+                basicSurveyVM.heightInFT = 8
+                basicSurveyVM.heightInFTInch = 2 - Int(progress)
+            }else if progress < 2 {
+                basicSurveyVM.heightInFT = 8
+                basicSurveyVM.heightInFTInch = 2 - Int(progress + 1)
+            }else if progress <= 14 {
+                basicSurveyVM.heightInFT = 7
+                basicSurveyVM.heightInFTInch = 12 - Int(progress - 2 + 1)
+            }else if progress <= 26 {
+                basicSurveyVM.heightInFT = 6
+                basicSurveyVM.heightInFTInch = 12 - Int(progress - 14 + 1)
+            }else if progress <= 38 {
+                basicSurveyVM.heightInFT = 5
+                basicSurveyVM.heightInFTInch = 12 - Int(progress -  26 + 1)
+            }else if progress <= 50 {
+                basicSurveyVM.heightInFT = 4
+                basicSurveyVM.heightInFTInch = 12 - Int(progress - 38 + 1)
+            }
+            else if progress <= 60 {
+                basicSurveyVM.heightInFT = 3
+                basicSurveyVM.heightInFTInch = 12 - Int(progress - 50 + 1)
+            }
+            
         }
     }
     

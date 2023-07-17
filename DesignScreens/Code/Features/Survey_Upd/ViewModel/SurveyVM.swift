@@ -33,7 +33,8 @@ class SurveyVM: ObservableObject {
     @Published var birthday = Date()
     @Published var measureInFT: Bool = false
     @Published var heightInCM: Int = 170
-    @Published var heightInFT: Double = 5.7
+    @Published var heightInFT: Int = 5
+    @Published var heightInFTInch: Int = 7
     @Published var measureInLB: Bool = false
     @Published var weightInKG: CGFloat = 50
     @Published var weightInLB: CGFloat = 100.0
@@ -161,9 +162,23 @@ class SurveyVM: ObservableObject {
     
     func heightRulerFTInOnAppear(_ scrollView: UIScrollView, rulerHeight: inout CGFloat) {
         rulerHeight = scrollView.contentSize.height - scrollView.frame.height
-        let unit = rulerHeight/8.2
-        let defaultScrollTo: CGFloat = abs(CGFloat(8.2 - heightInFT)) * unit
-        scrollView.contentOffset.y = defaultScrollTo
+        let unit = rulerHeight/60
+        
+        if heightInFT < 4 {
+            scrollView.contentOffset.y = 50*unit + CGFloat(10-heightInFTInch)*unit
+        }else if heightInFT < 5 {
+            scrollView.contentOffset.y = 38*unit + CGFloat(12-heightInFTInch)*unit
+        }else if heightInFT < 6 {
+            scrollView.contentOffset.y = 26*unit + CGFloat(12-heightInFTInch)*unit
+        }else if heightInFT < 7 {
+            scrollView.contentOffset.y = 14*unit + CGFloat(12-heightInFTInch)*unit
+        }else if heightInFT < 8 {
+            scrollView.contentOffset.y = 2*unit + CGFloat(12-heightInFTInch)*unit
+        }else {
+            scrollView.contentOffset.y = CGFloat(2-heightInFTInch)*unit
+        }
+        
+        
     }
     
     func weightRulerKGInOnAppear(_ scrollView: UIScrollView, scrollContentWidth: CGFloat) {
