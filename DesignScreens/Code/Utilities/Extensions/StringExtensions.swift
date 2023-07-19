@@ -15,3 +15,10 @@ extension String {
         return String(format: self.localizable, arguments: arguments)
     }
 }
+
+extension String: Identifiable {
+    public typealias ID = Int
+    public var id: Int {
+        return hash
+    }
+}
