@@ -24,23 +24,13 @@ struct SurveyMiddleView: View {
                 WidthSurvey()
             case 6:
                 GoalsSurvey()
+            case 7:
+                FocusAreasSurvey()
+            case 8:
+                BodyShapeSurvey()
             default: ZStack{}
             }
-            
-            // made this views seperate from switch cause could'nt figure out yet how to save scroll position of views
-//            HeightSurvey()
-//                .opacity(basicSurveyVM.surveyProgress == 4 ? 1 : 0)
-//                .frame(height: basicSurveyVM.surveyProgress == 4 ? nil : 0)
-//                .clipped()
-//                .transition(.opacity)
-//            
-//            WidthSurvey()
-//                .opacity(basicSurveyVM.surveyProgress == 5 ? 1 : 0)
-//                .frame(height: basicSurveyVM.surveyProgress == 5 ? nil : 0)
-//                .clipped()
-//                .transition(.opacity)
-            
-            
+                        
         }
         
     }

@@ -29,7 +29,7 @@ struct GenderSurvey: View {
                         .frame(width: 5)
                         .id(3)
                     
-                    GenderImage(image: "female_img", id: 2, genderName: "Female", selectedImage: basicSurveyVM.femaleSelectedImage, scale: basicSurveyVM.femaleImagescale)
+                    GenderImage(image: "female_body", id: 2, genderName: "Female", selectedImage: basicSurveyVM.femaleSelectedImage, scale: basicSurveyVM.femaleImagescale)
                         .onTapGesture {
                             basicSurveyVM.chooseFemale(proxy: scrollProxy)
                         }

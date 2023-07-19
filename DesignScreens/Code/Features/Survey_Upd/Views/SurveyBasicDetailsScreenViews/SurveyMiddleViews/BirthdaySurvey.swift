@@ -12,31 +12,31 @@ struct BirthdaySurvey: View {
     @EnvironmentObject var basicSurveyVM: SurveyVM
     
     var body: some View {
-        
-        VStack(spacing: 20){
-            HStack(spacing: 23){
-                Image("birthday_icon")
+        ScrollView(.vertical, showsIndicators: false) {
+            VStack(spacing: 20){
+                HStack(spacing: 23){
+                    Image("birthday_icon")
+                    
+                    Text("We will adjust our workouts to best suit your age, give rewards for your progress, and more!")
+                        .font(.subheadline)
+                        .foregroundColor(.white)
+                        .lineLimit(5)
+                }
+                .padding(.vertical)
+                .padding(.horizontal)
+                .background(Color(hex: "2D2D2D").opacity(0.5))
+                .cornerRadius(30)
                 
-                Text("We will adjust our workouts to best suit your age, give rewards for your progress, and more!")
-                    .font(.subheadline)
+                
+                DatePicker("select_date".localizable, selection: $basicSurveyVM.birthday, displayedComponents: .date)
                     .foregroundColor(.white)
-                    .lineLimit(5)
+                    .environment(\.colorScheme, .dark)
+                    .labelsHidden()
+                    .datePickerStyle(WheelDatePickerStyle())
             }
-            .padding(.vertical)
-            .padding(.horizontal)
-            .background(Color(hex: "2D2D2D").opacity(0.5))
-            .cornerRadius(30)
-            
-            
-            DatePicker("select_date".localizable, selection: $basicSurveyVM.birthday, displayedComponents: .date)
-                .foregroundColor(.white)
-                .environment(\.colorScheme, .dark)
-                .labelsHidden()
-                .datePickerStyle(WheelDatePickerStyle())
+            .padding(.top)
+            .padding(.horizontal, 40)
         }
-        .padding(.top)
-        .padding(.horizontal, 40)
-        
         .onAppear(perform: {
             basicSurveyVM.checker()
         })

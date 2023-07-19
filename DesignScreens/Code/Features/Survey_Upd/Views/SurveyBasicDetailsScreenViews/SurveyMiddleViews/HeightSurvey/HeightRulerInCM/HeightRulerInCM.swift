@@ -96,7 +96,7 @@ struct HeightRulerInCM: View { // Ruler - Линейка
             
             HStack{ // Human Image
                 if basicSurveyVM.gender == .female {
-                    Image("female_img")
+                    Image("female_body")
                         .resizable()
                         .scaledToFit()
                         .frame(width: Sizes.size(145), height: Sizes.size(420))

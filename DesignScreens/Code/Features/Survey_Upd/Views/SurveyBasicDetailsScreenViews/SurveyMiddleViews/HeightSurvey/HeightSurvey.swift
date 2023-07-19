@@ -12,21 +12,22 @@ struct HeightSurvey: View {
     @EnvironmentObject var basicSurveyVM: SurveyVM
     
     var body: some View {
-        VStack(spacing: 10){
-            Toggle("", isOn: $basicSurveyVM.measureInFT)
-                .toggleStyle(SurveyToggleStyle(unit1: "cm", unit2: "ft"))
-                .padding()
-            
-            if basicSurveyVM.measureInFT {
-                HeightRulerInFT()
-                    .clipped()
-            }else{
-                HeightRulerInCM()
-                    .clipped()
+        ScrollView(.vertical, showsIndicators: false) {
+            VStack(spacing: 10){
+                Toggle("", isOn: $basicSurveyVM.measureInFT)
+                    .toggleStyle(SurveyToggleStyle(unit1: "cm", unit2: "ft"))
+                    .padding()
+                
+                if basicSurveyVM.measureInFT {
+                    HeightRulerInFT()
+                        .clipped()
+                }else{
+                    HeightRulerInCM()
+                        .clipped()
+                }
+                
             }
-            
         }
-        
         .onAppear {
             basicSurveyVM.checker()
         }

@@ -23,10 +23,12 @@ class SurveyVM: ObservableObject {
     /// 4 - Height
     /// 5 - Width
     /// 6 - Goals
+    /// 7 - Focus Areas
+    /// 8 - Current Body Shape
     
     @Published var screensProgress: Int = 5
     @Published var isBack: Bool = false
-    @Published var surveyProgress: Int = 5
+    @Published var surveyProgress: Int = 7
     @Published var nextEnabled: Bool = false
     @Published var userName: String = "Vmir"
     @Published var gender: Gender = .other
@@ -38,7 +40,8 @@ class SurveyVM: ObservableObject {
     @Published var measureInLB: Bool = false
     @Published var weightInKG: CGFloat = 50
     @Published var weightInLB: CGFloat = 100.0
-    @Published var selectedGoalIndex: Int = 0
+    @Published var selectedGoalIndex: Int = 1
+    @Published var selectedFocusAreas: [FocusArea] = []
     
     
     init() {
@@ -109,6 +112,7 @@ class SurveyVM: ObservableObject {
         if surveyProgress < sectionSurveyCount.reduce(0, +) { //Sum
             withAnimation {
                 surveyProgress += 1
+                checker()
             }
         }
     }
@@ -137,6 +141,10 @@ class SurveyVM: ObservableObject {
             nextEnabled = true
         case 5:
             nextEnabled = true
+        case 6:
+            nextEnabled = true
+        case 7:
+            focusAreasChecker()
         default: print("")
         }
     }
@@ -151,6 +159,10 @@ class SurveyVM: ObservableObject {
     
     func birthdayChecker() {
         nextEnabled = birthday != Date()
+    }
+    
+    func focusAreasChecker() {
+        nextEnabled = selectedFocusAreas.count > 0
     }
     
     func heightRulerCMInOnAppear(_ scrollView: UIScrollView, rulerHeight: inout CGFloat) {
@@ -243,6 +255,7 @@ extension SurveyVM {
                 proxy.scrollTo(3, anchor: .center)
             }
         }
+        selectedFocusAreas.removeAll()
     }
     
     func chooseFemale(proxy: ScrollViewProxy) {
@@ -258,6 +271,7 @@ extension SurveyVM {
                 proxy.scrollTo(3, anchor: .center)
             }
         }
+        selectedFocusAreas.removeAll()
     }
     
     func chooseGenderOthers() {
@@ -265,6 +279,7 @@ extension SurveyVM {
             gender = .other
         }
         nextSurvey()
+        selectedFocusAreas.removeAll()
     }
 }
 

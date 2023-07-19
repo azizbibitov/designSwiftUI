@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0400B5EB2A678F50004BB7B9 /* MaleFocusAreasSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400B5EA2A678F50004BB7B9 /* MaleFocusAreasSurvey.swift */; };
+		0400B60A2A67AB13004BB7B9 /* BodyShapeSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400B6092A67AB13004BB7B9 /* BodyShapeSurvey.swift */; };
 		0413646F2A5DADB00096AAC1 /* WidthSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413646E2A5DADB00096AAC1 /* WidthSurvey.swift */; };
 		041364712A5F09010096AAC1 /* BMIDefinerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041364702A5F09010096AAC1 /* BMIDefinerView.swift */; };
 		041364732A5F0BAD0096AAC1 /* WidthRulerKG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041364722A5F0BAD0096AAC1 /* WidthRulerKG.swift */; };
@@ -25,6 +27,7 @@
 		043FC1D82A6098FF00CE9E50 /* WidthRulerLB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FC1D72A6098FF00CE9E50 /* WidthRulerLB.swift */; };
 		044EF1252A5D0D1500343DBD /* HeightRulerInFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EF1242A5D0D1400343DBD /* HeightRulerInFT.swift */; };
 		044EF1272A5D19D700343DBD /* RulerPartViewForFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EF1262A5D19D700343DBD /* RulerPartViewForFT.swift */; };
+		04548ACE2A6675960011BB31 /* FemaleFocusAreasSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04548ACD2A6675960011BB31 /* FemaleFocusAreasSurvey.swift */; };
 		04663D9C2A58B4F8009BF916 /* HeightRulerInCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663D9B2A58B4F8009BF916 /* HeightRulerInCM.swift */; };
 		04663D9C2A60C2B100169000 /* SurveyUpdateMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663D9B2A60C2B100169000 /* SurveyUpdateMain.swift */; };
 		04663D9E2A61C8CF00169000 /* LifestyleAndGoalsLaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663D9D2A61C8CF00169000 /* LifestyleAndGoalsLaunchScreen.swift */; };
@@ -64,6 +67,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0400B5EA2A678F50004BB7B9 /* MaleFocusAreasSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaleFocusAreasSurvey.swift; sourceTree = "<group>"; };
+		0400B6092A67AB13004BB7B9 /* BodyShapeSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyShapeSurvey.swift; sourceTree = "<group>"; };
 		0413646E2A5DADB00096AAC1 /* WidthSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthSurvey.swift; sourceTree = "<group>"; };
 		041364702A5F09010096AAC1 /* BMIDefinerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIDefinerView.swift; sourceTree = "<group>"; };
 		041364722A5F0BAD0096AAC1 /* WidthRulerKG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthRulerKG.swift; sourceTree = "<group>"; };
@@ -83,6 +88,7 @@
 		043FC1D72A6098FF00CE9E50 /* WidthRulerLB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthRulerLB.swift; sourceTree = "<group>"; };
 		044EF1242A5D0D1400343DBD /* HeightRulerInFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightRulerInFT.swift; sourceTree = "<group>"; };
 		044EF1262A5D19D700343DBD /* RulerPartViewForFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerPartViewForFT.swift; sourceTree = "<group>"; };
+		04548ACD2A6675960011BB31 /* FemaleFocusAreasSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FemaleFocusAreasSurvey.swift; sourceTree = "<group>"; };
 		04663D9B2A58B4F8009BF916 /* HeightRulerInCM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightRulerInCM.swift; sourceTree = "<group>"; };
 		04663D9B2A60C2B100169000 /* SurveyUpdateMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyUpdateMain.swift; sourceTree = "<group>"; };
 		04663D9D2A61C8CF00169000 /* LifestyleAndGoalsLaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifestyleAndGoalsLaunchScreen.swift; sourceTree = "<group>"; };
@@ -136,6 +142,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0400B6082A67A54F004BB7B9 /* BodyShapeSurvey */ = {
+			isa = PBXGroup;
+			children = (
+				0400B6092A67AB13004BB7B9 /* BodyShapeSurvey.swift */,
+			);
+			path = BodyShapeSurvey;
+			sourceTree = "<group>";
+		};
 		0413646D2A5DAD6B0096AAC1 /* WidthSurvey */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +198,15 @@
 				044EF1262A5D19D700343DBD /* RulerPartViewForFT.swift */,
 			);
 			path = HeightRulerInFT;
+			sourceTree = "<group>";
+		};
+		04548ACC2A6675710011BB31 /* FocusAreasSurvey */ = {
+			isa = PBXGroup;
+			children = (
+				04548ACD2A6675960011BB31 /* FemaleFocusAreasSurvey.swift */,
+				0400B5EA2A678F50004BB7B9 /* MaleFocusAreasSurvey.swift */,
+			);
+			path = FocusAreasSurvey;
 			sourceTree = "<group>";
 		};
 		04663D9A2A60C26A00169000 /* ScreensNavigation */ = {
@@ -418,6 +441,8 @@
 				04B5E7D72A58AA2800EEAFB9 /* HeightSurvey */,
 				0413646D2A5DAD6B0096AAC1 /* WidthSurvey */,
 				04663DA22A61E2C500169000 /* GoalsSurvey */,
+				04548ACC2A6675710011BB31 /* FocusAreasSurvey */,
+				0400B6082A67A54F004BB7B9 /* BodyShapeSurvey */,
 			);
 			path = SurveyMiddleViews;
 			sourceTree = "<group>";
@@ -565,12 +590,14 @@
 				043CF3602A5206AD00ADD6C1 /* SurveyHeader.swift in Sources */,
 				04B5E79B2A57286B00EEAFB9 /* BirthdaySurvey.swift in Sources */,
 				04B5E7972A5718B000EEAFB9 /* GenderImage.swift in Sources */,
+				0400B60A2A67AB13004BB7B9 /* BodyShapeSurvey.swift in Sources */,
 				0413646F2A5DADB00096AAC1 /* WidthSurvey.swift in Sources */,
 				0429C6582A51091A00846DFC /* BasicDetailsLaunchScreen.swift in Sources */,
 				04663D9C2A58B4F8009BF916 /* HeightRulerInCM.swift in Sources */,
 				04C2D64F2A50C61E00E3B0C1 /* Sizes.swift in Sources */,
 				04A290C62A533B7D0029C8D5 /* SurveyTitle.swift in Sources */,
 				044EF1272A5D19D700343DBD /* RulerPartViewForFT.swift in Sources */,
+				0400B5EB2A678F50004BB7B9 /* MaleFocusAreasSurvey.swift in Sources */,
 				043CF3652A520C1200ADD6C1 /* SurveyVM.swift in Sources */,
 				041364752A5F1A520096AAC1 /* VerticalLine.swift in Sources */,
 				047086A42A5597400031367E /* DynamicFontSizeModifier.swift in Sources */,
@@ -601,6 +628,7 @@
 				04C2D62F2A50A73F00E3B0C1 /* DesignScreensApp.swift in Sources */,
 				04C2D6462A50B4D900E3B0C1 /* SurveySecondOnboardingScreen.swift in Sources */,
 				04663DA12A58E4DB009BF916 /* ViewOffsetKeyPreferenceKey.swift in Sources */,
+				04548ACE2A6675960011BB31 /* FemaleFocusAreasSurvey.swift in Sources */,
 				04B5E7992A571FB300EEAFB9 /* SurveyBottomView.swift in Sources */,
 				04C663052A55F15700BF6E84 /* GenderSurvey.swift in Sources */,
 				04663D9E2A61C8CF00169000 /* LifestyleAndGoalsLaunchScreen.swift in Sources */,
