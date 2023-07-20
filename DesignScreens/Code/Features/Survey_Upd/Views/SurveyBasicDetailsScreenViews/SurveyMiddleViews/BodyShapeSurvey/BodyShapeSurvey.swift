@@ -28,7 +28,7 @@ struct BodyShapeSurvey: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(spacing: 30){
-                
+                Spacer()
                 SnapCarousel(index: $currentIndex, items: bodyShapes) { imageName  in
                     VStack {
                         Rectangle()
@@ -67,7 +67,7 @@ struct BodyShapeSurvey: View {
                 
                 
                 ApproximateBodyFatView()
-                
+                Spacer()
             }
         }
         .onDisappear {

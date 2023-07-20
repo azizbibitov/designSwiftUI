@@ -14,6 +14,7 @@ struct HeightSurvey: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(spacing: 10){
+                Spacer()
                 Toggle("", isOn: $basicSurveyVM.measureInFT)
                     .toggleStyle(SurveyToggleStyle(unit1: "cm", unit2: "ft"))
                     .padding()
@@ -25,7 +26,7 @@ struct HeightSurvey: View {
                     HeightRulerInCM()
                         .clipped()
                 }
-                
+                Spacer()
             }
         }
         .onAppear {

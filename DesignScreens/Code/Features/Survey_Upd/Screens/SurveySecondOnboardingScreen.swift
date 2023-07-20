@@ -19,43 +19,44 @@ struct SurveySecondOnboardingScreen: View {
                 topRightLanuageBtn
                 Spacer()
             }
-            
-            VStack {
-                Image("personal-couch")
-                    .resizable(resizingMode: .stretch)
-                    .frame(width: Sizes.size(319), height: Sizes.size(358))
-                    .padding(.top, 40)
-                
-                Spacer()
-                
-                VStack(alignment: .leading, spacing: 0) {
-             
-                    Text("_hi_".localizable)
-                        .font(.largeTitle.weight(.bold))
-                        .foregroundColor(.white)
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack {
+                    Image("personal-couch")
+                        .resizable(resizingMode: .stretch)
+                        .frame(width: Sizes.size(319), height: Sizes.size(358))
+                        .padding(.top, 40)
                     
-                    Text("I am your personal coach. Please answer some question to get personalized plans.")
-                        .font(.title2)
-                        .foregroundColor(.white)
+                    Spacer()
+                    
+                    VStack(alignment: .leading, spacing: 0) {
+                        
+                        Text("_hi_".localizable)
+                            .font(.largeTitle.weight(.bold))
+                            .foregroundColor(.white)
+                        
+                        Text("I am your personal coach. Please answer some question to get personalized plans.")
+                            .font(.title2)
+                            .foregroundColor(.white)
+                    }
+                    .padding(.horizontal, 45).padding(.top, 10).padding(.bottom, 30)
+                    .background(Rectangle().fill(Color(red: 0.17, green: 0.17, blue: 0.17).opacity(0.5)).cornerRadius(30))
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        print("I’M READY")
+                        basicSurveyVM.iamReadyBtnClick()
+                    }, label: {
+                        Text("I’M READY")
+                            .modifier(BtnText(enabled: $nextBtnEnabled))
+                    })
+                    .padding(.horizontal, 45)
+                    
+                    Spacer()
+                    
+                    HaveAccountView()
+                        .padding(.bottom, 55)
                 }
-                .padding(.horizontal, 45).padding(.top, 10).padding(.bottom, 30)
-                .background(Rectangle().fill(Color(red: 0.17, green: 0.17, blue: 0.17).opacity(0.5)).cornerRadius(30))
-                
-                Spacer()
-                
-                Button(action: {
-                    print("I’M READY")
-                    basicSurveyVM.iamReadyBtnClick()
-                }, label: {
-                    Text("I’M READY")
-                        .modifier(BtnText(enabled: $nextBtnEnabled))
-                })
-                .padding(.horizontal, 45)
-                
-                Spacer()
-                
-                HaveAccountView()
-                    .padding(.bottom, 55)
             }
         }
     }

@@ -14,6 +14,7 @@ struct BirthdaySurvey: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(spacing: 20){
+                Spacer()
                 HStack(spacing: 23){
                     Image("birthday_icon")
                     
@@ -33,6 +34,7 @@ struct BirthdaySurvey: View {
                     .environment(\.colorScheme, .dark)
                     .labelsHidden()
                     .datePickerStyle(WheelDatePickerStyle())
+                Spacer()
             }
             .padding(.top)
             .padding(.horizontal, 40)

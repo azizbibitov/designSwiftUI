@@ -56,3 +56,4 @@
 //new
 "focus_areas_asks" = "What are your focus areas?";
 "body_shape_asks" = "What is your current body shape?";
+"physical_pain_experience_asks" = "Have you experienced physical pain within 4 weeks?";

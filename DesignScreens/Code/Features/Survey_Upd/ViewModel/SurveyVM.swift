@@ -25,10 +25,11 @@ class SurveyVM: ObservableObject {
     /// 6 - Goals
     /// 7 - Focus Areas
     /// 8 - Current Body Shape
+    /// 9 - Physical Pain Experience
     
     @Published var screensProgress: Int = 5
     @Published var isBack: Bool = false
-    @Published var surveyProgress: Int = 8
+    @Published var surveyProgress: Int = 9
     @Published var nextEnabled: Bool = false
     @Published var userName: String = "Vmir"
     @Published var gender: Gender = .other
@@ -43,6 +44,7 @@ class SurveyVM: ObservableObject {
     @Published var selectedGoalIndex: Int = 1
     @Published var selectedFocusAreas: [FocusArea] = []
     @Published var bodyShapeIndex: Int = 0
+    @Published var hasPainExperience: Bool = false
     
     init() {
         let formatter = DateFormatter()
@@ -147,6 +149,8 @@ class SurveyVM: ObservableObject {
             focusAreasChecker()
         case 8:
             nextEnabled = true
+        case 9:
+            nextEnabled = false
         default: print("")
         }
     }

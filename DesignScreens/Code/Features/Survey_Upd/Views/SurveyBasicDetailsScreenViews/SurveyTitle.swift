@@ -19,11 +19,12 @@ struct SurveyTitle: View {
         ["main_goals_asks", "", ""],
         ["focus_areas_asks", "", ""],
         ["body_shape_asks", "", ""],
+        ["physical_pain_experience_asks", "", ""],
     ]
     
     var title1Show: Bool {
         switch basicSurveyVM.surveyProgress {
-        case 1, 2, 6, 7, 8:
+        case 1, 2, 6, 7, 8, 9:
             return true
         default: return false
         }
@@ -31,7 +32,7 @@ struct SurveyTitle: View {
     
     var title2Show: Bool {
         switch basicSurveyVM.surveyProgress {
-        case 1, 6, 7, 8:
+        case 1, 6, 7, 8, 9:
             return false
         default: return true
         }

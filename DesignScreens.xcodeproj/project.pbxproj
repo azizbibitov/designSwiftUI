@@ -10,6 +10,7 @@
 		0400B5EB2A678F50004BB7B9 /* MaleFocusAreasSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400B5EA2A678F50004BB7B9 /* MaleFocusAreasSurvey.swift */; };
 		0400B60A2A67AB13004BB7B9 /* BodyShapeSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400B6092A67AB13004BB7B9 /* BodyShapeSurvey.swift */; };
 		0400B6182A680077004BB7B9 /* SnapCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400B6172A680077004BB7B9 /* SnapCarousel.swift */; };
+		0400B61E2A68947D004BB7B9 /* PhysicalPainExperienceSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400B61D2A68947D004BB7B9 /* PhysicalPainExperienceSurvey.swift */; };
 		0413646F2A5DADB00096AAC1 /* WidthSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413646E2A5DADB00096AAC1 /* WidthSurvey.swift */; };
 		041364712A5F09010096AAC1 /* BMIDefinerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041364702A5F09010096AAC1 /* BMIDefinerView.swift */; };
 		041364732A5F0BAD0096AAC1 /* WidthRulerKG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041364722A5F0BAD0096AAC1 /* WidthRulerKG.swift */; };
@@ -70,6 +71,7 @@
 		0400B5EA2A678F50004BB7B9 /* MaleFocusAreasSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaleFocusAreasSurvey.swift; sourceTree = "<group>"; };
 		0400B6092A67AB13004BB7B9 /* BodyShapeSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyShapeSurvey.swift; sourceTree = "<group>"; };
 		0400B6172A680077004BB7B9 /* SnapCarousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapCarousel.swift; sourceTree = "<group>"; };
+		0400B61D2A68947D004BB7B9 /* PhysicalPainExperienceSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalPainExperienceSurvey.swift; sourceTree = "<group>"; };
 		0413646E2A5DADB00096AAC1 /* WidthSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthSurvey.swift; sourceTree = "<group>"; };
 		041364702A5F09010096AAC1 /* BMIDefinerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIDefinerView.swift; sourceTree = "<group>"; };
 		041364722A5F0BAD0096AAC1 /* WidthRulerKG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthRulerKG.swift; sourceTree = "<group>"; };
@@ -443,6 +445,7 @@
 				04663DA22A61E2C500169000 /* GoalsSurvey */,
 				04548ACC2A6675710011BB31 /* FocusAreasSurvey */,
 				0400B6082A67A54F004BB7B9 /* BodyShapeSurvey */,
+				0400B61D2A68947D004BB7B9 /* PhysicalPainExperienceSurvey.swift */,
 			);
 			path = SurveyMiddleViews;
 			sourceTree = "<group>";
@@ -605,6 +608,7 @@
 				04C2D6482A50B56A00E3B0C1 /* HaveAccountView.swift in Sources */,
 				0429C65A2A510A4800846DFC /* Triangle.swift in Sources */,
 				04663D9C2A60C2B100169000 /* SurveyUpdateMain.swift in Sources */,
+				0400B61E2A68947D004BB7B9 /* PhysicalPainExperienceSurvey.swift in Sources */,
 				041364772A5F1EE60096AAC1 /* WidthRulerPart.swift in Sources */,
 				047086A02A5579BE0031367E /* ProportionallyColoredRectangle.swift in Sources */,
 				04663DA52A58E598009BF916 /* RulerPartViewForCM.swift in Sources */,

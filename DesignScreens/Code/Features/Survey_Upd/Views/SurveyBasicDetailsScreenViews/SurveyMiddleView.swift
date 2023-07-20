@@ -28,9 +28,11 @@ struct SurveyMiddleView: View {
                 FocusAreasSurvey()
             case 8:
                 BodyShapeSurvey()
+            case 9:
+                PhysicalPainExperienceSurvey()
             default: ZStack{}
             }
-                        
+            
         }
         
     }

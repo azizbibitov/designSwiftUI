@@ -14,7 +14,7 @@ struct WidthSurvey: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(spacing: Sizes.size(30)){
-                
+                Spacer()
                 Toggle("", isOn: $basicSurveyVM.measureInLB)
                     .toggleStyle(SurveyToggleStyle(unit1: "kg", unit2: "lb"))
                     .padding()
@@ -36,6 +36,7 @@ struct WidthSurvey: View {
                 .clipped()
                 
                 BMIDefinerView()
+                Spacer()
             }
         }
         .onAppear {
