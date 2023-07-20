@@ -29,6 +29,7 @@
 		044EF1252A5D0D1500343DBD /* HeightRulerInFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EF1242A5D0D1400343DBD /* HeightRulerInFT.swift */; };
 		044EF1272A5D19D700343DBD /* RulerPartViewForFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EF1262A5D19D700343DBD /* RulerPartViewForFT.swift */; };
 		0452F8752A694F06002F3897 /* DiagnoseSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452F8742A694F06002F3897 /* DiagnoseSurvey.swift */; };
+		0452F87B2A695774002F3897 /* ActivityLevelSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452F87A2A695774002F3897 /* ActivityLevelSurvey.swift */; };
 		04548ACE2A6675960011BB31 /* FemaleFocusAreasSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04548ACD2A6675960011BB31 /* FemaleFocusAreasSurvey.swift */; };
 		04663D9C2A58B4F8009BF916 /* HeightRulerInCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663D9B2A58B4F8009BF916 /* HeightRulerInCM.swift */; };
 		04663D9C2A60C2B100169000 /* SurveyUpdateMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663D9B2A60C2B100169000 /* SurveyUpdateMain.swift */; };
@@ -92,6 +93,7 @@
 		044EF1242A5D0D1400343DBD /* HeightRulerInFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightRulerInFT.swift; sourceTree = "<group>"; };
 		044EF1262A5D19D700343DBD /* RulerPartViewForFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerPartViewForFT.swift; sourceTree = "<group>"; };
 		0452F8742A694F06002F3897 /* DiagnoseSurvey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagnoseSurvey.swift; sourceTree = "<group>"; };
+		0452F87A2A695774002F3897 /* ActivityLevelSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLevelSurvey.swift; sourceTree = "<group>"; };
 		04548ACD2A6675960011BB31 /* FemaleFocusAreasSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FemaleFocusAreasSurvey.swift; sourceTree = "<group>"; };
 		04663D9B2A58B4F8009BF916 /* HeightRulerInCM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightRulerInCM.swift; sourceTree = "<group>"; };
 		04663D9B2A60C2B100169000 /* SurveyUpdateMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyUpdateMain.swift; sourceTree = "<group>"; };
@@ -449,6 +451,7 @@
 				0400B6082A67A54F004BB7B9 /* BodyShapeSurvey */,
 				0400B61D2A68947D004BB7B9 /* PhysicalPainExperienceSurvey.swift */,
 				0452F8742A694F06002F3897 /* DiagnoseSurvey.swift */,
+				0452F87A2A695774002F3897 /* ActivityLevelSurvey.swift */,
 			);
 			path = SurveyMiddleViews;
 			sourceTree = "<group>";
@@ -595,6 +598,7 @@
 				044EF1252A5D0D1500343DBD /* HeightRulerInFT.swift in Sources */,
 				047086A22A5595D20031367E /* SurveyMiddleView.swift in Sources */,
 				043CF3602A5206AD00ADD6C1 /* SurveyHeader.swift in Sources */,
+				0452F87B2A695774002F3897 /* ActivityLevelSurvey.swift in Sources */,
 				04B5E79B2A57286B00EEAFB9 /* BirthdaySurvey.swift in Sources */,
 				04B5E7972A5718B000EEAFB9 /* GenderImage.swift in Sources */,
 				0400B60A2A67AB13004BB7B9 /* BodyShapeSurvey.swift in Sources */,
