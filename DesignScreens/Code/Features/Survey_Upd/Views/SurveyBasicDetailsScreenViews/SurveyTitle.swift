@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SurveyTitle: View {
+    
     @EnvironmentObject var basicSurveyVM: SurveyVM
     
     let surveyTitles: [[String]] = [
@@ -20,11 +21,12 @@ struct SurveyTitle: View {
         ["focus_areas_asks", "", ""],
         ["body_shape_asks", "", ""],
         ["physical_pain_experience_asks", "", ""],
+        ["diagnose_asks", "", ""],
     ]
     
     var title1Show: Bool {
         switch basicSurveyVM.surveyProgress {
-        case 1, 2, 6, 7, 8, 9:
+        case 1, 2, 6, 7, 8, 9, 10:
             return true
         default: return false
         }
@@ -32,7 +34,7 @@ struct SurveyTitle: View {
     
     var title2Show: Bool {
         switch basicSurveyVM.surveyProgress {
-        case 1, 6, 7, 8, 9:
+        case 1, 6, 7, 8, 9, 10:
             return false
         default: return true
         }

@@ -30,6 +30,8 @@ struct SurveyMiddleView: View {
                 BodyShapeSurvey()
             case 9:
                 PhysicalPainExperienceSurvey()
+            case 10:
+                DiagnoseSurvey()
             default: ZStack{}
             }
             

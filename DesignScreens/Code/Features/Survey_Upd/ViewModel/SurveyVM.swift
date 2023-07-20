@@ -26,10 +26,11 @@ class SurveyVM: ObservableObject {
     /// 7 - Focus Areas
     /// 8 - Current Body Shape
     /// 9 - Physical Pain Experience
+    /// 10 - Diagnose
     
     @Published var screensProgress: Int = 5
     @Published var isBack: Bool = false
-    @Published var surveyProgress: Int = 9
+    @Published var surveyProgress: Int = 10
     @Published var nextEnabled: Bool = false
     @Published var userName: String = "Vmir"
     @Published var gender: Gender = .other
@@ -151,6 +152,8 @@ class SurveyVM: ObservableObject {
             nextEnabled = true
         case 9:
             nextEnabled = false
+        case 10:
+            nextEnabled = true
         default: print("")
         }
     }
