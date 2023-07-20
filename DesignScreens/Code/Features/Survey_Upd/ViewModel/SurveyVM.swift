@@ -11,12 +11,15 @@ import SwiftUI
 class SurveyVM: ObservableObject {
     
     /// Screen Progresses
-    ///  3 - SurveySecondOnboardingScreen
-    ///  4 - BasicDetailsLaunchScreen
-    ///  5 - SurveysScreen
-    ///  6 - LifestyleAndGoalsLaunchScreen
-    ///  7 - RoutinesAndSyncLaunchScreen
-   
+    /// 1 - SignInScreen
+    /// 2 - SurveyFirstOnboardingScreen
+    /// 3 - SurveySecondOnboardingScreen
+    /// 4 - BasicDetailsLaunchScreen
+    /// 5 - SurveysScreen
+    /// 6 - LifestyleAndGoalsLaunchScreen
+    /// 7 - RoutinesAndSyncLaunchScreen
+    /// 8 - SignUpScreen
+    
     /// Survey Progresses
     /// 1 - Name
     /// 2 - Gender
@@ -31,9 +34,9 @@ class SurveyVM: ObservableObject {
     /// 11 - Activity Level
     /// 12 - Workout frequency
     
-    @Published var screensProgress: Int = 5
+    @Published var screensProgress: Int = 1
     @Published var isBack: Bool = false
-    @Published var surveyProgress: Int = 12
+    @Published var surveyProgress: Int = 1
     @Published var nextEnabled: Bool = false
     @Published var userName: String = "Vmir"
     @Published var gender: Gender = .other
@@ -97,9 +100,19 @@ class SurveyVM: ObservableObject {
         }
     }
     
+    func startSurveyBtnClick() {
+        isBack = false
+        screensProgress = 3
+    }
+    
+    func signInBtnClick() {
+        isBack = false
+        screensProgress = 2
+    }
+    
     func nextPressed() {
         if nextEnabled {
-            
+            isBack = false
             switch surveyProgress {
             case 5:
                 screensProgress = 6
@@ -113,6 +126,9 @@ class SurveyVM: ObservableObject {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
                     self.screensProgress = 5
                 }
+            case 12:
+                screensProgress = 8
+                surveyProgress += 1
             default:
                 nextSurvey()
             }
@@ -132,14 +148,22 @@ class SurveyVM: ObservableObject {
     }
     
     func prevSurvey(){
-        if surveyProgress != 1 {
-            withAnimation {
-                surveyProgress -= 1
-            }
-        }else{
-            screensProgress = 3
+        if screensProgress == 8 {
+            surveyProgress -= 1
+            screensProgress = 5
             isBack = true
+        }else{
+            switch surveyProgress {
+            case 1:
+                screensProgress = 3
+                isBack = true
+            default:
+                withAnimation {
+                    surveyProgress -= 1
+                }
+            }
         }
+     
         checker()
     }
     

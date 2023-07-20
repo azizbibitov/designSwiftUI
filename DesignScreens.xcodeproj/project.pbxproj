@@ -26,6 +26,7 @@
 		043CF36B2A5229A500ADD6C1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 043CF36D2A5229A500ADD6C1 /* Localizable.strings */; };
 		043CF3702A522AD500ADD6C1 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043CF36F2A522AD500ADD6C1 /* StringExtensions.swift */; };
 		043FC1D82A6098FF00CE9E50 /* WidthRulerLB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FC1D72A6098FF00CE9E50 /* WidthRulerLB.swift */; };
+		0449436B2A69C87B00F3D0A8 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0449436A2A69C87B00F3D0A8 /* SignUpScreen.swift */; };
 		044EF1252A5D0D1500343DBD /* HeightRulerInFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EF1242A5D0D1400343DBD /* HeightRulerInFT.swift */; };
 		044EF1272A5D19D700343DBD /* RulerPartViewForFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EF1262A5D19D700343DBD /* RulerPartViewForFT.swift */; };
 		0452F8752A694F06002F3897 /* DiagnoseSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452F8742A694F06002F3897 /* DiagnoseSurvey.swift */; };
@@ -33,6 +34,8 @@
 		0452F87F2A698F32002F3897 /* RoutinesAndSyncLaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452F87E2A698F32002F3897 /* RoutinesAndSyncLaunchScreen.swift */; };
 		0452F8812A699DCC002F3897 /* WorkoutFrequencySurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452F8802A699DCC002F3897 /* WorkoutFrequencySurvey.swift */; };
 		04548ACE2A6675960011BB31 /* FemaleFocusAreasSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04548ACD2A6675960011BB31 /* FemaleFocusAreasSurvey.swift */; };
+		045A95A92A69B14E009C943C /* SurveyFirstOnboardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A95A82A69B14E009C943C /* SurveyFirstOnboardingScreen.swift */; };
+		045A95AB2A69B5C2009C943C /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A95AA2A69B5C2009C943C /* SignInScreen.swift */; };
 		04663D9C2A58B4F8009BF916 /* HeightRulerInCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663D9B2A58B4F8009BF916 /* HeightRulerInCM.swift */; };
 		04663D9C2A60C2B100169000 /* SurveyUpdateMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663D9B2A60C2B100169000 /* SurveyUpdateMain.swift */; };
 		04663D9E2A61C8CF00169000 /* LifestyleAndGoalsLaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04663D9D2A61C8CF00169000 /* LifestyleAndGoalsLaunchScreen.swift */; };
@@ -92,6 +95,7 @@
 		043CF36E2A5229B400ADD6C1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		043CF36F2A522AD500ADD6C1 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		043FC1D72A6098FF00CE9E50 /* WidthRulerLB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthRulerLB.swift; sourceTree = "<group>"; };
+		0449436A2A69C87B00F3D0A8 /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
 		044EF1242A5D0D1400343DBD /* HeightRulerInFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightRulerInFT.swift; sourceTree = "<group>"; };
 		044EF1262A5D19D700343DBD /* RulerPartViewForFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerPartViewForFT.swift; sourceTree = "<group>"; };
 		0452F8742A694F06002F3897 /* DiagnoseSurvey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagnoseSurvey.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 		0452F87E2A698F32002F3897 /* RoutinesAndSyncLaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutinesAndSyncLaunchScreen.swift; sourceTree = "<group>"; };
 		0452F8802A699DCC002F3897 /* WorkoutFrequencySurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutFrequencySurvey.swift; sourceTree = "<group>"; };
 		04548ACD2A6675960011BB31 /* FemaleFocusAreasSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FemaleFocusAreasSurvey.swift; sourceTree = "<group>"; };
+		045A95A82A69B14E009C943C /* SurveyFirstOnboardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyFirstOnboardingScreen.swift; sourceTree = "<group>"; };
+		045A95AA2A69B5C2009C943C /* SignInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
 		04663D9B2A58B4F8009BF916 /* HeightRulerInCM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightRulerInCM.swift; sourceTree = "<group>"; };
 		04663D9B2A60C2B100169000 /* SurveyUpdateMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyUpdateMain.swift; sourceTree = "<group>"; };
 		04663D9D2A61C8CF00169000 /* LifestyleAndGoalsLaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifestyleAndGoalsLaunchScreen.swift; sourceTree = "<group>"; };
@@ -413,6 +419,9 @@
 			isa = PBXGroup;
 			children = (
 				04663D9A2A60C26A00169000 /* ScreensNavigation */,
+				045A95AA2A69B5C2009C943C /* SignInScreen.swift */,
+				0449436A2A69C87B00F3D0A8 /* SignUpScreen.swift */,
+				045A95A82A69B14E009C943C /* SurveyFirstOnboardingScreen.swift */,
 				04C2D6452A50B4D900E3B0C1 /* SurveySecondOnboardingScreen.swift */,
 				0429C6572A51091A00846DFC /* BasicDetailsLaunchScreen.swift */,
 				043CF35D2A51FE9A00ADD6C1 /* SurveysScreen.swift */,
@@ -621,6 +630,7 @@
 				047086A42A5597400031367E /* DynamicFontSizeModifier.swift in Sources */,
 				04C2D6482A50B56A00E3B0C1 /* HaveAccountView.swift in Sources */,
 				0429C65A2A510A4800846DFC /* Triangle.swift in Sources */,
+				045A95A92A69B14E009C943C /* SurveyFirstOnboardingScreen.swift in Sources */,
 				04663D9C2A60C2B100169000 /* SurveyUpdateMain.swift in Sources */,
 				0400B61E2A68947D004BB7B9 /* PhysicalPainExperienceSurvey.swift in Sources */,
 				041364772A5F1EE60096AAC1 /* WidthRulerPart.swift in Sources */,
@@ -630,6 +640,7 @@
 				043FC1D82A6098FF00CE9E50 /* WidthRulerLB.swift in Sources */,
 				0452F87F2A698F32002F3897 /* RoutinesAndSyncLaunchScreen.swift in Sources */,
 				041364732A5F0BAD0096AAC1 /* WidthRulerKG.swift in Sources */,
+				0449436B2A69C87B00F3D0A8 /* SignUpScreen.swift in Sources */,
 				04C2D64B2A50BB8900E3B0C1 /* ColorExtensions.swift in Sources */,
 				043CF3702A522AD500ADD6C1 /* StringExtensions.swift in Sources */,
 				041364712A5F09010096AAC1 /* BMIDefinerView.swift in Sources */,
@@ -651,6 +662,7 @@
 				04548ACE2A6675960011BB31 /* FemaleFocusAreasSurvey.swift in Sources */,
 				04B5E7992A571FB300EEAFB9 /* SurveyBottomView.swift in Sources */,
 				04C663052A55F15700BF6E84 /* GenderSurvey.swift in Sources */,
+				045A95AB2A69B5C2009C943C /* SignInScreen.swift in Sources */,
 				04663D9E2A61C8CF00169000 /* LifestyleAndGoalsLaunchScreen.swift in Sources */,
 				043CF35E2A51FE9A00ADD6C1 /* SurveysScreen.swift in Sources */,
 			);

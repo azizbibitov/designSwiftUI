@@ -27,6 +27,7 @@ struct SurveySecondOnboardingScreen: View {
                         .padding(.top, 40)
                     
                     Spacer()
+                        .frame(height: 50)
                     
                     VStack(alignment: .leading, spacing: 0) {
                         
@@ -42,6 +43,7 @@ struct SurveySecondOnboardingScreen: View {
                     .background(Rectangle().fill(Color(red: 0.17, green: 0.17, blue: 0.17).opacity(0.5)).cornerRadius(30))
                     
                     Spacer()
+                        .frame(height: 50)
                     
                     Button(action: {
                         print("I’M READY")
@@ -53,6 +55,7 @@ struct SurveySecondOnboardingScreen: View {
                     .padding(.horizontal, 45)
                     
                     Spacer()
+                        .frame(height: 30)
                     
                     HaveAccountView()
                         .padding(.bottom, 55)

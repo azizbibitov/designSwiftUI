@@ -24,6 +24,7 @@ struct SurveyTitle: View {
         ["diagnose_asks", "", ""],
         ["activity_level_asks", "", ""],
         ["how_often_want_workout_asks", "", ""],
+        ["", "", ""],
     ]
     
     var title1Show: Bool {

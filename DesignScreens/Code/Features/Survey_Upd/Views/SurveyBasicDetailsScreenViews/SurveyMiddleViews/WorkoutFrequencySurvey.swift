@@ -119,7 +119,7 @@ struct WorkoutFrequencySurvey: View {
 struct WorkoutFrequencySurvey_Previews: PreviewProvider {
     static let basicSurveyVM = SurveyVM()
     static var previews: some View {
-        ContentView()
+        WorkoutFrequencySurvey()
             .environmentObject(basicSurveyVM)
     }
 }

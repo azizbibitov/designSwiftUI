@@ -23,6 +23,14 @@ struct SurveyUpdateMain: View {
                 
                 Group {
                     
+                    if basicSurveyVM.screensProgress == 1 {
+                        SignInScreen()
+                    }
+                    
+                    if basicSurveyVM.screensProgress == 2 {
+                        SurveyFirstOnboardingScreen()
+                    }
+                    
                     if basicSurveyVM.screensProgress == 3 {
                         SurveySecondOnboardingScreen()
                     }
@@ -43,7 +51,9 @@ struct SurveyUpdateMain: View {
                         RoutinesAndSyncLaunchScreen()
                     }
                     
-                    
+                    if basicSurveyVM.screensProgress == 8 {
+                        SignUpScreen()
+                    }
                     
                 }
                 .transition(AnyTransition.asymmetric(
