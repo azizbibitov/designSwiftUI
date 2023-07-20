@@ -15,6 +15,7 @@ class SurveyVM: ObservableObject {
     ///  4 - BasicDetailsLaunchScreen
     ///  5 - SurveysScreen
     ///  6 - LifestyleAndGoalsLaunchScreen
+    ///  7 - RoutinesAndSyncLaunchScreen
    
     /// Survey Progresses
     /// 1 - Name
@@ -28,10 +29,11 @@ class SurveyVM: ObservableObject {
     /// 9 - Physical Pain Experience
     /// 10 - Diagnose
     /// 11 - Activity Level
+    /// 12 - Workout frequency
     
     @Published var screensProgress: Int = 5
     @Published var isBack: Bool = false
-    @Published var surveyProgress: Int = 11
+    @Published var surveyProgress: Int = 12
     @Published var nextEnabled: Bool = false
     @Published var userName: String = "Vmir"
     @Published var gender: Gender = .other
@@ -48,6 +50,7 @@ class SurveyVM: ObservableObject {
     @Published var bodyShapeIndex: Int = 0
     @Published var hasPainExperience: Bool = false
     @Published var activityLevelIndex: Int = 0
+    @Published var chosedWorkoutFrequencyIndex: Int = 0
     
     init() {
         let formatter = DateFormatter()
@@ -100,6 +103,12 @@ class SurveyVM: ObservableObject {
             switch surveyProgress {
             case 5:
                 screensProgress = 6
+                self.nextSurvey()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+                    self.screensProgress = 5
+                }
+            case 11:
+                screensProgress = 7
                 self.nextSurvey()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
                     self.screensProgress = 5

@@ -59,3 +59,4 @@
 "physical_pain_experience_asks" = "Have you experienced physical pain within 4 weeks?";
 "diagnose_asks" = "Have you been diagnosed with any of the following?";
 "activity_level_asks" = "What is your activity level?";
+"how_often_want_workout_asks" = "How often do you want to workout?";

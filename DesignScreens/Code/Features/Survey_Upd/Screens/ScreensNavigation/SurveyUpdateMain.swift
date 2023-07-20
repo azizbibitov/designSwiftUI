@@ -39,6 +39,10 @@ struct SurveyUpdateMain: View {
                         LifestyleAndGoalsLaunchScreen()
                     }
                     
+                    if basicSurveyVM.screensProgress == 7 {
+                        RoutinesAndSyncLaunchScreen()
+                    }
+                    
                     
                     
                 }
