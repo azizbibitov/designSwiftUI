@@ -135,7 +135,7 @@ struct DiagnoseSurvey: View {
                 
             }
             .padding(.horizontal, 20)
-            
+            Spacer()
         }
         .padding(.bottom, keyboard.currentHeight)
         .edgesIgnoringSafeArea(.bottom)
