@@ -34,7 +34,7 @@ class SurveyVM: ObservableObject {
     /// 11 - Activity Level
     /// 12 - Workout frequency
     
-    @Published var screensProgress: Int = 1
+    @Published var screensProgress: Int = 2
     @Published var isBack: Bool = false
     @Published var surveyProgress: Int = 1
     @Published var nextEnabled: Bool = false
@@ -52,6 +52,8 @@ class SurveyVM: ObservableObject {
     @Published var selectedFocusAreas: [FocusArea] = []
     @Published var bodyShapeIndex: Int = 0
     @Published var hasPainExperience: Bool = false
+    @Published var diagnosesString: [String] = []
+    @Published var otherDiagnose: String = ""
     @Published var activityLevelIndex: Int = 0
     @Published var chosedWorkoutFrequencyIndex: Int = 0
     
@@ -61,7 +63,52 @@ class SurveyVM: ObservableObject {
         birthday = formatter.date(from: "1995/10/08") ?? Date()
     }
     
-    var sectionSurveyCount: [Int] = [5, 6, 2]
+    var sectionSurveyCount: [Int] {
+        if selectedGoalIndex == 4 {
+            return [5, 6, 2]
+        }else{
+            return [5, 4, 2]
+        }
+    }
+    
+    var surveyTitles: [[String]] {
+        if selectedGoalIndex == 4 {
+            return  [["full_name_asks", "", ""],
+            ["nice_to_meet_you", "what_is_your", "_gender_"],
+            ["", "when_is_your", "_birthday_"],
+            ["", "What_is_your_height", "_height_"],
+            ["", "What_is_your_weight", "_weight_"],
+            ["main_goals_asks", "", ""],
+            ["focus_areas_asks", "", ""],
+            ["body_shape_asks", "", ""],
+            ["physical_pain_experience_asks", "", ""],
+            ["diagnose_asks", "", ""],
+            ["activity_level_asks", "", ""],
+            ["how_often_want_workout_asks", "", ""],
+            ["", "", ""],]
+        }else{
+            return  [["full_name_asks", "", ""],
+            ["nice_to_meet_you", "what_is_your", "_gender_"],
+            ["", "when_is_your", "_birthday_"],
+            ["", "What_is_your_height", "_height_"],
+            ["", "What_is_your_weight", "_weight_"],
+            ["main_goals_asks", "", ""],
+            ["focus_areas_asks", "", ""],
+            ["body_shape_asks", "", ""],
+            ["activity_level_asks", "", ""],
+            ["how_often_want_workout_asks", "", ""],
+            ["", "", ""],]
+        }
+        
+    }
+    
+    var sectionsView: [AnyView] {
+        if selectedGoalIndex == 4 {
+            return [AnyView(NameSurvey()), AnyView(GenderSurvey()), AnyView(BirthdaySurvey()), AnyView(HeightSurvey()), AnyView(WidthSurvey()), AnyView(GoalsSurvey()), AnyView(FocusAreasSurvey()), AnyView(BodyShapeSurvey()), AnyView(PhysicalPainExperienceSurvey()), AnyView(DiagnoseSurvey()), AnyView(ActivityLevelSurvey()), AnyView(WorkoutFrequencySurvey()), AnyView(ZStack{})]
+        }else{
+            return [AnyView(NameSurvey()), AnyView(GenderSurvey()), AnyView(BirthdaySurvey()), AnyView(HeightSurvey()), AnyView(WidthSurvey()), AnyView(GoalsSurvey()), AnyView(FocusAreasSurvey()), AnyView(BodyShapeSurvey()), AnyView(ActivityLevelSurvey()), AnyView(WorkoutFrequencySurvey()), AnyView(ZStack{})]
+        }
+    }
     
     func getProgressPercentage(section: Int) -> CGFloat {
         switch section {
@@ -120,21 +167,19 @@ class SurveyVM: ObservableObject {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
                     self.screensProgress = 5
                 }
-            case 11:
+            case (sectionSurveyCount[0] + sectionSurveyCount[1]):
                 screensProgress = 7
                 self.nextSurvey()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
                     self.screensProgress = 5
                 }
-            case 12:
+            case (sectionSurveyCount[0] + sectionSurveyCount[1] + 1):
                 screensProgress = 8
                 surveyProgress += 1
             default:
                 nextSurvey()
             }
             
-            
-          
         }
     }
     
@@ -171,14 +216,24 @@ class SurveyVM: ObservableObject {
         switch surveyProgress {
         case 1:
             return nameChecker()
-        case 2, 4, 5, 6, 8, 10, 11:
+        case 2, 4, 5, 6, 8, 11:
             nextEnabled = true
         case 3:
             birthdayChecker()
         case 7:
             focusAreasChecker()
         case 9:
-            nextEnabled = false
+            if selectedGoalIndex == 4 {
+                nextEnabled = false
+            }else{
+                nextEnabled = true
+            }
+        case 10:
+            if selectedGoalIndex == 4 {
+                nextEnabled = true
+            }else{
+                nextEnabled = true
+            }
         default: print("")
         }
     }

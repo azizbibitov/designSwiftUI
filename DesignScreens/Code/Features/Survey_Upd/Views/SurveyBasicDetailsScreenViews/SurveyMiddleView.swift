@@ -11,32 +11,11 @@ struct SurveyMiddleView: View {
     @EnvironmentObject var basicSurveyVM: SurveyVM
     var body: some View {
         VStack {
+            
             switch basicSurveyVM.surveyProgress {
-            case 1:
-                NameSurvey()
-            case 2:
-                GenderSurvey()
-            case 3:
-                BirthdaySurvey()
-            case 4:
-                HeightSurvey()
-            case 5:
-                WidthSurvey()
-            case 6:
-                GoalsSurvey()
-            case 7:
-                FocusAreasSurvey()
-            case 8:
-                BodyShapeSurvey()
-            case 9:
-                PhysicalPainExperienceSurvey()
-            case 10:
-                DiagnoseSurvey()
-            case 11:
-                ActivityLevelSurvey()
-            case 12:
-                WorkoutFrequencySurvey()
-            default: ZStack{}
+            case basicSurveyVM.surveyProgress:
+                basicSurveyVM.sectionsView[basicSurveyVM.surveyProgress-1]
+            default: ZStack {}
             }
             
         }

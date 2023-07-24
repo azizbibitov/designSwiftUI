@@ -21,12 +21,27 @@ struct SignInScreen: View {
             ScrollView(.vertical, showsIndicators: false) {
                 
                 VStack(spacing: 0){
+                    
+                    
+                    HStack {
+                        Button {
+                            hideKeyboard()
+                            basicSurveyVM.screensProgress = 2
+                            basicSurveyVM.isBack = true
+                        } label: {
+                            Image("arrow-right")
+                            
+                        }
+                        
+                        Spacer()
+                    }
+                    .padding(.leading, 20)
+                    .padding(.top, 20)
+                    
                     Text("Sign in")
                         .foregroundColor(.white)
                         .font(.title.bold())
-                    
-                    Spacer()
-                        .frame(height: 14)
+                        .padding(.bottom, 14)
                     
                     ZStack {
                         
@@ -86,13 +101,14 @@ struct SignInScreen: View {
                     }, label: {
                         Text("Sign in")
                             .shadow(color: .black, radius: 7, x: 0, y: 2)
-                            .frame(maxWidth: .infinity, maxHeight: 60)
-                            .font(.largeTitle.weight(.bold))
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 10)
+                            .font(.title2.weight(.bold))
                             .foregroundColor(.white)
                             .background(Color(hex: "#04E000"))
                             .cornerRadius(10)
                     })
-                    .padding(.horizontal, 45)
+                    .padding(.horizontal, 56)
                     .padding(.top, 47)
                     
                     
@@ -141,18 +157,12 @@ struct SignInScreen: View {
                     }
                     .padding(.top, 35)
                     
-                    Group {
-                        Text("By continuing, you agree to our ")
-                        + Text("Terms of Service").foregroundColor(Color(hex: "#00FF38"))
-                            .font(.subheadline.bold()) + Text(" and acknowledge that you have read our ") + Text("Privacy Policy").foregroundColor(Color(hex: "#00FF38"))
-                            .font(.subheadline.bold()) + Text(" to learn how we collect and use your data.")
-                        
+                    if #available(iOS 15, *) {
+                        iOS15LinksView()
+                    } else {
+                        LinksView()
                     }
-                    .foregroundColor(.white)
-                    .font(.subheadline)
-                    .multilineTextAlignment(.center)
-                    .padding(.top, 42)
-                    .padding(.horizontal, 14)
+
                 }
                 
             }
@@ -161,6 +171,8 @@ struct SignInScreen: View {
             hideKeyboard()
         }
     }
+    
+    
 }
 
 struct SecureInputView: View {
@@ -224,6 +236,72 @@ struct SecureInputView: View {
         )
         .padding(.horizontal, 55)
     }
+}
+
+@available(iOS 15, *)
+struct iOS15LinksView: View {
+    
+    @State var string1 = AttributedString("By continuing, you agree to our ")
+    @State var termsOfServiceText = AttributedString("Terms of Service")
+    @State var string2 = AttributedString(" and acknowledge that you have read our ")
+    @State var privacyPolicyText = AttributedString("Privacy Policy")
+    @State var string3 = AttributedString(" to learn how we collect and use your data.")
+    
+    var body: some View {
+        Text(string1)
+            .foregroundColor(.white)
+            .font(.subheadline)
+            .multilineTextAlignment(.center)
+            .padding(.top, 42)
+            .padding(.horizontal, 14)
+            .onAppear {
+                termsOfServiceText.link = URL(string: "https://www.apple.com/")
+                termsOfServiceText.foregroundColor = Color(hex: "#00FF38")
+                
+                privacyPolicyText.link = URL(string: "https://www.google.com/")
+                privacyPolicyText.foregroundColor = Color(hex: "#00FF38")
+                
+                string1.append(termsOfServiceText)
+                string1.append(string2)
+                string1.append(privacyPolicyText)
+                string1.append(string3)
+            }
+    }
+    
+}
+
+struct LinksView: View {
+    var body: some View {
+        VStack(spacing: 0){
+            HStack(spacing: 0){
+                Text("By continuing, you agree to our ")
+                Text("Terms of Service")
+                    .font(.subheadline.bold())
+                    .foregroundColor(Color(hex: "#00FF38"))
+                    .onTapGesture {
+                        UIApplication.shared.open(URL(string: "https://www.apple.com/")!)
+                    }
+            }
+           Text(" and acknowledge that you have read our ")
+            HStack(spacing: 0){
+     
+                Text("Privacy Policy")
+                    .font(.subheadline.bold())
+                    .foregroundColor(Color(hex: "#00FF38"))
+                    .onTapGesture {
+                        UIApplication.shared.open(URL(string: "https://www.google.com/")!)
+                    }
+                Text(" to learn how we collect")
+            }
+            Text(" and use your data.")
+        }
+        .foregroundColor(.white)
+        .font(.subheadline)
+        .multilineTextAlignment(.center)
+        .padding(.top, 42)
+        .padding(.horizontal, 14)
+    }
+    
 }
 
 struct SignInScreen_Previews: PreviewProvider {

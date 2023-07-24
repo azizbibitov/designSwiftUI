@@ -65,6 +65,18 @@ struct BodyShapeSurvey: View {
                 .background(Color.white.opacity(0.18))
                 .cornerRadius(10)
                 
+                HStack(spacing: 200){
+                    
+                    Text("Fit")
+                        .foregroundColor(.white)
+                        .font(.subheadline.bold())
+                    
+                    Text("Big")
+                        .foregroundColor(.white)
+                        .font(.subheadline.bold())
+                }
+                .padding(.top, -20)
+                
                 
                 ApproximateBodyFatView()
                 Spacer()

@@ -33,6 +33,8 @@ struct SurveysScreen: View {
                         .frame(height: Sizes.size(45 + safeAreaInsets.top))
                     
                     SurveyTitle()
+                        .padding(.top, 30)
+                        .padding(.bottom, 10)
                     
                     Spacer()
                     

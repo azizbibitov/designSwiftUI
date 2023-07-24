@@ -91,7 +91,7 @@ struct SignUpScreen: View {
                             .shadow(color: .black, radius: 7, x: 0, y: 2)
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 10)
-                            .font(.title.weight(.bold))
+                            .font(.title2.weight(.bold))
                             .foregroundColor(.white)
                             .background(Color(hex: "#04E000"))
                             .cornerRadius(10)
@@ -145,20 +145,14 @@ struct SignUpScreen: View {
                     }
                     .padding(.top, 35)
                     
-                    Group {
-                        Text("By continuing, you agree to our ")
-                        + Text("Terms of Service").foregroundColor(Color(hex: "#00FF38"))
-                            .font(.subheadline.bold()) + Text(" and acknowledge that you have read our ") + Text("Privacy Policy").foregroundColor(Color(hex: "#00FF38"))
-                            .font(.subheadline.bold()) + Text(" to learn how we collect and use your data.")
-                        
+                    if #available(iOS 15, *) {
+                        iOS15LinksView()
+                    } else {
+                        LinksView()
                     }
-                    .foregroundColor(.white)
-                    .font(.subheadline)
-                    .multilineTextAlignment(.center)
-                    .padding(.top, 42)
                     
                 }
-            }
+            }.ignoresSafeArea()
             
         }
         .onTapGesture {

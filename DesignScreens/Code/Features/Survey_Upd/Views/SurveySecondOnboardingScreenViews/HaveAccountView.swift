@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HaveAccountView: View {
-    
+    @EnvironmentObject var basicSurveyVM: SurveyVM
     var body: some View {
         VStack(alignment: .center, spacing: 20) {
             HStack (spacing: 9){
@@ -29,6 +29,8 @@ struct HaveAccountView: View {
             
             Button {
                 print("SignIn")
+                basicSurveyVM.isBack = false
+                basicSurveyVM.screensProgress = 1
             } label: {
                 Text("Sign in to your existing account")
                     .font(.subheadline)
@@ -41,8 +43,8 @@ struct HaveAccountView: View {
     }
 }
 
-struct HaveAccountView_Previews: PreviewProvider {
-    static var previews: some View {
-        HaveAccountView()
-    }
-}
+//struct HaveAccountView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HaveAccountView()
+//    }
+//}

@@ -11,22 +11,6 @@ struct SurveyTitle: View {
     
     @EnvironmentObject var basicSurveyVM: SurveyVM
     
-    let surveyTitles: [[String]] = [
-        ["full_name_asks", "", ""],
-        ["nice_to_meet_you", "what_is_your", "_gender_"],
-        ["", "when_is_your", "_birthday_"],
-        ["", "What_is_your_height", "_height_"],
-        ["", "What_is_your_weight", "_weight_"],
-        ["main_goals_asks", "", ""],
-        ["focus_areas_asks", "", ""],
-        ["body_shape_asks", "", ""],
-        ["physical_pain_experience_asks", "", ""],
-        ["diagnose_asks", "", ""],
-        ["activity_level_asks", "", ""],
-        ["how_often_want_workout_asks", "", ""],
-        ["", "", ""],
-    ]
-    
     var title1Show: Bool {
         switch basicSurveyVM.surveyProgress {
         case 1, 2, 6, 7, 8, 9, 10, 11, 12:
@@ -46,7 +30,7 @@ struct SurveyTitle: View {
     var body: some View {
         VStack{
             if title1Show {
-                Text("\(surveyTitles[basicSurveyVM.surveyProgress-1][0])".localizable(arguments: basicSurveyVM.userName))
+                Text("\(basicSurveyVM.surveyTitles[basicSurveyVM.surveyProgress-1][0])".localizable(arguments: basicSurveyVM.userName))
                     .padding(.top, 40)
                     .modifier(SurveyTitleModifier())
             }else{
@@ -56,7 +40,7 @@ struct SurveyTitle: View {
             
             
             if title2Show {
-                (Text("\(surveyTitles[basicSurveyVM.surveyProgress-1][1])".localizable).foregroundColor(.white) + Text("\(surveyTitles[basicSurveyVM.surveyProgress-1][2])".localizable).foregroundColor(Color(hex: "#05FF00")) + Text("?").foregroundColor(.white))
+                (Text("\(basicSurveyVM.surveyTitles[basicSurveyVM.surveyProgress-1][1])".localizable).foregroundColor(.white) + Text("\(basicSurveyVM.surveyTitles[basicSurveyVM.surveyProgress-1][2])".localizable).foregroundColor(Color(hex: "#05FF00")) + Text("?").foregroundColor(.white))
                     .modifier(SurveyTitleModifier())
             }
         }

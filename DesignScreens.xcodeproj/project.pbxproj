@@ -27,6 +27,7 @@
 		043CF3702A522AD500ADD6C1 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043CF36F2A522AD500ADD6C1 /* StringExtensions.swift */; };
 		043FC1D82A6098FF00CE9E50 /* WidthRulerLB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FC1D72A6098FF00CE9E50 /* WidthRulerLB.swift */; };
 		0449436B2A69C87B00F3D0A8 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0449436A2A69C87B00F3D0A8 /* SignUpScreen.swift */; };
+		044943742A6C0FFA00F3D0A8 /* süleymanin_mustafasina_siiri.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 044943732A6C0FFA00F3D0A8 /* süleymanin_mustafasina_siiri.mp4 */; };
 		044EF1252A5D0D1500343DBD /* HeightRulerInFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EF1242A5D0D1400343DBD /* HeightRulerInFT.swift */; };
 		044EF1272A5D19D700343DBD /* RulerPartViewForFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EF1262A5D19D700343DBD /* RulerPartViewForFT.swift */; };
 		0452F8752A694F06002F3897 /* DiagnoseSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452F8742A694F06002F3897 /* DiagnoseSurvey.swift */; };
@@ -96,6 +97,8 @@
 		043CF36F2A522AD500ADD6C1 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		043FC1D72A6098FF00CE9E50 /* WidthRulerLB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthRulerLB.swift; sourceTree = "<group>"; };
 		0449436A2A69C87B00F3D0A8 /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
+		044943732A6C0FFA00F3D0A8 /* süleymanin_mustafasina_siiri.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "süleymanin_mustafasina_siiri.mp4"; sourceTree = "<group>"; };
+		044943752A6C26D500F3D0A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		044EF1242A5D0D1400343DBD /* HeightRulerInFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightRulerInFT.swift; sourceTree = "<group>"; };
 		044EF1262A5D19D700343DBD /* RulerPartViewForFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerPartViewForFT.swift; sourceTree = "<group>"; };
 		0452F8742A694F06002F3897 /* DiagnoseSurvey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagnoseSurvey.swift; sourceTree = "<group>"; };
@@ -196,6 +199,14 @@
 				043CF3642A520C1200ADD6C1 /* SurveyVM.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		044943722A6C0FE600F3D0A8 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				044943732A6C0FFA00F3D0A8 /* süleymanin_mustafasina_siiri.mp4 */,
+			);
+			path = Videos;
 			sourceTree = "<group>";
 		};
 		044EF1222A5D0BF700343DBD /* HeightRulerInCM */ = {
@@ -332,6 +343,7 @@
 		04C2D62D2A50A73F00E3B0C1 /* DesignScreens */ = {
 			isa = PBXGroup;
 			children = (
+				044943752A6C26D500F3D0A8 /* Info.plist */,
 				04C2D63F2A50B45C00E3B0C1 /* Code */,
 				04C2D63C2A50B42700E3B0C1 /* SupportingFiles */,
 				04C2D63D2A50B42F00E3B0C1 /* Resources */,
@@ -361,6 +373,7 @@
 		04C2D63D2A50B42F00E3B0C1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				044943722A6C0FE600F3D0A8 /* Videos */,
 				04C2D63E2A50B43700E3B0C1 /* Images */,
 			);
 			path = Resources;
@@ -552,6 +565,7 @@
 				04C2D64D2A50BE3C00E3B0C1 /* Survey_Upd.xcassets in Resources */,
 				043CF36B2A5229A500ADD6C1 /* Localizable.strings in Resources */,
 				04C2D6362A50A74000E3B0C1 /* Preview Assets.xcassets in Resources */,
+				044943742A6C0FFA00F3D0A8 /* süleymanin_mustafasina_siiri.mp4 in Resources */,
 				04C2D6332A50A74000E3B0C1 /* AppIcon.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -811,6 +825,7 @@
 				DEVELOPMENT_TEAM = MQU4CU9NLX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DesignScreens/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Design UI";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -843,6 +858,7 @@
 				DEVELOPMENT_TEAM = MQU4CU9NLX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DesignScreens/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Design UI";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
