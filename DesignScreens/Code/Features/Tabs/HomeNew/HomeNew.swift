@@ -22,7 +22,21 @@ struct HomeNew: View {
                     
                     HomeUserPlansView()
                     
-//                    Spacer()
+                    HStack {
+                        Text("Plans by Gogita Tupuriya")
+                            .foregroundColor(Color("#939393"))
+                            .font(.title3.bold())
+                        
+                        Spacer()
+                    }
+                    .padding(.horizontal, 11)
+                    
+                    
+                    InfluencerSinglePlan()
+                    
+                    InfluencerMultiplePlans()
+                    
+                    
                 }
                 .padding(.top, safeAreaInsets.top)
                 .padding(.bottom, 85)

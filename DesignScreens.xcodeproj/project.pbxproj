@@ -63,6 +63,7 @@
 		047BD74B2A79D491002742B7 /* HomeUserPlansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BD74A2A79D491002742B7 /* HomeUserPlansView.swift */; };
 		04A290C42A532E390029C8D5 /* SurveyTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A290C32A532E390029C8D5 /* SurveyTitleModifier.swift */; };
 		04A290C62A533B7D0029C8D5 /* SurveyTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A290C52A533B7D0029C8D5 /* SurveyTitle.swift */; };
+		04B3063B2A7AE577005AF378 /* InfluencerPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B3063A2A7AE577005AF378 /* InfluencerPlans.swift */; };
 		04B5E7972A5718B000EEAFB9 /* GenderImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5E7962A5718B000EEAFB9 /* GenderImage.swift */; };
 		04B5E7992A571FB300EEAFB9 /* SurveyBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5E7982A571FB300EEAFB9 /* SurveyBottomView.swift */; };
 		04B5E79B2A57286B00EEAFB9 /* BirthdaySurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5E79A2A57286B00EEAFB9 /* BirthdaySurvey.swift */; };
@@ -143,6 +144,7 @@
 		047BD74A2A79D491002742B7 /* HomeUserPlansView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUserPlansView.swift; sourceTree = "<group>"; };
 		04A290C32A532E390029C8D5 /* SurveyTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTitleModifier.swift; sourceTree = "<group>"; };
 		04A290C52A533B7D0029C8D5 /* SurveyTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTitle.swift; sourceTree = "<group>"; };
+		04B3063A2A7AE577005AF378 /* InfluencerPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfluencerPlans.swift; sourceTree = "<group>"; };
 		04B5E7962A5718B000EEAFB9 /* GenderImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderImage.swift; sourceTree = "<group>"; };
 		04B5E7982A571FB300EEAFB9 /* SurveyBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyBottomView.swift; sourceTree = "<group>"; };
 		04B5E79A2A57286B00EEAFB9 /* BirthdaySurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaySurvey.swift; sourceTree = "<group>"; };
@@ -330,6 +332,7 @@
 			children = (
 				047BD73C2A7983E2002742B7 /* HomeNew.swift */,
 				047BD74A2A79D491002742B7 /* HomeUserPlansView.swift */,
+				04B3063A2A7AE577005AF378 /* InfluencerPlans.swift */,
 				047BD7482A79D120002742B7 /* HomeNewVM.swift */,
 			);
 			path = HomeNew;
@@ -709,6 +712,7 @@
 				04B5E79B2A57286B00EEAFB9 /* BirthdaySurvey.swift in Sources */,
 				04B5E7972A5718B000EEAFB9 /* GenderImage.swift in Sources */,
 				0400B60A2A67AB13004BB7B9 /* BodyShapeSurvey.swift in Sources */,
+				04B3063B2A7AE577005AF378 /* InfluencerPlans.swift in Sources */,
 				0413646F2A5DADB00096AAC1 /* WidthSurvey.swift in Sources */,
 				0429C6582A51091A00846DFC /* BasicDetailsLaunchScreen.swift in Sources */,
 				04663D9C2A58B4F8009BF916 /* HeightRulerInCM.swift in Sources */,
