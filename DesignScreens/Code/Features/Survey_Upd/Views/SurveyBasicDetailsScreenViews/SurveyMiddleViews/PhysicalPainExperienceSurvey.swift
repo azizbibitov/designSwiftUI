@@ -119,11 +119,11 @@ struct ResponseView: View {
     var body: some View {
         VStack(spacing: 15){
             
-            Text(yesSelected ? "Great to hear!" : "No worries!")
+            Text(!yesSelected ? "Great to hear!" : "No worries!")
                 .foregroundColor(Color(hex: "#05FF00"))
                 .font(.title.bold())
             
-            Text(yesSelected ? "You're on the right track to full recovery. Let's continue the good work and aim to make those once painful areas stronger and more resilient." : "Remember, pain is part of the journey, but we're here to help you navigate through it. Together, we'll focus on alleviating this pain and building strength.")
+            Text(!yesSelected ? "You're on the right track to full recovery. Let's continue the good work and aim to make those once painful areas stronger and more resilient." : "Remember, pain is part of the journey, but we're here to help you navigate through it. Together, we'll focus on alleviating this pain and building strength.")
                 .foregroundColor(.white)
                 .multilineTextAlignment(.center)
                 .font(.subheadline)

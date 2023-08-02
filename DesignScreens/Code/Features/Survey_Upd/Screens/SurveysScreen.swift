@@ -52,8 +52,6 @@ struct SurveysScreen: View {
             
         }
         .ignoresSafeArea(.keyboard, edges: .all)
-      
-        
         .onTapGesture {
             hideKeyboard()
         }

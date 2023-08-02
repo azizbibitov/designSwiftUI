@@ -10,6 +10,7 @@ import SwiftUI
 struct SurveySecondOnboardingScreen: View {
     @State private var nextBtnEnabled: Bool = true
     @EnvironmentObject var basicSurveyVM: SurveyVM
+    @Environment(\.safeAreaInsets) private var safeAreaInsets
     var body: some View {
         ZStack {
             Color(hex: "#050813")
@@ -17,8 +18,12 @@ struct SurveySecondOnboardingScreen: View {
             
             VStack {
                 topRightLanuageBtn
+                    .padding(.top, safeAreaInsets.top)
                 Spacer()
             }
+            .edgesIgnoringSafeArea(.all)
+            
+            
             ScrollView(.vertical, showsIndicators: false) {
                 VStack {
                     Image("personal-couch")
@@ -66,6 +71,16 @@ struct SurveySecondOnboardingScreen: View {
     
     var topRightLanuageBtn: some View {
         HStack {
+            Button {
+                basicSurveyVM.isBack = true
+                basicSurveyVM.screensProgress = 2
+            } label: {
+                Image("arrow-right")
+                
+            }
+            .padding(.leading, 20)
+//            .padding(.top, 25)
+            
             Spacer()
             Button {
                 print("Change Language")
@@ -76,7 +91,7 @@ struct SurveySecondOnboardingScreen: View {
                     .foregroundColor(.white)
                     .opacity(0.5)
                     .padding(.trailing, 30)
-                    .padding(.top, 25)
+//                    .padding(.top, 25)
             }
         }
     }

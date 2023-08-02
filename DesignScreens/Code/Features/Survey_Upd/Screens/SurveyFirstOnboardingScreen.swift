@@ -13,7 +13,7 @@ struct SurveyFirstOnboardingScreen: View {
     var playerItem = AVPlayerItem(url: URL(fileURLWithPath: Bundle.main.path(forResource: "süleymanin_mustafasina_siiri", ofType: "mp4")!))
     @State var playerLooper: AVPlayerLooper!
     @State var queuePlayer = AVQueuePlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "süleymanin_mustafasina_siiri", ofType: "mp4")!))
-    
+    @Environment(\.safeAreaInsets) private var safeAreaInsets
     @State private var nextBtnEnabled: Bool = true
     @EnvironmentObject var basicSurveyVM: SurveyVM
     var body: some View {
@@ -66,8 +66,10 @@ struct SurveyFirstOnboardingScreen: View {
             
             VStack {
                 topRightLanuageBtn
+                    .padding(.top, safeAreaInsets.top)
                 Spacer()
             }
+            .edgesIgnoringSafeArea(.all)
             
         }
         
@@ -86,7 +88,7 @@ struct SurveyFirstOnboardingScreen: View {
                     .foregroundColor(.white)
                     .opacity(0.5)
                     .padding(.trailing, 30)
-                    .padding(.top, 25)
+//                    .padding(.top, 25)
             }
         }
     }

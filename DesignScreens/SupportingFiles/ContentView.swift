@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var basicSurveyVM = SurveyVM()
+    @StateObject var homeNewVM = HomeNewVM()
     var body: some View {
-        SurveyUpdateMain()
-            .environmentObject(basicSurveyVM)
+        TabsView()
+            .environmentObject(homeNewVM)
     }
 }
 

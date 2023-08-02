@@ -127,7 +127,7 @@ struct SignInScreen: View {
                             .frame(height: 1)
                             .background(Color(hex: "#878787"))
                     }
-                    .padding(.top, 70)
+                    .padding(.top, 30)
                     
                     HStack(spacing: 115){
                         
@@ -155,7 +155,7 @@ struct SignInScreen: View {
                         
                         
                     }
-                    .padding(.top, 35)
+                    .padding(.top, 30)
                     
                     if #available(iOS 15, *) {
                         iOS15LinksView()
@@ -167,6 +167,7 @@ struct SignInScreen: View {
                 
             }
         }
+        .edgesIgnoringSafeArea(.all)
         .onTapGesture {
             hideKeyboard()
         }
@@ -252,7 +253,7 @@ struct iOS15LinksView: View {
             .foregroundColor(.white)
             .font(.subheadline)
             .multilineTextAlignment(.center)
-            .padding(.top, 42)
+            .padding(.top, 30)
             .padding(.horizontal, 14)
             .onAppear {
                 termsOfServiceText.link = URL(string: "https://www.apple.com/")
@@ -298,7 +299,7 @@ struct LinksView: View {
         .foregroundColor(.white)
         .font(.subheadline)
         .multilineTextAlignment(.center)
-        .padding(.top, 42)
+        .padding(.top, 30)
         .padding(.horizontal, 14)
     }
     
@@ -309,5 +310,6 @@ struct SignInScreen_Previews: PreviewProvider {
     static var previews: some View {
         SignInScreen()
             .environmentObject(basicSurveyVM)
+            .previewDevice(PreviewDevice(rawValue: DeviceName.iPhone_X.rawValue))
     }
 }

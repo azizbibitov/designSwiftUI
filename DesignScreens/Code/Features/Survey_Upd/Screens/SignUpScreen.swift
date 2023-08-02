@@ -28,7 +28,7 @@ struct SignUpScreen: View {
                     Text("Finish Sign Up & Sync")
                         .foregroundColor(.white)
                         .font(.title.bold())
-                        .padding(.top, 60)
+                        .padding(.top, 30)
                     
                     
                     ZStack {
@@ -115,7 +115,7 @@ struct SignUpScreen: View {
                             .frame(height: 1)
                             .background(Color(hex: "#878787"))
                     }
-                    .padding(.top, 70)
+                    .padding(.top, 30)
                     
                     HStack(spacing: 115){
                         
@@ -143,7 +143,7 @@ struct SignUpScreen: View {
                         
                         
                     }
-                    .padding(.top, 35)
+                    .padding(.top, 30)
                     
                     if #available(iOS 15, *) {
                         iOS15LinksView()
@@ -152,9 +152,10 @@ struct SignUpScreen: View {
                     }
                     
                 }
-            }.ignoresSafeArea()
+            }
             
         }
+        .edgesIgnoringSafeArea(.all)
         .onTapGesture {
             hideKeyboard()
         }
@@ -166,5 +167,6 @@ struct SignUpScreen_Previews: PreviewProvider {
     static var previews: some View {
         SignUpScreen()
             .environmentObject(basicSurveyVM)
+            .previewDevice(PreviewDevice(rawValue: DeviceName.iPhone_11_Pro_Max.rawValue))
     }
 }

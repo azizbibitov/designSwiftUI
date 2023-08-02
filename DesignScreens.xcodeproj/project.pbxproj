@@ -52,6 +52,15 @@
 		047086A22A5595D20031367E /* SurveyMiddleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047086A12A5595D20031367E /* SurveyMiddleView.swift */; };
 		047086A42A5597400031367E /* DynamicFontSizeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047086A32A5597400031367E /* DynamicFontSizeModifier.swift */; };
 		047086A62A559C6E0031367E /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047086A52A559C6E0031367E /* ViewExtensions.swift */; };
+		047BD7352A7982F4002742B7 /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BD7342A7982F4002742B7 /* TabsView.swift */; };
+		047BD73D2A7983E2002742B7 /* HomeNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BD73C2A7983E2002742B7 /* HomeNew.swift */; };
+		047BD73F2A7983F3002742B7 /* DiscoveryNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BD73E2A7983F3002742B7 /* DiscoveryNew.swift */; };
+		047BD7412A7983FB002742B7 /* Messaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BD7402A7983FB002742B7 /* Messaging.swift */; };
+		047BD7432A798406002742B7 /* StoreNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BD7422A798406002742B7 /* StoreNew.swift */; };
+		047BD7452A798411002742B7 /* ProfileNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BD7442A798411002742B7 /* ProfileNew.swift */; };
+		047BD7472A79898C002742B7 /* Tabs.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047BD7462A79898C002742B7 /* Tabs.xcassets */; };
+		047BD7492A79D120002742B7 /* HomeNewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BD7482A79D120002742B7 /* HomeNewVM.swift */; };
+		047BD74B2A79D491002742B7 /* HomeUserPlansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BD74A2A79D491002742B7 /* HomeUserPlansView.swift */; };
 		04A290C42A532E390029C8D5 /* SurveyTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A290C32A532E390029C8D5 /* SurveyTitleModifier.swift */; };
 		04A290C62A533B7D0029C8D5 /* SurveyTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A290C52A533B7D0029C8D5 /* SurveyTitle.swift */; };
 		04B5E7972A5718B000EEAFB9 /* GenderImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5E7962A5718B000EEAFB9 /* GenderImage.swift */; };
@@ -123,6 +132,15 @@
 		047086A12A5595D20031367E /* SurveyMiddleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyMiddleView.swift; sourceTree = "<group>"; };
 		047086A32A5597400031367E /* DynamicFontSizeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFontSizeModifier.swift; sourceTree = "<group>"; };
 		047086A52A559C6E0031367E /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		047BD7342A7982F4002742B7 /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
+		047BD73C2A7983E2002742B7 /* HomeNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNew.swift; sourceTree = "<group>"; };
+		047BD73E2A7983F3002742B7 /* DiscoveryNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryNew.swift; sourceTree = "<group>"; };
+		047BD7402A7983FB002742B7 /* Messaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messaging.swift; sourceTree = "<group>"; };
+		047BD7422A798406002742B7 /* StoreNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreNew.swift; sourceTree = "<group>"; };
+		047BD7442A798411002742B7 /* ProfileNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNew.swift; sourceTree = "<group>"; };
+		047BD7462A79898C002742B7 /* Tabs.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Tabs.xcassets; sourceTree = "<group>"; };
+		047BD7482A79D120002742B7 /* HomeNewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNewVM.swift; sourceTree = "<group>"; };
+		047BD74A2A79D491002742B7 /* HomeUserPlansView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUserPlansView.swift; sourceTree = "<group>"; };
 		04A290C32A532E390029C8D5 /* SurveyTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTitleModifier.swift; sourceTree = "<group>"; };
 		04A290C52A533B7D0029C8D5 /* SurveyTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTitle.swift; sourceTree = "<group>"; };
 		04B5E7962A5718B000EEAFB9 /* GenderImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderImage.swift; sourceTree = "<group>"; };
@@ -262,6 +280,61 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		047BD7312A79828A002742B7 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				047BD7342A7982F4002742B7 /* TabsView.swift */,
+				047BD73B2A798359002742B7 /* HomeNew */,
+				047BD73A2A79834F002742B7 /* DiscoveryNew */,
+				047BD7392A798348002742B7 /* Messaging */,
+				047BD7382A79832E002742B7 /* StoreNew */,
+				047BD7372A798327002742B7 /* ProfileNew */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		047BD7372A798327002742B7 /* ProfileNew */ = {
+			isa = PBXGroup;
+			children = (
+				047BD7442A798411002742B7 /* ProfileNew.swift */,
+			);
+			path = ProfileNew;
+			sourceTree = "<group>";
+		};
+		047BD7382A79832E002742B7 /* StoreNew */ = {
+			isa = PBXGroup;
+			children = (
+				047BD7422A798406002742B7 /* StoreNew.swift */,
+			);
+			path = StoreNew;
+			sourceTree = "<group>";
+		};
+		047BD7392A798348002742B7 /* Messaging */ = {
+			isa = PBXGroup;
+			children = (
+				047BD7402A7983FB002742B7 /* Messaging.swift */,
+			);
+			path = Messaging;
+			sourceTree = "<group>";
+		};
+		047BD73A2A79834F002742B7 /* DiscoveryNew */ = {
+			isa = PBXGroup;
+			children = (
+				047BD73E2A7983F3002742B7 /* DiscoveryNew.swift */,
+			);
+			path = DiscoveryNew;
+			sourceTree = "<group>";
+		};
+		047BD73B2A798359002742B7 /* HomeNew */ = {
+			isa = PBXGroup;
+			children = (
+				047BD73C2A7983E2002742B7 /* HomeNew.swift */,
+				047BD74A2A79D491002742B7 /* HomeUserPlansView.swift */,
+				047BD7482A79D120002742B7 /* HomeNewVM.swift */,
+			);
+			path = HomeNew;
+			sourceTree = "<group>";
+		};
 		04B5E79F2A57393A00EEAFB9 /* SurveyHeader */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,6 +457,7 @@
 			children = (
 				04C2D6322A50A74000E3B0C1 /* AppIcon.xcassets */,
 				04C2D64C2A50BE3C00E3B0C1 /* Survey_Upd.xcassets */,
+				047BD7462A79898C002742B7 /* Tabs.xcassets */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -400,6 +474,7 @@
 		04C2D6402A50B46600E3B0C1 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				047BD7312A79828A002742B7 /* Tabs */,
 				04C2D6422A50B4A600E3B0C1 /* Survey_Upd */,
 			);
 			path = Features;
@@ -567,6 +642,7 @@
 				04C2D6362A50A74000E3B0C1 /* Preview Assets.xcassets in Resources */,
 				044943742A6C0FFA00F3D0A8 /* süleymanin_mustafasina_siiri.mp4 in Resources */,
 				04C2D6332A50A74000E3B0C1 /* AppIcon.xcassets in Resources */,
+				047BD7472A79898C002742B7 /* Tabs.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,11 +697,13 @@
 			files = (
 				046A18892A62140F005DA357 /* GoalModel.swift in Sources */,
 				0452F8752A694F06002F3897 /* DiagnoseSurvey.swift in Sources */,
+				047BD73F2A7983F3002742B7 /* DiscoveryNew.swift in Sources */,
 				04B5E7D02A5785EB00EEAFB9 /* HeightSurvey.swift in Sources */,
 				047086A62A559C6E0031367E /* ViewExtensions.swift in Sources */,
 				043CF3622A52092E00ADD6C1 /* SurveyGreenProgressBar.swift in Sources */,
 				044EF1252A5D0D1500343DBD /* HeightRulerInFT.swift in Sources */,
 				047086A22A5595D20031367E /* SurveyMiddleView.swift in Sources */,
+				047BD7412A7983FB002742B7 /* Messaging.swift in Sources */,
 				043CF3602A5206AD00ADD6C1 /* SurveyHeader.swift in Sources */,
 				0452F87B2A695774002F3897 /* ActivityLevelSurvey.swift in Sources */,
 				04B5E79B2A57286B00EEAFB9 /* BirthdaySurvey.swift in Sources */,
@@ -641,14 +719,20 @@
 				0400B5EB2A678F50004BB7B9 /* MaleFocusAreasSurvey.swift in Sources */,
 				043CF3652A520C1200ADD6C1 /* SurveyVM.swift in Sources */,
 				041364752A5F1A520096AAC1 /* VerticalLine.swift in Sources */,
+				047BD7492A79D120002742B7 /* HomeNewVM.swift in Sources */,
 				047086A42A5597400031367E /* DynamicFontSizeModifier.swift in Sources */,
 				04C2D6482A50B56A00E3B0C1 /* HaveAccountView.swift in Sources */,
+				047BD7452A798411002742B7 /* ProfileNew.swift in Sources */,
 				0429C65A2A510A4800846DFC /* Triangle.swift in Sources */,
 				045A95A92A69B14E009C943C /* SurveyFirstOnboardingScreen.swift in Sources */,
 				04663D9C2A60C2B100169000 /* SurveyUpdateMain.swift in Sources */,
+				047BD74B2A79D491002742B7 /* HomeUserPlansView.swift in Sources */,
+				047BD73D2A7983E2002742B7 /* HomeNew.swift in Sources */,
+				047BD7352A7982F4002742B7 /* TabsView.swift in Sources */,
 				0400B61E2A68947D004BB7B9 /* PhysicalPainExperienceSurvey.swift in Sources */,
 				041364772A5F1EE60096AAC1 /* WidthRulerPart.swift in Sources */,
 				047086A02A5579BE0031367E /* ProportionallyColoredRectangle.swift in Sources */,
+				047BD7432A798406002742B7 /* StoreNew.swift in Sources */,
 				04663DA52A58E598009BF916 /* RulerPartViewForCM.swift in Sources */,
 				04A290C42A532E390029C8D5 /* SurveyTitleModifier.swift in Sources */,
 				043FC1D82A6098FF00CE9E50 /* WidthRulerLB.swift in Sources */,
