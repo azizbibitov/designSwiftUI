@@ -143,6 +143,23 @@ struct UserPlanCardView: View {
             .padding(.top, 110)
             .padding(.leading, 24)
             
+            HStack {
+                Rectangle()
+                    .foregroundColor(.clear)
+                    .frame(width: 80, height: 26)
+                    .background(Color(red: 0.03, green: 0.02, blue: 0.02).opacity(0.4))
+                    .cornerRadius(10)
+                    .overlay(
+                        Text("5 weeks")
+                            .foregroundColor(.white)
+                            .font(.subheadline.bold())
+                    )
+                    .padding(.top, 45)
+                    .padding(.leading, 24)
+                
+             Spacer()
+            }
+            
 //            HStack {
 //                Rectangle()
 //                    .foregroundColor(.clear)
