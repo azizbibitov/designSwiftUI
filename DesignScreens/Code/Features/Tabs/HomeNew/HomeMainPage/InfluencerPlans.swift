@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct InfluencerSinglePlan: View {
+    
+    var horizontalPadding: CGFloat = 11
+    
     var body: some View {
         
         ZStack {
@@ -23,7 +26,7 @@ struct InfluencerSinglePlan: View {
                     
                     Spacer()
                 }
-                .padding(.horizontal, 11)
+                .padding(.horizontal, horizontalPadding)
                 
                 HStack {
                     Text("“These plans range from intensive to fucking super intensive, ass-bursting workouts”")
@@ -32,7 +35,7 @@ struct InfluencerSinglePlan: View {
                     
                     Spacer()
                 }
-                .padding(.horizontal, 11)
+                .padding(.horizontal, horizontalPadding)
                 
                 UserPlanCardView()
                 
@@ -44,6 +47,9 @@ struct InfluencerSinglePlan: View {
 }
 
 struct InfluencerMultiplePlans: View {
+    
+    var horizontalPadding: CGFloat = 11
+    
     var body: some View {
         ZStack {
             
@@ -59,7 +65,7 @@ struct InfluencerMultiplePlans: View {
                     
                     Spacer()
                 }
-                .padding(.horizontal, 11)
+                .padding(.horizontal, horizontalPadding)
                 
                 HStack {
                     Text("“These plans range from intensive to fucking super intensive, ass-bursting workouts”")
@@ -68,7 +74,7 @@ struct InfluencerMultiplePlans: View {
                     
                     Spacer()
                 }
-                .padding(.horizontal, 11)
+                .padding(.horizontal, horizontalPadding)
                 
                 
                 ScrollView(.horizontal, showsIndicators: false) {
@@ -78,7 +84,7 @@ struct InfluencerMultiplePlans: View {
                             SmallPlanCardView()
                         }
                     }
-                    .padding(.horizontal, 11)
+                    .padding(.horizontal, horizontalPadding)
                     
                 }
                 

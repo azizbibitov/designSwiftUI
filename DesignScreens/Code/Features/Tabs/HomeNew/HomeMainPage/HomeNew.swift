@@ -12,36 +12,39 @@ struct HomeNew: View {
     @EnvironmentObject var homeNewVM: HomeNewVM
     @Environment(\.safeAreaInsets) private var safeAreaInsets
     var body: some View {
-        ZStack {
-            Color("#050814")
-                .edgesIgnoringSafeArea(.all)
-            ScrollView {
-                VStack(spacing: 25){
-                    
-                    HomeTopInfluencerView()
-                    
-                    HomeUserPlansView()
-                    
-                    HStack {
-                        Text("Plans by Gogita Tupuriya")
-                            .foregroundColor(Color("#939393"))
-                            .font(.title3.bold())
+        NavigationView {
+            ZStack {
+                Color("#050814")
+                    .edgesIgnoringSafeArea(.all)
+                ScrollView {
+                    VStack(spacing: 25){
                         
-                        Spacer()
+                        HomeTopInfluencerView()
+                        
+                        HomeUserPlansView()
+                        
+                        HStack {
+                            Text("Plans by Gogita Tupuriya")
+                                .foregroundColor(Color("#939393"))
+                                .font(.title3.bold())
+                            
+                            Spacer()
+                        }
+                        .padding(.horizontal, 11)
+                        
+                        
+                        InfluencerSinglePlan()
+                        
+                        InfluencerMultiplePlans()
+                        
+                        
                     }
-                    .padding(.horizontal, 11)
-                    
-                    
-                    InfluencerSinglePlan()
-                    
-                    InfluencerMultiplePlans()
-                    
-                    
+                    .padding(.top, safeAreaInsets.top)
+                    .padding(.bottom, 85)
                 }
-                .padding(.top, safeAreaInsets.top)
-                .padding(.bottom, 85)
+                
             }
-            
+            .navigationBarHidden(true)
         }
     }
 }
@@ -56,9 +59,8 @@ struct HomeTopInfluencerView: View {
             
             VStack(spacing: 8){
                 
-                Button {
-                    print("your_coach")
-                } label: {
+                
+                NavigationLink(destination: InfluencerPage()){
                     Rectangle()
                         .foregroundColor(.clear)
                         .background(Color("#1C1E29"))
@@ -90,8 +92,8 @@ struct HomeTopInfluencerView: View {
                                 
                             }
                         )
+                    
                 }
-
                 
                 Rectangle()
                     .foregroundColor(.clear)
