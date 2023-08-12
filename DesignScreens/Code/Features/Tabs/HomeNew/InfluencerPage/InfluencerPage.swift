@@ -11,7 +11,7 @@ import SwiftUI
 struct InfluencerPage: View {
     
     @Environment(\.safeAreaInsets) private var safeAreaInsets
-    
+    @EnvironmentObject var homeNewVM: HomeVM
     var body: some View {
         ZStack {
             Color(hex: "#050814")
@@ -69,6 +69,8 @@ struct InfluencerPage: View {
                 .frame(width: UIScreen.screenWidth)
                 .padding(.bottom, 85)
             })
+            
+            InfluencerOptionsView(isShowing: $homeNewVM.optionsShow)
         }
         
         .navigationBarBackButtonHidden()
@@ -200,6 +202,7 @@ struct InfluencerProfile: View {
 struct InfluencerHeaderView: View {
     
     @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var homeNewVM: HomeVM
     
     var body: some View {
         ZStack {
@@ -221,10 +224,13 @@ struct InfluencerHeaderView: View {
                 
                 Button {
                     print("dots")
+                    homeNewVM.optionsShow.toggle()
                 } label: {
                     Image("dots")
                     
                 }
+                
+                
             }
             .padding(.trailing, 20)
             
@@ -236,13 +242,119 @@ struct InfluencerHeaderView: View {
                 Image("small_check2")
             }
             
+            
         }
     }
 }
 
+struct Option: Hashable{
+    var optionName: String
+    var optionIcon: String
+}
+
+var optionsData: [Option] = [
+    Option(optionName: "Share", optionIcon: "share_icon_new"),
+    Option(optionName: "Notifications", optionIcon: "notification_icon_new"),
+    Option(optionName: "Report", optionIcon: "report_icon_new"),
+    Option(optionName: "Unfollow", optionIcon: "unfollow_icon_new"),
+]
+
+
+struct InfluencerOptionsView: View {
+    
+    @Binding var isShowing: Bool
+    
+    var body: some View {
+        
+        ZStack(alignment: .bottom) {
+            
+            if isShowing {
+                Color.black
+                    .opacity(0.3)
+                    .ignoresSafeArea()
+                    .onTapGesture {
+                        withAnimation {
+                            isShowing = false
+                        }
+                    }
+                
+                VStack(spacing: 0){
+                    ForEach(0..<4, id: \.self) { index in
+                        OptionItem(image: optionsData[index].optionIcon, optionTitle: optionsData[index].optionName, isColorRed: index > 1 ? true : false)
+                            .listRowBackground(Color("#313131"))
+                            .frame(height: 60)
+                        
+                        if index != 3 {
+                            Rectangle()
+                                .foregroundColor(.clear)
+                                .frame(width: 429, height: 1)
+                                .background(Color("#4A4A4A"))
+                        }
+                    }
+                    
+                   
+                    
+                }
+                .padding(.top, 20)
+                .padding(.bottom, 105)
+                .frame(maxWidth: .infinity)
+                .background(Color("#313131"))
+                .cornerRadius(16, corners: .topLeft)
+                .cornerRadius(16, corners: .topRight)
+                .transition(.opacity.combined(with: .move(edge: .bottom)))
+            }
+            
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+        .ignoresSafeArea()
+        .animation(.easeInOut, value: isShowing)
+        
+    }
+}
+
+
+
+struct OptionItem: View {
+    var image: String = ""
+    var optionTitle: String = ""
+    var isColorRed: Bool = false
+    
+    var body: some View {
+        Button {
+            print(optionTitle)
+        } label: {
+            VStack {
+                HStack(spacing: 13){
+                    
+                    Spacer()
+                        .frame(width: 20)
+                    
+                    Image(image)
+                        .renderingMode(.template)
+                        .foregroundColor(isColorRed ? .red : .white)
+                    
+                    
+                    Text(optionTitle)
+                        .foregroundColor(isColorRed ? .red : .white)
+                        .font(.title3)
+                    
+                    
+                    Spacer()
+                }
+                
+                
+            }
+        }
+
+    }
+}
+
+
 struct InfluencerPage_Previews: PreviewProvider {
+    static let basicSurveyVM = HomeVM()
     static var previews: some View {
         InfluencerPage()
+            .environmentObject(basicSurveyVM)
 //            .previewDevice(PreviewDevice(rawValue: DeviceName.iPhone_SE_3rd_generation.rawValue))
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeNew: View {
     
-    @EnvironmentObject var homeNewVM: HomeNewVM
+    @EnvironmentObject var homeNewVM: HomeVM
     @Environment(\.safeAreaInsets) private var safeAreaInsets
     var body: some View {
         NavigationView {

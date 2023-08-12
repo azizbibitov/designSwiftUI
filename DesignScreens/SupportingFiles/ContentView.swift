@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var homeNewVM = HomeNewVM()
+    @StateObject var homeNewVM = HomeVM()
     var body: some View {
         TabsView()
             .environmentObject(homeNewVM)

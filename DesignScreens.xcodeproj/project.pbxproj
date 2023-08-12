@@ -62,7 +62,7 @@
 		047BD7432A798406002742B7 /* StoreNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BD7422A798406002742B7 /* StoreNew.swift */; };
 		047BD7452A798411002742B7 /* ProfileNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BD7442A798411002742B7 /* ProfileNew.swift */; };
 		047BD7472A79898C002742B7 /* Tabs.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047BD7462A79898C002742B7 /* Tabs.xcassets */; };
-		047BD7492A79D120002742B7 /* HomeNewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BD7482A79D120002742B7 /* HomeNewVM.swift */; };
+		047BD7492A79D120002742B7 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BD7482A79D120002742B7 /* HomeVM.swift */; };
 		047BD74B2A79D491002742B7 /* HomeUserPlansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BD74A2A79D491002742B7 /* HomeUserPlansView.swift */; };
 		04A290C42A532E390029C8D5 /* SurveyTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A290C32A532E390029C8D5 /* SurveyTitleModifier.swift */; };
 		04A290C62A533B7D0029C8D5 /* SurveyTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A290C52A533B7D0029C8D5 /* SurveyTitle.swift */; };
@@ -147,7 +147,7 @@
 		047BD7422A798406002742B7 /* StoreNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreNew.swift; sourceTree = "<group>"; };
 		047BD7442A798411002742B7 /* ProfileNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNew.swift; sourceTree = "<group>"; };
 		047BD7462A79898C002742B7 /* Tabs.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Tabs.xcassets; sourceTree = "<group>"; };
-		047BD7482A79D120002742B7 /* HomeNewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNewVM.swift; sourceTree = "<group>"; };
+		047BD7482A79D120002742B7 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		047BD74A2A79D491002742B7 /* HomeUserPlansView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUserPlansView.swift; sourceTree = "<group>"; };
 		04A290C32A532E390029C8D5 /* SurveyTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTitleModifier.swift; sourceTree = "<group>"; };
 		04A290C52A533B7D0029C8D5 /* SurveyTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTitle.swift; sourceTree = "<group>"; };
@@ -340,7 +340,7 @@
 			children = (
 				04B306462A8412E0005AF378 /* HomeMainPage */,
 				04B306472A8412ED005AF378 /* InfluencerPage */,
-				047BD7482A79D120002742B7 /* HomeNewVM.swift */,
+				047BD7482A79D120002742B7 /* HomeVM.swift */,
 			);
 			path = HomeNew;
 			sourceTree = "<group>";
@@ -753,7 +753,7 @@
 				0400B5EB2A678F50004BB7B9 /* MaleFocusAreasSurvey.swift in Sources */,
 				043CF3652A520C1200ADD6C1 /* SurveyVM.swift in Sources */,
 				041364752A5F1A520096AAC1 /* VerticalLine.swift in Sources */,
-				047BD7492A79D120002742B7 /* HomeNewVM.swift in Sources */,
+				047BD7492A79D120002742B7 /* HomeVM.swift in Sources */,
 				047086A42A5597400031367E /* DynamicFontSizeModifier.swift in Sources */,
 				04C2D6482A50B56A00E3B0C1 /* HaveAccountView.swift in Sources */,
 				047BD7452A798411002742B7 /* ProfileNew.swift in Sources */,
