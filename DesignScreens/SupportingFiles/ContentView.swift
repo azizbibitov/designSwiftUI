@@ -9,9 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var homeNewVM = HomeVM()
+//    @StateObject var surveyVM = SurveyVM()
     var body: some View {
+//        SurveyUpdateMain()
+//            .environmentObject(surveyVM)
         TabsView()
             .environmentObject(homeNewVM)
+//        TestView()
     }
 }
 

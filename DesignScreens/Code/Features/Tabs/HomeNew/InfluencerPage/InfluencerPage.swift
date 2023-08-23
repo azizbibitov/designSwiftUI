@@ -355,6 +355,6 @@ struct InfluencerPage_Previews: PreviewProvider {
     static var previews: some View {
         InfluencerPage()
             .environmentObject(basicSurveyVM)
-//            .previewDevice(PreviewDevice(rawValue: DeviceName.iPhone_SE_3rd_generation.rawValue))
+            .previewDevice(PreviewDevice(rawValue: DeviceName.iPhone_SE_3rd_generation.rawValue))
     }
 }

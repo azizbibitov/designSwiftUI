@@ -22,6 +22,7 @@
 		0429C6452A50F02900846DFC /* BtnText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429C6442A50F02900846DFC /* BtnText.swift */; };
 		0429C6582A51091A00846DFC /* BasicDetailsLaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429C6572A51091A00846DFC /* BasicDetailsLaunchScreen.swift */; };
 		0429C65A2A510A4800846DFC /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429C6592A510A4800846DFC /* Triangle.swift */; };
+		042AA4C32A8D759900C05872 /* PersonalAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042AA4C22A8D759900C05872 /* PersonalAccountView.swift */; };
 		043CF35E2A51FE9A00ADD6C1 /* SurveysScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043CF35D2A51FE9A00ADD6C1 /* SurveysScreen.swift */; };
 		043CF3602A5206AD00ADD6C1 /* SurveyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043CF35F2A5206AD00ADD6C1 /* SurveyHeader.swift */; };
 		043CF3622A52092E00ADD6C1 /* SurveyGreenProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043CF3612A52092E00ADD6C1 /* SurveyGreenProgressBar.swift */; };
@@ -86,6 +87,9 @@
 		04C2D6512A50C73100E3B0C1 /* UIScreenExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2D6502A50C73100E3B0C1 /* UIScreenExtensions.swift */; };
 		04C662DE2A55B34D00BF6E84 /* NameSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C662DD2A55B34D00BF6E84 /* NameSurvey.swift */; };
 		04C663052A55F15700BF6E84 /* GenderSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C663042A55F15700BF6E84 /* GenderSurvey.swift */; };
+		04EB6A1D2A964FA9007908BC /* WorkoutActivitySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB6A1C2A964FA9007908BC /* WorkoutActivitySection.swift */; };
+		04EB6A1F2A96501F007908BC /* MonthlyStatsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB6A1E2A96501F007908BC /* MonthlyStatsSection.swift */; };
+		04EB6A212A965083007908BC /* DailyStatisticsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB6A202A965083007908BC /* DailyStatisticsSection.swift */; };
 		2227B5A7E8AF560D302335DC /* Pods_DesignScreens.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA35DCE1DE841E8501691E0 /* Pods_DesignScreens.framework */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +109,7 @@
 		0429C6442A50F02900846DFC /* BtnText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnText.swift; sourceTree = "<group>"; };
 		0429C6572A51091A00846DFC /* BasicDetailsLaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDetailsLaunchScreen.swift; sourceTree = "<group>"; };
 		0429C6592A510A4800846DFC /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		042AA4C22A8D759900C05872 /* PersonalAccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalAccountView.swift; sourceTree = "<group>"; };
 		043CF35D2A51FE9A00ADD6C1 /* SurveysScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveysScreen.swift; sourceTree = "<group>"; };
 		043CF35F2A5206AD00ADD6C1 /* SurveyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyHeader.swift; sourceTree = "<group>"; };
 		043CF3612A52092E00ADD6C1 /* SurveyGreenProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyGreenProgressBar.swift; sourceTree = "<group>"; };
@@ -172,6 +177,9 @@
 		04C2D6502A50C73100E3B0C1 /* UIScreenExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenExtensions.swift; sourceTree = "<group>"; };
 		04C662DD2A55B34D00BF6E84 /* NameSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSurvey.swift; sourceTree = "<group>"; };
 		04C663042A55F15700BF6E84 /* GenderSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSurvey.swift; sourceTree = "<group>"; };
+		04EB6A1C2A964FA9007908BC /* WorkoutActivitySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutActivitySection.swift; sourceTree = "<group>"; };
+		04EB6A1E2A96501F007908BC /* MonthlyStatsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyStatsSection.swift; sourceTree = "<group>"; };
+		04EB6A202A965083007908BC /* DailyStatisticsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyStatisticsSection.swift; sourceTree = "<group>"; };
 		4B75937BD7C49E2A1117CB8D /* Pods-DesignScreens.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignScreens.debug.xcconfig"; path = "Target Support Files/Pods-DesignScreens/Pods-DesignScreens.debug.xcconfig"; sourceTree = "<group>"; };
 		7BA35DCE1DE841E8501691E0 /* Pods_DesignScreens.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesignScreens.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0CC2F7F7E8F272584D9BB6B /* Pods-DesignScreens.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignScreens.release.xcconfig"; path = "Target Support Files/Pods-DesignScreens/Pods-DesignScreens.release.xcconfig"; sourceTree = "<group>"; };
@@ -307,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				047BD7442A798411002742B7 /* ProfileNew.swift */,
+				04EB6A1B2A964F86007908BC /* ProfileMainPage */,
 			);
 			path = ProfileNew;
 			sourceTree = "<group>";
@@ -359,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				04B306482A841303005AF378 /* InfluencerPage.swift */,
+				042AA4C22A8D759900C05872 /* PersonalAccountView.swift */,
 				0428BB7B2A86760300B13323 /* InfluencerVideoView.swift */,
 			);
 			path = InfluencerPage;
@@ -590,6 +600,16 @@
 			path = SurveyMiddleViews;
 			sourceTree = "<group>";
 		};
+		04EB6A1B2A964F86007908BC /* ProfileMainPage */ = {
+			isa = PBXGroup;
+			children = (
+				04EB6A1C2A964FA9007908BC /* WorkoutActivitySection.swift */,
+				04EB6A1E2A96501F007908BC /* MonthlyStatsSection.swift */,
+				04EB6A202A965083007908BC /* DailyStatisticsSection.swift */,
+			);
+			path = ProfileMainPage;
+			sourceTree = "<group>";
+		};
 		5F9E1A9190CD1BB73668B6D9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -735,6 +755,7 @@
 				043CF3622A52092E00ADD6C1 /* SurveyGreenProgressBar.swift in Sources */,
 				044EF1252A5D0D1500343DBD /* HeightRulerInFT.swift in Sources */,
 				047086A22A5595D20031367E /* SurveyMiddleView.swift in Sources */,
+				04EB6A212A965083007908BC /* DailyStatisticsSection.swift in Sources */,
 				047BD7412A7983FB002742B7 /* Messaging.swift in Sources */,
 				043CF3602A5206AD00ADD6C1 /* SurveyHeader.swift in Sources */,
 				0452F87B2A695774002F3897 /* ActivityLevelSurvey.swift in Sources */,
@@ -774,6 +795,7 @@
 				0428BB782A861C3300B13323 /* TestView.swift in Sources */,
 				041364732A5F0BAD0096AAC1 /* WidthRulerKG.swift in Sources */,
 				0449436B2A69C87B00F3D0A8 /* SignUpScreen.swift in Sources */,
+				04EB6A1D2A964FA9007908BC /* WorkoutActivitySection.swift in Sources */,
 				04C2D64B2A50BB8900E3B0C1 /* ColorExtensions.swift in Sources */,
 				043CF3702A522AD500ADD6C1 /* StringExtensions.swift in Sources */,
 				041364712A5F09010096AAC1 /* BMIDefinerView.swift in Sources */,
@@ -785,6 +807,7 @@
 				04B5E79D2A572C9900EEAFB9 /* Enums.swift in Sources */,
 				0429C6452A50F02900846DFC /* BtnText.swift in Sources */,
 				04B306492A841303005AF378 /* InfluencerPage.swift in Sources */,
+				04EB6A1F2A96501F007908BC /* MonthlyStatsSection.swift in Sources */,
 				04C662DE2A55B34D00BF6E84 /* NameSurvey.swift in Sources */,
 				04663D9F2A58E2F4009BF916 /* SafeAreaInsets.swift in Sources */,
 				04C2D6512A50C73100E3B0C1 /* UIScreenExtensions.swift in Sources */,
@@ -793,6 +816,7 @@
 				04C2D62F2A50A73F00E3B0C1 /* DesignScreensApp.swift in Sources */,
 				04C2D6462A50B4D900E3B0C1 /* SurveySecondOnboardingScreen.swift in Sources */,
 				04663DA12A58E4DB009BF916 /* ViewOffsetKeyPreferenceKey.swift in Sources */,
+				042AA4C32A8D759900C05872 /* PersonalAccountView.swift in Sources */,
 				04548ACE2A6675960011BB31 /* FemaleFocusAreasSurvey.swift in Sources */,
 				04B5E7992A571FB300EEAFB9 /* SurveyBottomView.swift in Sources */,
 				04C663052A55F15700BF6E84 /* GenderSurvey.swift in Sources */,
